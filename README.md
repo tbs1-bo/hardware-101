@@ -9,7 +9,7 @@ verbunden. Der I²C-Overlay kann mit raspi-config aktiviert werden.
 Zuerst wird die Adresse mit `i2cdetect` ermittelt.
 
 
-    pi@cloudberrypi ~/lm75 $ i2cdetect -y 1
+    pi@meinpi ~/lm75 $ i2cdetect -y 1
          0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
     00:          -- -- -- -- -- -- -- -- -- -- -- -- -- 
     10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
@@ -26,7 +26,7 @@ kann mit i2cget aus dem Register `0x00` (dort liegen die aktuellen
 Temperaturen) ausgelesen werden. Die Option `w` liest ein Wort (2
 Bytes) aus.
 
-    pi@cloudberrypi ~/lm75 $ i2cget -y 1 0x48 0x00 w
+    pi@meinpi ~/lm75 $ i2cget -y 1 0x48 0x00 w
     0x8018
 
 Dieser Wert muss nun in eine Temperatur umgewandelt werden. Hierzu
