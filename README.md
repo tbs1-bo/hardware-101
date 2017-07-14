@@ -56,3 +56,7 @@ unvollständiges Demoprogramm. Liest dir die Dokumentation durch und
 vervollständige es.
 
 
+## Datenblatt
+
+- [Datenblatt (vollständig)](docs/nxp_lm75_datasheet_full.pdf)
+- [Datenblatt (gekürzt)](docs/nxp_lm75_datasheet_short.pdf)
