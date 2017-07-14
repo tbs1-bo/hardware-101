@@ -1,4 +1,4 @@
-# lm75
+# lm75 Temperatursensor
 
 ![lm75](docs/lm75-pins.png)
 
