@@ -30,8 +30,12 @@ try:
         # liest ein 16-Bit-Wort aus dem Register 0x00
         rtwo = iic.read_word_data(lm75, 0x00)
 
-        # HIER MUSS DIE UMRECHNUNG STATTFINDEN
-        temperatur = 0
+        # Vertauscht die Bytes des Wortes
+        wort = ((rtwo << 8) & 0xFF00) + (rtwo >> 8)
+
+        # Die letzten 5 Bits werden ignoriert und nach rechts
+        # Der Wert wird schließlich mit 0.125 multipliziert
+        temperatur = (wort >> 5) * 0.125
 
         print("Temperatur:", temperatur)
 
