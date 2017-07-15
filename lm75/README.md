@@ -8,9 +8,23 @@ Der LM75 ist ein Temperatursensor, der sich über die I²C-Schnittstelle auslese
 lässt. Hierfür wird der Raspberry Pi (Master) mit Pin 5 und 3 mit SCL bzw. SDA
 verbunden. Der I²C-Overlay kann mit raspi-config aktiviert werden.
 
+## Beschaltung
+
+![Schaltung](docs/lm75-schematic.png)
+
+- SDA: Serial Data (I²C)
+- SCL: Serial Clock (I²C)
+- GND: Masse
+- A0, A1, A2: Beeinflusst die Slaveadresse des Sensors.
+- VCC: Spannungsversorgung des Sensors (3,3 V)
+
+Auf Pulldown-Widerstände an den Busleitungen kann (und sollte) verzichtet werden, da diese bereits am Raspberry Pi vorhanden sind.
+
 ## Adressierung
 
-Zuerst wird die Adresse mit `i2cdetect` ermittelt.
+Die ersten 4 Bit der Slaveadresse sind beim LM75 unveränderbar `0b1001`. Über die Pins A0, A1 und A3 können die letzten (niederwertigen) 3 Bit eingestellt werden. Mit der Betriesspannung (VCC bzw. 3,3 V) an einem Pin wird eine `1` an der entsprechenden Stelle gesetzt. Um eine `0` zu setzen, wird der entsprechende Pin auf Masse (GND) gelegt.
+
+Mit `i2cdetect` kann die Adresse ermittelt werden.
 
 
     pi@meinpi ~/lm75 $ i2cdetect -y 1
@@ -26,7 +40,7 @@ Zuerst wird die Adresse mit `i2cdetect` ermittelt.
 
 
 Der Sensor meldet sich bei diesem Beispiel unter der Adresse
-`0x48`. Die Slave-Adresse hängt beim LM75 von der Beschaltung ab.
+`0x48`.
 
 ## Sensor auslesen
 
