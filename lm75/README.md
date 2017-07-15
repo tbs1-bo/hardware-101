@@ -10,7 +10,7 @@ verbunden. Der I²C-Overlay kann mit raspi-config aktiviert werden.
 
 ## Beschaltung
 
-![Schaltung](docs/lm75_schematic.png)
+![Schaltung](docs/lm75_schematic.png){:width="50%"}
 
 - SDA: Serial Data (I²C)
 - SCL: Serial Clock (I²C)
