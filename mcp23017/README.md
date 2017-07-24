@@ -15,13 +15,13 @@ Der MCP23017 ist ein I/O Expander, der sich über die I²C-Schnittstelle ansteue
 - SDA: Serial Data (I²C)
 - SCL: Serial Clock (I²C)
 - A0, A1, A2: Beeinflusst die Slaveadresse des I/O Expanders.
-- RESET: Setzt den I/O Expander bei einem Low-Signal (Massepotential) zurück.*
+- RESET: Setzt den I/O Expander bei einem Low-Signal (Massepotential) zurück.¹
 - INTA, INTB: Interrupt-Ausgänge
 - GPA0-GPA7, GPB0-GPB7: I/O-Pins
 
 Auf Pulldown-Widerstände an den Busleitungen kann (und sollte) verzichtet werden, da diese bereits am Raspberry Pi vorhanden sind.
 
-* Der Reset-Pin erwartet ein definiertes, externes High- oder Low-Signal. Der Pfeil im Pinout aus dem Datenblatt zeigt in die falsche Richtung.
+¹ Am Reset-Pin wird ein definiertes, externes High- oder Low-Signal erwartet. Der Pfeil im Pinout aus dem Datenblatt zeigt in die falsche Richtung.
 
 ## Adressierung
 
