@@ -15,4 +15,4 @@ Beim Ausschalten eines bestimmten Pins wird das entsprechende Bit mit `0` verund
 
 ## Datenblatt
 
-- [Beispielprogramm](mcp23017sample.py)
+- [Beispielprogramm](mcp23017_sample.py)

@@ -5918,7 +5918,7 @@ Source: www.kingbright.com</description>
 <parts>
 <part name="IC1" library="microchip" library_urn="urn:adsk.eagle:library:294" deviceset="MCP23017" device="SP"/>
 <part name="RASPI" library="con-ml" library_urn="urn:adsk.eagle:library:164" deviceset="ML40" device=""/>
-<part name="R4" library="resistor" deviceset="R-EU_" device="0207/10" value="150"/>
+<part name="R3" library="resistor" deviceset="R-EU_" device="0207/10" value="150"/>
 <part name="LED" library="led" deviceset="LED" device="5MM"/>
 <part name="R2" library="resistor" deviceset="R-EU_" device="0207/10" value="10k"/>
 <part name="R1" library="resistor" deviceset="R-EU_" device="0207/10" value="1k"/>
@@ -5931,7 +5931,7 @@ Source: www.kingbright.com</description>
 <instances>
 <instance part="IC1" gate="G$1" x="73.66" y="40.64"/>
 <instance part="RASPI" gate="1" x="35.56" y="35.56" rot="R180"/>
-<instance part="R4" gate="G$1" x="93.98" y="38.1"/>
+<instance part="R3" gate="G$1" x="93.98" y="38.1"/>
 <instance part="LED" gate="G$1" x="104.14" y="38.1" rot="R90"/>
 <instance part="R2" gate="G$1" x="116.84" y="45.72" rot="R90"/>
 <instance part="R1" gate="G$1" x="99.06" y="73.66"/>
@@ -6013,7 +6013,7 @@ Source: www.kingbright.com</description>
 </net>
 <net name="N$6" class="0">
 <segment>
-<pinref part="R4" gate="G$1" pin="2"/>
+<pinref part="R3" gate="G$1" pin="2"/>
 <pinref part="LED" gate="G$1" pin="A"/>
 <wire x1="99.06" y1="38.1" x2="101.6" y2="38.1" width="0.1524" layer="91"/>
 </segment>
@@ -6022,7 +6022,7 @@ Source: www.kingbright.com</description>
 <segment>
 <pinref part="IC1" gate="G$1" pin="GPB0"/>
 <wire x1="86.36" y1="38.1" x2="88.9" y2="38.1" width="0.1524" layer="91"/>
-<pinref part="R4" gate="G$1" pin="1"/>
+<pinref part="R3" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="N$7" class="0">
