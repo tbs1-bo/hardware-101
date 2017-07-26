@@ -1,4 +1,4 @@
-# MCP23017 / sample
+# MCP23017/sample
 
 
 In dem Beispiel wird eine LED an GPB0 (Pin1) und ein Taster mit Pull-down-Widerstand an GPA7 (Pin28) angeschlossen. Der Taster wird durch polling abgefragt und bei betätigtem Taster wird "whoop" ausgegeben. Die LED blinkt, wie es sich für ein ordentliches LED-Beispiel gehört. 
@@ -13,6 +13,6 @@ Beim Ausschalten eines bestimmten Pins wird das entsprechende Bit mit `0` verund
 
 ![Beispielschaltung](mcp23017_sample.png)
 
-## Datenblatt
+## Beispielprogramm
 
-- [Beispielprogramm](mcp23017_sample.py)
+- [mcp23017_sample.py](mcp23017_sample.py)
