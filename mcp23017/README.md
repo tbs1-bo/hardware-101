@@ -33,7 +33,7 @@ Je nach Beschaltung ergibt sich eine Slave-ADresse zwischen `0x20` und `0x27`. I
 
 Genau wie bei den GPIO-Pins des Raspberry Pi, müssen die Pins zunächst als Input- oder Output-Pin konfiguriert werden. Dazu dient das "I/O direction register" des entsprechenden Ports. Standardmäßig sind die Pins beider Ports als Input konfiguriert. In den Registern mit den Adressen `0x00` und `0x01` stehen die Werte `0xff = 0b11111111`. Jedes Bit der Register steht dabei für den entsprechenden Pin des jeweiligen Ports. Das niederwertigste Bit des Registers `0x00` konfiguriert beispielsweise den Pin GPA0 (Pin 21 am IC). Wird ein Bit auf `0` gesetzt, so ist der entsprechende Pin ein Output-Pin.
 
-Über "General purpose I/O port register" (Adresse `0x12` für Port A und `0x13` für Port B) lässt sich der Signalwert (0 = low, 1 = high) der entsprechenden Pins lesen. Die Output-Pins können über diese Register ein- bzw. ausgeschaltet werden.
+Über "General purpose I/O port register" (Adresse `0x12` für Port A und `0x13` für Port B) lässt sich der Signalwert (0 = low, 1 = high) der entsprechenden Pins lesen. Die Output-Pins können über das "Output latch register" (Adresse `0x14` für Port A und `0x15` für Port B) ein- bzw. ausgeschaltet werden. Durch das Schreiben in das GPIO-Register wird ebenfalls das Output-Latch-Register verändert.
 
 Mit dem "input polarity port register" können die Signale an den Input-Pins invertiert werden. Dies kann beispielsweise nützlich sein, wenn man Pull-up-Widerstände oder das GPPU-Register verwendet.
 
@@ -51,6 +51,10 @@ Das IC verfügt für jeden Port über 8 weitere Register. Unter anderem kann man
 * 1: High-Signal am Pin
 * 0: Low-Signal am Pin (default)
 
+### OLATA (OLATB) - Output latch register Port A (Port B) - 0x14 (0x15)
+* 1: High-Signal
+* 0: Low-Signal (default)
+
 ### Weitere Register
 * GPINTEN - Interrupt-on-change Pins (0x04/0x05)
 * DEFVAL - Default value register (0x06/0x07)
@@ -59,7 +63,6 @@ Das IC verfügt für jeden Port über 8 weitere Register. Unter anderem kann man
 * GPPU - GPIO Pull-up resistor register (0x0C/0x0D)
 * INTF - Interrupt flag register (0x0E/0x0F)
 * INTCAP - Interrupt captured value for port register (0x10/0x11)
-* OLAT - Output latch register (0x14/0x15)
 
 ## Datenblatt
 
