@@ -1,7 +1,9 @@
-# "Beipackzettel" für ICs
+# Hardware-101 für Hardwarebausteine
 
-In diesem Repository befinden sich für jeweils einen ICs grundlegende
-Informationen wie Datenblätter, Quelltext- und Schaltungsbeispiele und
-eine Beschreibung.
+In diesem Repository befinden sich für verschiedene Hardwarebausteine
+grundlegende Informationen wie Datenblätter, Quelltext- und
+Schaltungsbeispiele sowie eine Beschreibung.
 
-- lm75: Temperatursensor
+- [led_matrix](led_matrix): Eine 5x7 LED-Matrix
+- [lm75](lm75): Temperatursensor
+- [mcp23017](mcp23017): Portexpander
