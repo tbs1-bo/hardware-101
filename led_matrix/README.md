@@ -29,5 +29,5 @@ Datei [ledmatrix.py](ledmatrix.py). Ein
 Datenblatt
 ----------
 Die LED-Matrix ist vergleichbar mit der TC07-11 von Kingbright. 
-- [Datenblatt](docs/TA07-11_TC07-11_datasheet.pdf)
+- [Datenblatt](doc/TA07-11_TC07-11_datasheet.pdf)
 
