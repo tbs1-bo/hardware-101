@@ -78,10 +78,10 @@ class LedMatrix:
 def main():
     ledmat = LedMatrix()
     # connect pins of the led-matrix to GPIO-pins
-    ledmat.connect_pins(1, 17)
-    ledmat.connect_pins(3, 18)
-    ledmat.connect_pins(11, 23)
-    ledmat.connect_pins(12, 22)
+    ledmat.connect_pins(ledpin=1, gpio=17)
+    ledmat.connect_pins(ledpin=3, gpio=18)
+    ledmat.connect_pins(ledpin=11, gpio=23)
+    ledmat.connect_pins(ledpin=12, gpio=22)
 
     # turn on each of the 4 LEDs from top left to bottom right - for 5 seconds
     start = time.time()
