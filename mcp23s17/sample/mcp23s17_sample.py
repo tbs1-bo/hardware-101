@@ -1,7 +1,7 @@
 import time
 import spidev
 
-# Slaveadresse des MCP23017
+# Slaveadresse des MCP23S17
 # IOEXP = 0x20
 SPIBUS = 0    # SPI0
 SPIDEVICE = 0 # CE0
@@ -25,7 +25,7 @@ spi.open(SPIBUS, SPIDEVICE)
 spi.xfer([IOEXPw, IODIRA, 0xFE])
 
 try:
-    while(True):        
+    while(True):
         # Port B lesen, Registerinhalt im dritten Byte
         portb = spi.xfer([IOEXPr, GPIOB, 0])[2]
         # Pruefen, ob Port B, Pin 0 (Taster-Pin) gesetzt wurde
