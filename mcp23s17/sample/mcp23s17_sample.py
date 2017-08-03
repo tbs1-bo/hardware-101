@@ -33,7 +33,7 @@ try:
         portb = spi.xfer([IOEXPr, GPIOB, 0])[2]
         portb &= 0x01
         if portb == 0x01:
-            print("whoop")
+            print("Taster wurde gedrückt!")
 
         # Port A, Pin 0 (LED) einschalten
         # alle anderen Pins bleiben unveraendert
