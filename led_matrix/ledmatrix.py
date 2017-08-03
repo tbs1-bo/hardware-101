@@ -67,7 +67,8 @@ def main():
     ledm = LedMatrix(led_gpio)
 
     # turning on each led from top left to bottom right
-    while False and True:
+    start = time.time()
+    while time.time() - start < 5:
         for x in (0, 1):
             for y in (0, 1):
                 ledm.led(x, y, True)
@@ -75,24 +76,20 @@ def main():
                 ledm.led(x, y, False)
                 time.sleep(0.2)
 
-
-def led(x, y, on_off, led_gpio):
-    """Turn the led at coordinate (x,y) on or off. (0,0) is a top left."""
-    xy_pins = {(0, 0): (12, 1),
-               (0, 1): (12, 3),
-               (1, 0): (11, 1),
-               (1, 1): (11, 3)}
-
-    if on_off:
-        pin_hi, pin_lo = xy_pins[(x, y)]
-    else:
-        pin_lo, pin_hi = xy_pins[(x, y)]
-
-    gpio_hi, gpio_lo = led_gpio[pin_hi], led_gpio[pin_lo]
-
-    print("hi", gpio_hi, "lo", gpio_lo)
-    GPIO.output(gpio_hi, True)
-    GPIO.output(gpio_lo, False)
+    # turning on some leds using muliplexing
+    while True:
+        for x in (0, 1):
+            for y in (0, 1):
+                if (x, y) in [(0, 0), (1, 1)]:
+                    ledm.led(x, y, True)
+                    time.sleep(0.002)
+                    ledm.led(x, y, False)
+                    
+                else:
+                    ledm.led(x, y, False)
+                    
+                #ledm.led(x, y, False)
+                #time.sleep(0.2)
 
 
 if __name__ == "__main__":
