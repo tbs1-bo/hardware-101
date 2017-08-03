@@ -71,8 +71,8 @@ class LedMatrix:
         # determine GPIO pins for led pins
         gpio_hi, gpio_lo = self.led_gpio[ledpin_hi], self.led_gpio[ledpin_lo]
 
-        GPIO.output(gpio_hi, True)
-        GPIO.output(gpio_lo, False)
+        GPIO.output(gpio_hi, GPIO.HIGH)
+        GPIO.output(gpio_lo, GPIO.LOW)
 
 
 def main():
