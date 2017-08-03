@@ -10,6 +10,7 @@ __pycache__/
 # Distribution / packaging
 .Python
 env/
+venv/
 build/
 develop-eggs/
 dist/
@@ -61,4 +62,7 @@ target/
 # Emacs Backup files
 *~
 
-
+# pycharm project folders
+.idea/
+# ninja ide project files
+*.nja
