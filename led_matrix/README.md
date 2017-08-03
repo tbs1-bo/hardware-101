@@ -26,3 +26,8 @@ Ein Beispielprogramm zur Ansteuerung der Matrix befindet sich in der
 Datei [ledmatrix.py](ledmatrix.py). Ein
 [Video](https://youtu.be/pf3Cuj75bP4) zeigt die Matrix im Betrieb.
 
+Datenblatt
+----------
+Die LED-Matrix ist vergleichbar mit der TC07-11 von Kingbright. 
+- [Datenblatt](docs/TA07-11_TC07-11_datasheet.pdf
+
