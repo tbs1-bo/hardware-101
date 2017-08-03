@@ -30,7 +30,7 @@ import time
 
 
 class LedMatrix:
-    
+
     def __init__(self, boardmode=GPIO.BCM):
         """Create an led matrix. Use the connect-method afterwards to connect
         led matrix pins with GPIO pins on the Raspberry Pi."""
@@ -42,7 +42,7 @@ class LedMatrix:
         # default pins on a 5x7 matrix
         self.x_pins = [1, 3, 10, 7, 8]
         self.y_pins = [12, 11, 2, 9, 4, 5, 6]
-        
+
         # using the given numbering scheme
         GPIO.setmode(boardmode)
 
