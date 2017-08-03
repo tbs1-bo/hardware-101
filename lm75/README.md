@@ -74,7 +74,7 @@ beschrieben.
 ![datenblatt](docs/lm75-temp-description.png)
 
 Das Programm `temperature.py` in diesem Repo enthält ein
-unvollständiges Demoprogramm. Liest dir die Dokumentation durch und
+unvollständiges Demoprogramm. Lies dir die Dokumentation durch und
 vervollständige es.
 
 
