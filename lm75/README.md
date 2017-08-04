@@ -73,6 +73,12 @@ beschrieben.
 
 ![datenblatt](docs/lm75-temp-description.png)
 
+## Zweierkomplement
+
+Im Temperaturregister wird der Temperaturwert im [Zweierkomplement](https://de.wikipedia.org/wiki/Zweierkomplement) hinterlegt. Wenn die gemessene Temperatur auch negative Werte annehmen kann, müssen weitere Berechnungen mit dem Inhalt des Registers durchgeführt werden. Im [Beispielprogramm des MPU6050](../mpu6050/mpu6050.py) befindet sich eine Methode, mit der diese Berechnung durchgeführt wird.
+
+## Beispielprogramm
+
 Das Programm in der Datei [lm75.py](lm75.py) in diesem Repo enthält ein
 unvollständiges Demoprogramm. Lies dir die Dokumentation durch und
 vervollständige es.
