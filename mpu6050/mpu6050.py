@@ -4,18 +4,23 @@ import math
 
 
 class MPU6050:
-    def __init__(self, address=0x68):
-        self.power_mgmt_1 = 0x6b
-        self.power_mgmt_2 = 0x6c
+    def __init__(self, i2c_address=0x68):
+        # Registers as described in the register map document (section 3)
+        self.regs = {"POWER_MGM1_1": 0x6b,
+                     "TEMP_OUT_H": 0x41,
+                     "TEMP_OUT_L": 0x42,
+                     "GYRO_XOUT_H": 0x43,  # described in section 4.19
+                     "GYRO_XOUT_L": 0x44}  # ... and more
 
-        self.bus = smbus.SMBus(1)
-        self.address = 0x68
+        self.i2c = smbus.SMBus(1)
+        self.address = i2c_address
 
-        self.bus.write_byte_data(self.address, self.power_mgmt_1, 0)
+        # writing to register power_mgmt awakes the chip after powerup
+        self.i2c.write_byte_data(self.address, self.regs["POWER_MGMT_1"], 0)
 
     def read_word(self, reg):
-        h = self.bus.read_byte_data(self.address, reg)
-        l = self.bus.read_byte_data(self.address, reg + 1)
+        h = self.i2c.read_byte_data(self.address, reg)
+        l = self.i2c.read_byte_data(self.address, reg + 1)
         value = (h << 8) + l
         return value
 
@@ -38,17 +43,15 @@ class MPU6050:
         return math.degrees(radians)
 
     def get_xyz_rotation(self):
-        gyroskop_xout = self.read_word_2c(0x43)
-        gyroskop_yout = self.read_word_2c(0x45)
-        gyroskop_zout = self.read_word_2c(0x47)
+        gyroskop_xout = self.read_word_2c(self.regs["GYRO_XOUT_H"])
+        # TODO: the same for the other coordinates
+        gyroskop_yout = -1
+        gyroskop_zout = -1
 
         gyroskop_xout_skaliert = gyroskop_xout / 131
-        gyroskop_yout_skaliert = gyroskop_yout / 131
-        gyroskop_zout_skaliert = gyroskop_zout / 131
-
-        #print("gyroskop_xout: ", ("%5d" % gyroskop_xout), " skaliert: ", gyroskop_xout_skaliert)
-        #print("gyroskop_yout: ", ("%5d" % gyroskop_yout), " skaliert: ", gyroskop_yout_skaliert)
-        #print("gyroskop_zout: ", ("%5d" % gyroskop_zout), " skaliert: ", gyroskop_zout_skaliert)
+        # TODO: the same for the other coordinates
+        gyroskop_yout_skaliert = -1
+        gyroskop_zout_skaliert = -1
 
         return {"x": [gyroskop_xout, gyroskop_xout_skaliert],
                 "y": [gyroskop_yout, gyroskop_yout_skaliert],
