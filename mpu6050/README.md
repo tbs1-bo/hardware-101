@@ -16,7 +16,8 @@ Schaltung
 
 ![Schaltung](doc/schaltung_mpu6050_Steckplatine.png)
 
-Der IC kann über I²C direkt an dem Pi betrieben werden.
+Der IC kann über I²C direkt am Pi betrieben werden. Dort meldet er
+sich unter der Adresse 0x68.
 
 
 
