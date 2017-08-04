@@ -19,9 +19,11 @@ Der MCP3426 ist ein Analog-Digital-Wandler, mit einer I²C-Schnittstelle. Analog
 
 Auf Pulldown-Widerstände an den Busleitungen kann (und sollte) verzichtet werden, da diese bereits am Raspberry Pi vorhanden sind.
 
-Die Eingangssignale werden an die positiven und negativen Eingangspins angelegt. Die gemessene Spannung ist also die Potentialdifferenz zwischen CH+ und CH-.
+Die Eingangssignale werden an die positiven und negativen Eingangspins CH1 bzw. CH2
+angelegt. Die gemessene Spannung ist also die Potentialdifferenz
+zwischen CH+ und CH-.
 
-Eine Referenzspannung kann nicht exern angelegt werden. Der MCP3426 verwendet eine interne Referenzspannung von `2,048 V`.
+Eine Referenzspannung kann nicht extern angelegt werden. Der MCP3426 verwendet eine interne Referenzspannung von `2,048 V`.
 
 ## Weitere Eigenschaften
 
@@ -40,7 +42,7 @@ SPS = samples per second
 
 ## Konfiguration
 
-Mit der Standardkonfiguration wird Kanal 1 im 12-Bit-Modus ohne Verstärkung verwendet. 
+Mit der Standardkonfiguration wird Kanal 1 (CH1) im 12-Bit-Modus ohne Verstärkung verwendet. 
 
 Durch Lesen des Registers `0x00` (2 Byte) kann die Spannung gemessen werden. Der Wert des Registers entspricht bei dieser Konfiguration der Eingangsspannung in Millivolt. Negative Werte sind im Zweierkomplement gespeichert. Weiterhin muss beachtet werden, dass beim Lesen des Registers die beiden Byte vertauscht sind.
 
