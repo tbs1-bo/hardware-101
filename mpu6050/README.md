@@ -16,10 +16,17 @@ Schaltung
 
 ![Schaltung](doc/schaltung_mpu6050_Steckplatine.png)
 
-Der IC kann über I²C direkt am Pi betrieben werden. Dort meldet er
-sich unter der Adresse 0x68.
+Der IC kann über den I²C-Bus direkt am Pi betrieben werden. Dort
+meldet er sich unter der Adresse `0x68`. Zunächst muss der Chip aus
+einem Schlafmodus erweckt werden, bevor die Sensordaten zur Verfügung
+stehen.
 
+Quelltext
+---------
 
+Ein Beispielprogramm befindet sich in der Datei [mpu6050.py](mpu6050.py). 
+Es stellt eine Klasse `MPU6050` bereit, die bereits die X-Achse des
+Gyrosensors ausliest und einfach erweitert werden kann.
 
 
 Links
