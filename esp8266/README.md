@@ -106,31 +106,17 @@ shell für den ESP8266.
 ## Ansteuerung über I²C
 
 Der ESP kann über den I²C-Bus auch mit Sensoren oder anderen Modulen
-kommunizieren. Zwei der GPIO-Pins werden dafür als Clock (scl) und
-Daten-Pin (sda) definiert. Das folgende Beispiel nutzt hierfür die Pins
-0 und 2.
-
-    import machine
-    
-	# GPIO0 (scl) und GPIO2 (sda) verwenden
-	# auf dem Board sind dies D3 und D4
-	
-	i2c = machine.I2C(machine.Pin(0), machine.Pin(2)) </code>
-
-Nun kann der Bus gescannt werden.
-
-    >> i2c.scan()
-	[32]
-
-Ein Modul meldet sich von Adresse 32 (0x20). Es kann nun verwendet
-werden.
+kommunizieren. Zwei der GPIO-Pins werden dafür benötigt: einer als
+Clock (scl) und einer als Daten-Pin (sda).
+Die Datei [esp8266_i2c_scan.py](esp8266_i2c_scan.py) zeigt beispielhaft,
+wie man auf dem I²C-Bus nach Geräten scannen kann.
 
 ## Links
 
-- Vortrag der Froscon 2016: [Python für das Internet der Dinge - 
+- Vortrag der Froscon 2016: [Python für das Internet der Dinge -
 Einführung in MicroPython für ESP8266 und Cortex-M4
 Mikroprozessorboards](https://media.ccc.de/v/froscon2016-1791-python_fur_das_internet_der_dinge)
-- Unter Windows werden eventuell Treiber für den USB-UART-Konverter benötigt. 
+- Unter Windows werden eventuell Treiber für den USB-UART-Konverter benötigt.
   Ein populärer Treiber ist unter 
   [MSXFAQ](http://www.msxfaq.de/sonst/bastelbude/nodemcu.htm) verlinkt.
 - [Forum für den 
