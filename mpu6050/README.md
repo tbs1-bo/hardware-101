@@ -1,14 +1,14 @@
 MPU6050 bzw. GY-521
 ===================
 
-Der MPU 6050 ist ein Beschleunigungssensor und Gyrometer, der sich
-über I²C auslesen lässt. Er wird häufig auf einem breakout-board mit
-der Bezeichnung GY-521 geliefert.
+Der MPU 6050 ist ein Beschleunigungssensor, Temperatursensor und 
+Gyrometer, der sich über I²C auslesen lässt. Er wird häufig auf 
+einem breakout-board mit der Bezeichnung GY-521 geliefert.
 
-Details werden in dem [Datenblatt des MPU6050](doc/mpu6050.pdf)
-beschrieben. Eine Beschreibung der Register ist in einem separaten
-Dokument [MPU6050 Register Map](doc/MPU-6000-6050-Register-Map.pdf)
-verfügbar.
+Der IC wir in dem [Datenblatt des MPU6050](doc/mpu6050.pdf)
+beschrieben. Eine ausführliche Beschreibung der zahlreichen Register
+ist in dem separaten Dokument 
+[MPU6050 Register Map](doc/MPU-6000-6050-Register-Map.pdf) verfügbar.
 
 
 Schaltung
@@ -25,7 +25,7 @@ Quelltext
 ---------
 
 Ein Beispielprogramm befindet sich in der Datei [mpu6050.py](mpu6050.py). 
-Es stellt eine Klasse `MPU6050` bereit, die bereits die X-Achse des
+Es stellt eine Klasse `MPU6050` bereit, die die X-Achse des
 Gyrosensors ausliest und einfach erweitert werden kann.
 
 
