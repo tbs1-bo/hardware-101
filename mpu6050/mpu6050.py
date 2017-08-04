@@ -14,7 +14,8 @@ class MPU6050:
         self.i2c = smbus.SMBus(1)
         self.address = i2c_address
 
-        # writing to register power_mgmt awakes the chip after powerup
+        # writing to register power_mgmt awakes the chip after powerup.
+        # more information in section 4.28 of the register map document.
         self.i2c.write_byte_data(self.address, self.regs["POWER_MGMT_1"], 0)
 
     def read_word(self, reg):
