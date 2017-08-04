@@ -10,7 +10,7 @@ Ansteuerung benötigt.
 
 Die LEDs werden mit einem Vorwiderstand von 220 Ohm betrieben. 
 
-Anschluss
+Anschluss (unvollständig)
 ---------
 
 ![Schaltung](doc/schaltung_Steckplatine.png)
@@ -28,6 +28,7 @@ Datei [ledmatrix.py](ledmatrix.py). Ein
 
 Datenblatt
 ----------
+
 Die LED-Matrix ist vergleichbar mit der TC07-11 von Kingbright. 
 - [Datenblatt](doc/TA07-11_TC07-11_datasheet.pdf)
 
