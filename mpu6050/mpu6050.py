@@ -59,42 +59,10 @@ class MPU6050:
                 "y": [gyro_yout, gyro_yout_scaled],
                 "z": [gyro_zout, gyro_zout_scaled]}
 
-    def get_xyz_beschleunigung(self):
-        beschleunigung_xout = self.read_word_2c(0x3b)
-        beschleunigung_yout = self.read_word_2c(0x3d)
-        beschleunigung_zout = self.read_word_2c(0x3f)
-
-        beschleunigung_xout_skaliert = beschleunigung_xout / 16384.0
-        beschleunigung_yout_skaliert = beschleunigung_yout / 16384.0
-        beschleunigung_zout_skaliert = beschleunigung_zout / 16384.0
-
-        #print("beschleunigung_xout: ", ("%6d" % beschleunigung_xout),
-        #       " skaliert: ", beschleunigung_xout_skaliert)
-        #print("beschleunigung_yout: ", ("%6d" % beschleunigung_yout),
-        #       " skaliert: ", beschleunigung_yout_skaliert)
-        #print("beschleunigung_zout: ", ("%6d" % beschleunigung_zout),
-        #       " skaliert: ", beschleunigung_zout_skaliert)
-
-        x_rotation = self.get_x_rotation(beschleunigung_xout_skaliert,
-            beschleunigung_yout_skaliert, beschleunigung_zout_skaliert)
-        y_rotation = self.get_y_rotation(beschleunigung_xout_skaliert,
-            beschleunigung_yout_skaliert, beschleunigung_zout_skaliert)
-
-        #print("X Rotation: ", x_rotation)
-        #print("Y Rotation: ", y_rotation)
-
-        return {"x": [beschleunigung_xout, beschleunigung_xout_skaliert],
-                "y": [beschleunigung_yout, beschleunigung_yout_skaliert],
-                "z": [beschleunigung_zout, beschleunigung_zout_skaliert],
-                "xrotation": x_rotation,
-                "yrotation": y_rotation}
-
 
 if "__main__" == __name__:
         a = MPU6050()
         while True:
-            test = a.get_xyz_rotation()
-            print(test)
-            # test = a.get_xyz_beschleunigung()
-            print(test)
+            xyz_rot = a.get_xyz_rotation()
+            print(xyz_rot)
             time.sleep(0.5)
