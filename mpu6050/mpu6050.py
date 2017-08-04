@@ -1,6 +1,5 @@
 import smbus
 import time
-import math
 
 
 class MPU6050:
@@ -19,6 +18,7 @@ class MPU6050:
         self.i2c.write_byte_data(self.address, self.regs["POWER_MGMT_1"], 0)
 
     def read_word(self, reg):
+        """Read a word (2 Bytes) from a register."""
         h = self.i2c.read_byte_data(self.address, reg)
         l = self.i2c.read_byte_data(self.address, reg + 1)
         value = (h << 8) + l
@@ -33,17 +33,6 @@ class MPU6050:
             return -((0xFFFF - val) + 1)
         else:
             return val
-
-    def dist(self, a, b):
-        return math.sqrt((a * a) + (b * b))
-
-    def get_y_rotation(self, x, y, z):
-        radians = math.atan2(x, self.dist(y, z))
-        return -math.degrees(radians)
-
-    def get_x_rotation(self, x, y, z):
-        radians = math.atan2(y, self.dist(x, z))
-        return math.degrees(radians)
 
     def get_xyz_rotation(self):
         gyro_xout = self.read_word_2c(self.regs["GYRO_XOUT_H"])
