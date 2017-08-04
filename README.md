@@ -9,4 +9,5 @@ Schaltungsbeispiele sowie eine Beschreibung.
 - [lm75](lm75): Temperatursensor
 - [mcp23017](mcp23017): Portexpander (I²C)
 - [mcp23s17](mcp23s17): Portexpander (SPI)
+- [mcp3426](mcp3426): Analog-Digtial-Wandler (I²C)
 - [mpu6050](mpu6050): Beschleunigungssensor und Gyrometer
