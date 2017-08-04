@@ -18,14 +18,16 @@ class MPU6050:
         self.i2c.write_byte_data(self.address, self.regs["POWER_MGMT_1"], 0)
 
     def read_word(self, reg):
-        """Read a word (2 Bytes) from a register."""
+        """Read a word (2 Bytes) from a register. Two bytes (hi and lo) are
+        read from the given register address and are combined into one word."""
+
         h = self.i2c.read_byte_data(self.address, reg)
         l = self.i2c.read_byte_data(self.address, reg + 1)
         value = (h << 8) + l
         return value
 
     def read_word_2c(self, reg):
-        """Read a word in 2-complement."""
+        """Read a word in 2-complement from the given register address."""
 
         val = self.read_word(reg)
 
