@@ -43,19 +43,21 @@ class MPU6050:
         return math.degrees(radians)
 
     def get_xyz_rotation(self):
-        gyroskop_xout = self.read_word_2c(self.regs["GYRO_XOUT_H"])
+        gyro_xout = self.read_word_2c(self.regs["GYRO_XOUT_H"])
         # TODO: the same for the other coordinates
-        gyroskop_yout = -1
-        gyroskop_zout = -1
+        gyro_yout = -1
+        gyro_zout = -1
 
-        gyroskop_xout_skaliert = gyroskop_xout / 131
+        # scaling the value realted to the sensitivity configured in FS_SEL
+        # see section 4.19 in the register map document
+        gyro_xout_scaled = gyro_xout / 131
         # TODO: the same for the other coordinates
-        gyroskop_yout_skaliert = -1
-        gyroskop_zout_skaliert = -1
+        gyro_yout_scaled = -1
+        gyro_zout_scaled = -1
 
-        return {"x": [gyroskop_xout, gyroskop_xout_skaliert],
-                "y": [gyroskop_yout, gyroskop_yout_skaliert],
-                "z": [gyroskop_zout, gyroskop_zout_skaliert]}
+        return {"x": [gyro_xout, gyro_xout_scaled],
+                "y": [gyro_yout, gyro_yout_scaled],
+                "z": [gyro_zout, gyro_zout_scaled]}
 
     def get_xyz_beschleunigung(self):
         beschleunigung_xout = self.read_word_2c(0x3b)
