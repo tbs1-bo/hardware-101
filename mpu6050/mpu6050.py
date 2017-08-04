@@ -25,9 +25,12 @@ class MPU6050:
         return value
 
     def read_word_2c(self, reg):
+        """Read a word in 2-complement."""
+
         val = self.read_word(reg)
+
         if (val >= 0x8000):
-            return -((65535 - val) + 1)
+            return -((0xFFFF - val) + 1)
         else:
             return val
 
