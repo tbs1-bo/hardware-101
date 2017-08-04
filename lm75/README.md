@@ -73,7 +73,7 @@ beschrieben.
 
 ![datenblatt](docs/lm75-temp-description.png)
 
-Das Programm `temperature.py` in diesem Repo enthält ein
+Das Programm [temperature.py](temperature.py) in diesem Repo enthält ein
 unvollständiges Demoprogramm. Lies dir die Dokumentation durch und
 vervollständige es.
 
