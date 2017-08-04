@@ -23,8 +23,10 @@ Ansteuerung
 -----------
 
 Ein Beispielprogramm zur Ansteuerung der Matrix befindet sich in der
-Datei [ledmatrix.py](ledmatrix.py). Ein
-[Video](https://youtu.be/pf3Cuj75bP4) zeigt die Matrix im Betrieb.
+Datei [ledmatrix.py](ledmatrix.py). Ein Video
+[hier](https://youtu.be/pf3Cuj75bP4) oder 
+[hier](https://archive.org/details/led_matrix_demo) zeigt die Matrix 
+in Betrieb.
 
 Datenblatt
 ----------
