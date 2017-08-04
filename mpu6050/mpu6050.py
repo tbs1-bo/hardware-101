@@ -3,93 +3,8 @@ import time
 import math
 
 
-class bmx055:
-    def __init__(self):
-        self.bus = smbus.SMBus(1)
-
-    def read_Acceleration(self):
-        self.bus.write_byte_data(0x18, 0x0F, 0x03)
-        self.bus.write_byte_data(0x18, 0x10, 0x08)
-        self.bus.write_byte_data(0x18, 0x11, 0x00)
-
-        time.sleep(0.5)
-        data = self.bus.read_i2c_block_data(0x18, 0x02, 6)
-
-        xAccl = ((data[1] * 256) + (data[0] & 0xF0)) / 16
-        if xAccl > 2047:
-            xAccl -= 4096
-        yAccl = ((data[3] * 256) + (data[2] & 0xF0)) / 16
-        if yAccl > 2047:
-            yAccl -= 4096
-        zAccl = ((data[5] * 256) + (data[4] & 0xF0)) / 16
-        if zAccl > 2047:
-            zAccl -= 4096
-
-        #print("Acceleration in X-Axis : %d" % xAccl)
-        print("Acceleration in Y-Axis : %d" % yAccl)
-        print("Acceleration in Z-Axis : %d" % zAccl)
-
-        achsen = {"x": xAccl, "y": yAccl, "z": zAccl}
-        return achsen
-
-    def read_rotation(self):
-
-        self.bus.write_byte_data(0x68, 0x0F, 0x04)
-        self.bus.write_byte_data(0x68, 0x10, 0x07)
-        self.bus.write_byte_data(0x68, 0x11, 0x00)
-
-        time.sleep(0.5)
-
-        data = self.bus.read_i2c_block_data(0x68, 0x02, 6)
-
-        xGyro = data[1] * 256 + data[0]
-        if xGyro > 32767:
-            xGyro -= 65536
-        yGyro = data[3] * 256 + data[2]
-        if yGyro > 32767:
-            yGyro -= 65536
-        zGyro = data[5] * 256 + data[4]
-        if zGyro > 32767:
-            zGyro -= 65536
-
-        print("X-Axis of Rotation : %d" % xGyro)
-        print("Y-Axis of Rotation : %d" % yGyro)
-        print("Z-Axis of Rotation : %d" % zGyro)
-
-        achsen = {"x":xGyro, "y":yGyro, "z":zGyro}
-        return achsen
-
-    def read_magnetfeld(self):
-
-        self.bus.write_byte_data(0x10, 0x4B, 0x83)
-        self.bus.write_byte_data(0x10, 0x4C, 0x00)
-        self.bus.write_byte_data(0x10, 0x4E, 0x84)
-        self.bus.write_byte_data(0x10, 0x51, 0x04)
-        self.bus.write_byte_data(0x10, 0x52, 0x0F)
-
-        time.sleep(0.5)
-
-        data = self.bus.read_i2c_block_data(0x10, 0x42, 6)
-
-        xMag = ((data[1] * 256) + (data[0] & 0xF8)) / 8
-        if xMag > 4095:
-            xMag -= 8192
-        yMag = ((data[3] * 256) + (data[2] & 0xF8)) / 8
-        if yMag > 4095:
-            yMag -= 8192
-        zMag = ((data[5] * 256) + (data[4] & 0xFE)) / 2
-        if zMag > 16383:
-            zMag -= 32768
-
-        print("Magnetic field in X-Axis : %d" % xMag)
-        print("Magnetic field in Y-Axis : %d" % yMag)
-        print("Magnetic field in Z-Axis : %d" % zMag)
-
-        achsen = {"x": xMag, "y": yMag, "z": zMag}
-        return achsen
-
-class mpu6050:
-    def __init__(self):
+class MPU6050:
+    def __init__(self, address=0x68):
         self.power_mgmt_1 = 0x6b
         self.power_mgmt_2 = 0x6c
 
@@ -171,8 +86,10 @@ class mpu6050:
 
 
 if "__main__" == __name__:
-        a = mpu6050()
-        test = a.get_xyz_rotation()
-        print(test)
-        test = a.get_xyz_beschleunigung()
-        print(test)
+        a = MPU6050()
+        while True:
+            test = a.get_xyz_rotation()
+            print(test)
+            # test = a.get_xyz_beschleunigung()
+            print(test)
+            time.sleep(0.5)
