@@ -5,7 +5,7 @@ import time
 class MPU6050:
     def __init__(self, i2c_address=0x68):
         # Registers as described in the register map document (section 3)
-        self.regs = {"POWER_MGM1_1": 0x6b,
+        self.regs = {"POWER_MGMT_1": 0x6b,
                      "TEMP_OUT_H": 0x41,
                      "TEMP_OUT_L": 0x42,
                      "GYRO_XOUT_H": 0x43,  # described in section 4.19
