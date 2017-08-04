@@ -89,11 +89,11 @@ Sie können auch abgespeichert werden.
 
 Ebenso einfach können Dateien auf den Chip kopiert werden.
 
-    $ ampy -p /dev/ttyUSB0 put main.py
+    $ ampy -p /dev/ttyUSB0 put main.py
 
 Eine Datei kann auch direkt ausgeführt werden.
 
-    $ ampy run mein_script.py
+    $ ampy -p /dev/ttyUSB0 run mein_script.py
 
 Neben ampy gibt es weitere Tools für den Dateitransfer.
 [mpfshell](https://github.com/wendlers/mpfshell) ist ein
