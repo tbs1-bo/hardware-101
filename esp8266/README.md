@@ -26,9 +26,9 @@ Anschließend kann die vorhandene Firmware auf den ESP8266 zunächst
 gelöscht und mit dem zweiten Befehl die neue Firmware übertragen werden.
 
     $ esptool.py --port /dev/ttyUSB0 erase_flash
-    $ esptool.py --port /dev/ttyUSB0 --baud 115200 write_flash --flash_size=8m 0 esp8266-20160825-v1.8.3-49-ga589fa3.bin
+    $ esptool.py --port /dev/ttyUSB0 --baud 115200 write_flash --flash_size=8m 0 esp8266-DATUM-v1.VERSION.bin
 
-Es kann  bei Geschwindigkeiten über 115200 Baud zu Problemen kommen, dann
+Wenn es bei Übetragungsgeschwindigkeiten über 115200 Baud zu Problemen kommt,
 muss die Geschwindigkeit reduziert werden. Die Befehle sind der
 [Anleitung von
 mircopython](http://docs.micropython.org/en/latest/esp8266/esp8266/tutorial/intro.html#deploying-the-firmware)
@@ -37,7 +37,7 @@ entnommen.
 ## Zugriff über die serielle Schnittstelle
 
 Nun kann mit einem Terminalprogramm auf den Microcontroller zugegriffen
-werden. Das geht mit putty, minicom, screen oder auch miniterm.py.
+werden. Das geht mit `putty, minicom, screen` oder auch `miniterm.py`.
 
     $ screen /dev/ttyUSB0 115200
 
@@ -46,42 +46,40 @@ oder
     $ miniterm.py /dev/ttyUSB0 115200
 
 Für `/dev/ttyUSB0` muss die serielle Schnittstelle angegeben werden,
-unter der sich der Chip am USB-Port anmeldet. Unter Windows findet man
+mit welcher sich der Chip am USB-Port anmeldet. Unter Windows findet man
 die Information im Geräte-Manager: `COM` gefolgt von einer Zahl.
 
-Sollte miniterm.py noch nicht installiert sein, so kann es mit `pip
-install pyserial` nachinstalliert werden.
+Wenn `miniterm.py` noch nicht installiert ist, kann es mit `pip
+install pyserial` installiert werden.
 
 Im Anschluss erhält man eine Python-Konsole, die man für eigene Projekte
 verwenden kann. Beim Start steht der ESP als Access Point zur Verfügung,
-auf den sich Clients mit dem Standardpasswort 'micropythoN' verbinden
-können. Für den Dateitransfer kann dann das Kommandozeilentool
-[webrepl_cli.py](https://github.com/micropython/webrepl)
-verwendet werden.
+auf den sich Clients mit dem Standardpasswort `micropythoN` verbinden
+können.
 
 ## Pin-Belegung
 
 Für das
-[nodemcu-devkit](https://github.com/nodemcu/nodemcu-devkit-v1.0),
-das auch oben abgebildet ist, existiert eine gute Dokumentation der
+[nodemcu-devkit](https://github.com/nodemcu/nodemcu-devkit-v1.0)
+existiert eine gute Dokumentation der
 Pinbelegung.
 
 ![pinout](doc/nodemcu_devkit_v1.0_pinmap.png)
 
 ## Dateitransfer
 
-Mit dem Tool [ampy](https://github.com/adafruit/ampy) lassen
+Mit dem mächtigen Tool [ampy](https://github.com/adafruit/ampy) lassen
 sich leicht Dateien auf den Chip kopieren, von ihm lesen oder auf ihm
 ausführen. Es wird mit `pip3 install adafruit-ampy` installiert. Dazu
 muss ggf. eine bestehende Verbindung über die serielle Schnittstelle
 zuvor beendet werden.
 
-Dateien lassen sich mit ls anzeigen. Der Parameter `-p` gibt die
+Dateien lassen sich mit `ls` anzeigen. Der Parameter `-p` gibt die
 serielle Schnittstelle an, über die die Verbindung besteht.
 
     $ ampy -p /dev/ttyUSB0 ls
 
-Dateien können mit *get* lokal ausgegeben werden.
+Dateien können mit `get` lokal ausgegeben werden.
 
     $ ampy -p /dev/ttyUSB0 get main.py
 
@@ -101,13 +99,16 @@ Neben ampy gibt es weitere Tools für den Dateitransfer.
 [mpfshell](https://github.com/wendlers/mpfshell) ist ein
 shell-basierter Datei-Explorer, um den ESP zu erkunden.
 [rshell](https://github.com/dhylands/rshell) ist eine remote
-shell für den ESP8266.
+shell für den ESP8266. 
+[webrepl_cli.py](https://github.com/micropython/webrepl) ist 
+eine weitere Möglichkeit.
+
 
 ## Ansteuerung über I²C
 
 Der ESP kann über den I²C-Bus auch mit Sensoren oder anderen Modulen
 kommunizieren. Zwei der GPIO-Pins werden dafür benötigt: einer als
-Clock (scl) und einer als Daten-Pin (sda).
+Clock- (scl) und einer als Daten-Pin (sda).
 Die Datei [esp8266_i2c_scan.py](esp8266_i2c_scan.py) zeigt beispielhaft,
 wie man auf dem I²C-Bus nach Geräten scannen kann.
 
