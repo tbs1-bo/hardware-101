@@ -36,20 +36,20 @@ class MPU6050:
 
     def get_xyz_rotation(self):
         gyro_xout = self.read_word_2c(self.regs["GYRO_XOUT_H"])
-        # TODO: the same for the other coordinates
-        gyro_yout = -1
-        gyro_zout = -1
+        # TODO: the same for the other axis y and z.
+        # gyro_yout = ...
+        # gyro_zout = ...
 
-        # scaling the value realted to the sensitivity configured in FS_SEL
-        # see section 4.19 in the register map document
+        # scaling the value relative to the sensitivity value configured in
+        # register FS_SEL see section 4.4 and 4.19 in the register map document
         gyro_xout_scaled = gyro_xout / 131
         # TODO: the same for the other coordinates
-        gyro_yout_scaled = -1
-        gyro_zout_scaled = -1
+        # gyro_yout_scaled = ...
+        # gyro_zout_scaled = ...
 
         return {"x": [gyro_xout, gyro_xout_scaled],
-                "y": [gyro_yout, gyro_yout_scaled],
-                "z": [gyro_zout, gyro_zout_scaled]}
+                "y": "change this",
+                "z": "change this"}
 
 
 if "__main__" == __name__:
