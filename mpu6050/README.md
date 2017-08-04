@@ -6,7 +6,9 @@ Der MPU 6050 ist ein Beschleunigungssensor und Gyrometer, der sich
 der Bezeichnung GY-521 geliefert.
 
 Details werden in dem [Datenblatt des MPU6050](doc/mpu6050.pdf)
-beschrieben.
+beschrieben. Eine Beschreibung der Register ist in einem separaten
+Dokument [MPU6050 Register Map](doc/MPU-6000-6050-Register-Map.pdf)
+verfügbar.
 
 
 Schaltung
