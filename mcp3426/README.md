@@ -46,6 +46,8 @@ Mit der Standardkonfiguration wird Kanal 1 (CH1) im 12-Bit-Modus ohne Verstärku
 
 Durch Lesen des Registers `0x00` (2 Byte) kann die Spannung gemessen werden. Der Wert des Registers entspricht bei dieser Konfiguration der Eingangsspannung in Millivolt. Negative Werte sind im Zweierkomplement gespeichert. Weiterhin muss beachtet werden, dass beim Lesen des Registers die beiden Byte vertauscht sind.
 
+Eine Beispielanwendung befindet sich im Ordner [sample](sample).
+
 ## Datenblatt
 
 - [Datenblatt](docs/mcp3426_datasheet.pdf)
