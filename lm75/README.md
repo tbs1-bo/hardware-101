@@ -18,14 +18,19 @@ verbunden. Der I²C-Overlay kann mit raspi-config aktiviert werden.
 - A0, A1, A2: Beeinflusst die Slaveadresse des Sensors.
 - VCC: Spannungsversorgung des Sensors (3,3 V)
 
-Auf Pulldown-Widerstände an den Busleitungen kann (und sollte) verzichtet werden, da diese bereits am Raspberry Pi vorhanden sind.
+Auf Pulldown-Widerstände an den Busleitungen kann (und sollte)
+verzichtet werden, da diese bereits am Raspberry Pi vorhanden sind.
 
 ## Adressierung
 
-Die ersten 4 Bit der Slaveadresse sind beim LM75 unveränderbar `0b1001`. Über die Pins A0, A1 und A3 können die letzten (niederwertigen) 3 Bit eingestellt werden. Mit der Betriesspannung (VCC bzw. 3,3 V) an einem Pin wird eine `1` an der entsprechenden Stelle gesetzt. Um eine `0` zu setzen, wird der entsprechende Pin auf Masse (GND) gelegt.
+Die ersten 4 Bit der Slaveadresse sind beim LM75 unveränderbar
+`0b1001`. Über die Pins A0, A1 und A3 können die letzten
+(niederwertigen) 3 Bit eingestellt werden. Mit der Betriesspannung
+(VCC bzw. 3,3 V) an einem Pin wird eine `1` an der entsprechenden
+Stelle gesetzt. Um eine `0` zu setzen, wird der entsprechende Pin auf
+Masse (GND) gelegt.
 
 Mit `i2cdetect` kann die Adresse ermittelt werden.
-
 
     $ i2cdetect -y 1
          0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
@@ -36,8 +41,7 @@ Mit `i2cdetect` kann die Adresse ermittelt werden.
     40: -- -- -- -- -- -- -- -- 48 -- -- -- -- -- -- -- 
     50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
     60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
-    70: -- -- -- -- -- -- -- --         
-
+    70: -- -- -- -- -- -- -- --
 
 Der Sensor meldet sich bei diesem Beispiel unter der Adresse
 `0x48`.
@@ -75,7 +79,14 @@ beschrieben.
 
 ## Zweierkomplement
 
-Im Temperaturregister wird der Temperaturwert im [Zweierkomplement](https://de.wikipedia.org/wiki/Zweierkomplement) hinterlegt. Wenn die gemessene Temperatur auch negative Werte annehmen kann, müssen weitere Berechnungen mit dem Inhalt des Registers durchgeführt werden. Im [Beispielprogramm des MPU6050](../mpu6050/mpu6050.py) befindet sich eine Methode, mit der diese Berechnung durchgeführt wird.
+Im Temperaturregister wird der Temperaturwert
+im [Zweierkomplement](https://de.wikipedia.org/wiki/Zweierkomplement)
+hinterlegt. Wenn die gemessene Temperatur auch negative Werte annehmen
+kann, müssen weitere Berechnungen mit dem Inhalt des Registers
+durchgeführt werden. Im 
+[Beispielprogramm des MPU6050](../mpu6050/mpu6050.py)
+befindet sich eine Methode, mit der diese Berechnung durchgeführt
+wird.
 
 ## Beispielprogramm
 
