@@ -29,4 +29,5 @@ Schaltung
 
 Eine einfache Beschaltung lässt eine LED am ersten und letzten
 Ausgangspin jeweils blinken. Statt einer LED kann auch ein Multimeter
-benutzt werden, um die Spannung an den Ausgangpins zu kontrollieren.
+oder ein weiterer Raspberry Pi genutzt werden, um die Spannung an den
+Ausgangpins zu kontrollieren.
