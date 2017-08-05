@@ -1,6 +1,8 @@
 74HC595
 =======
 
+![bild](doc/sn74hc595n_8bitshiftregister.jpg)
+
 Der 74HC595 ist ein Schieberegister, über das mehrere Werte
 gleichzeitig ausgegeben werden können, nachdem sie in ein
 8Bit-Register geschoben wurden.
