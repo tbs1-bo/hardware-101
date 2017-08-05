@@ -2,8 +2,8 @@
 =======
 
 Der 74HC595 ist ein Schieberegister, über das mehrere Werte
-gleichzeitig ausgegeben werden können, nachdem sie in das Register
-geschoben wurden.
+gleichzeitig ausgegeben werden können, nachdem sie in ein
+8Bit-Register geschoben wurden.
 
 ![pinout](doc/pinout.png)
 
@@ -13,9 +13,17 @@ Prozess des Schiebens wird über zwei Clockpins `RCLK`und `SRCLK`
 kontrolloiert. Über den Pin `OE` (*output enabled*) wird bestimmt, ob
 der Inhalt des Register an den Ausgängen anliegen soll oder nicht.
 
+Die genaue Funktionsweise wird im [Datenblatt](doc/sn74hc595.pdf)
+detailisiert beschrieben. Weitere Informationen bieten ein 
+[Artikel von 
+mikrocontroller.net](https://www.mikrocontroller.net/articles/AVR-Tutorial:_Schieberegister) 
+und die [Informationen von
+sparkfun](https://www.sparkfun.com/products/13699).
 
 Schaltung
 ---------
 
 ![schaltung](doc/schaltung_Steckplatine.png)
 
+Eine einfache Beschaltung lässt eine LED am ersten und letzten Pin
+jeweils blinken.
