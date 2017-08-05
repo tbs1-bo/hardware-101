@@ -25,12 +25,13 @@ einfach installieren lässt.
 Anschließend kann die vorhandene Firmware auf den ESP8266 zunächst
 gelöscht und mit dem zweiten Befehl die neue Firmware übertragen werden.
 
-    $ esptool.py --port /dev/ttyUSB0 erase_flash
-    $ esptool.py --port /dev/ttyUSB0 --baud 115200 write_flash --flash_size=8m 0 esp8266-DATUM-v1.VERSION.bin
+    $ esptool.py --port /dev/ttyUSB0 erase_flash
+    $ esptool.py --port /dev/ttyUSB0 --baud 115200 write_flash --flash_size=detect 0 esp8266-DATUM-v1.VERSION.bin
 
 Wenn es bei Übetragungsgeschwindigkeiten über 115200 Baud zu Problemen kommt,
-muss die Geschwindigkeit reduziert werden. Die Befehle sind der
-[Anleitung von
+muss die Geschwindigkeit reduziert werden. 
+
+Die Befehle sind der [Anleitung von
 mircopython](http://docs.micropython.org/en/latest/esp8266/esp8266/tutorial/intro.html#deploying-the-firmware)
 entnommen.
 
