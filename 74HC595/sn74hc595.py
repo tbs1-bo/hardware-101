@@ -29,7 +29,7 @@ class SN74HC595:
         GPIO.setmode(board_mode)
         # all pins are output pins
         for p in [self.ser, self.rclk, self.srclk, self.oe]:
-            GPIO.setup(p, GPIO.OUTPUT)
+            GPIO.setup(p, GPIO.OUT)
 
         self.output_enable(False)
 
@@ -47,8 +47,8 @@ class SN74HC595:
         GPIO.output(self.srclk, GPIO.HIGH)
         time.sleep(self.clk_time)
 
-    def output_enable(self, true_false):
-        GPIO.output(self.oe, not true_false)
+    def output_enable(self, signal):
+        GPIO.output(self.oe, not signal)
 
     def send_ser(self, signal):
         GPIO.output(self.ser, signal)
@@ -61,13 +61,13 @@ def main():
     register.output_enable(True)
 
     # send on bit into the register
-    register.srclk()
+    register.tick_srclk()
     register.send_ser(True)
-    register.srclk()
+    register.tick_srclk()
     register.send_ser(False)
 
     # let the register tick some cycles
-    for i in range(5):
+    for i in range(8):
         register.tick_rclk()
         register.tick_srclk()
 
