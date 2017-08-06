@@ -31,3 +31,9 @@ Eine einfache Beschaltung lässt eine LED am ersten und letzten
 Ausgangspin jeweils blinken. Statt einer LED kann auch ein Multimeter
 oder ein weiterer Raspberry Pi genutzt werden, um die Spannung an den
 Ausgangpins zu kontrollieren.
+
+Quelltext
+---------
+
+Eine Beispielverwendung befindet sich im Quelltext der
+Datei [sn74hc595.py](sn74hc595.py).
