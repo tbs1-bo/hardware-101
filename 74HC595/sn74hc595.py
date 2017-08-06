@@ -1,4 +1,4 @@
-import Rpi.GPIO as GPIO
+import RPi.GPIO as GPIO
 import time
 
 
@@ -6,16 +6,16 @@ class SN74HC595:
     """
     A class that drives an 8Bit-shift register.
 
-         +--u--+
-    Qb  -|1  16|- Vcc
-    Qc  -|2  15|- Qa
-    Qd  -|3  14|- SER
-    Qe  -|4  13|- ~OE
-    Qf  -|5  12|- RCLK
-    Qg  -|6  11|- SRCLK
-    Qh  -|7  10|- ~SRCLR
-    GND -|8   9|- Qh'
-         +-----+
+        ┌──◡──┐
+    Qb  ┤1  16├ Vcc
+    Qc  ┤2  15├ Qa
+    Qd  ┤3  14├ SER
+    Qe  ┤4  13├ ~OE
+    Qf  ┤5  12├ RCLK
+    Qg  ┤6  11├ SRCLK
+    Qh  ┤7  10├ ~SRCLR
+    GND ┤8   9├ Qh'
+        └─────┘
     """
 
     def __init__(self, ser_pin, rclk_pin, srclk_pin, oe_pin,
