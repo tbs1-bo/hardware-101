@@ -6,7 +6,13 @@ Bei dem Beispiel wird die Betriebsspannung des Raspberry Pi mit dem MCP3426 geme
 
 ![Beispielschaltung](mcp3426_sample.png)
 
-Die 5-V-Betriebsspannung kann beim Raspberry Pi am Pin 2 (oder 4) abgegriffen werden. Da der AD-Wandler maximal 2,048 V messen kann, ist es erforderlich den Messbereich mithilfe eines Spannungsteilers anzupassen. Im Beispiel wird die Spannung an eine Reihenschaltung aus drei 10-kΩ-Widerständen angeschlossen. Der AD-Wandler misst allerdings nur die Spannung an einem der Widerstände. Dadurch misst der AD-Wandler nur ein drittel der Betriebsspannung des Raspberry Pi.
+Die 5-V-Betriebsspannung kann beim Raspberry Pi am Pin 2 (oder 4)
+abgegriffen werden. Da der AD-Wandler maximal 2,048 V messen kann, ist
+es erforderlich den Messbereich mithilfe eines Spannungsteilers
+anzupassen. Im Beispiel wird die Spannung an eine Reihenschaltung aus
+drei 10-kΩ-Widerständen angeschlossen. Der AD-Wandler misst allerdings
+nur die Spannung an einem der Widerstände. Dadurch misst der
+AD-Wandler nur ein Drittel der Betriebsspannung des Raspberry Pi.
 
 U_max_neu = U_max_alt * (R_1 + R_2 + R_3) / R_3
 
