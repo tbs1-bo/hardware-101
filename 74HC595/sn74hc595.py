@@ -55,21 +55,24 @@ class SN74HC595:
 
 
 def main():
-    register = SN74HC595(ser_pin=4, rclk_pin=18, srclk_pin=17, oe_pin=22)
+    register = SN74HC595(ser_pin=4, rclk_pin=18, srclk_pin=17, oe_pin=22,
+                         clk_time=0.1)
 
     # enable the output
     register.output_enable(True)
 
     # send on bit into the register
-    register.tick_srclk()
     register.send_ser(True)
     register.tick_srclk()
+    register.tick_rclk()
     register.send_ser(False)
+    register.tick_srclk()
+    register.tick_rclk()
 
     # let the register tick some cycles
     for i in range(8):
-        register.tick_rclk()
         register.tick_srclk()
+        register.tick_rclk()
 
 
 if __name__ == "__main__":
