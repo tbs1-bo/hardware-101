@@ -37,3 +37,12 @@ Quelltext
 
 Eine Beispielverwendung befindet sich im Quelltext der
 Datei [sn74hc595.py](sn74hc595.py).
+
+Demo
+----
+
+![Demo](https://archive.org/download/8bit_shift_register/8bit_shift_register.thumbs/MUTE_20170807_170113_000001.jpg)
+
+Ein Demovideo ([hier](https://archive.org/details/8bit_shift_register) oder 
+[hier](https://youtu.be/Q4rGgCm2nYc)) zeigt eine Verwendung, bei der eine 1
+durch das Register und damit alle Ausgänge geschoben wird.
