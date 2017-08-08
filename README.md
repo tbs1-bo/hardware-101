@@ -12,3 +12,5 @@ Schaltungsbeispiele sowie eine Beschreibung.
 - [mcp23s17](mcp23s17): Portexpander (SPI)
 - [mcp3426](mcp3426): Analog-Digtial-Wandler (I²C)
 - [mpu6050](mpu6050): Beschleunigungssensor und Gyrometer (I²C)
+- [ws2811/ws2812](ws28x): RGB-LED-Streifen
+
