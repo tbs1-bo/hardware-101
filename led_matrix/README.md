@@ -3,10 +3,10 @@ LED-Matrix (5x7)
 
 ![LED-Matrix](doc/ledmatrix.png)
 
-In der Matrix sind die LEDs in Zeilen und Spalten miteinander
-verbunden. Jede LED lässt sich aus einer Kombination von Spalte und
-Zeile einzeln ansteuern. Insgesamt werden 5+7=12 GPIO für die
-Ansteuerung benötigt.
+Die Matrix besteht aus einzelnen LEDs, die zeilen- und spaltenweise
+miteinander verbunden sind. Damit lässt sich Jede LED aus einer
+Kombination von Spalte und Zeile direkt ansteuern. Insgesamt werden
+5+7=12 GPIO für die Ansteuerung benötigt.
 
 Die LEDs werden mit einem Vorwiderstand von 220 Ohm betrieben. 
 
@@ -34,3 +34,10 @@ Datenblatt
 Die LED-Matrix ist vergleichbar mit der TC07-11 von Kingbright. 
 - [Datenblatt](doc/TA07-11_TC07-11_datasheet.pdf)
 
+Weitere Informationen
+---------------------
+
+Ein [Artikel bei 
+mikrocontroller.net](https://www.mikrocontroller.net/articles/LED-Matrix) 
+beschreibt LED-Matrizen genauer und geht auf unterschiedliche Möglichkeiten
+der Ansteuerung ein.
