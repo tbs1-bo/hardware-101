@@ -1,3 +1,25 @@
+"""
+Example code that uses the neopixel api and the Adafruit_NeoPixel class
+(see below) to control an RGB-LED stripe controlled by an WS281X controller.
+
+┌─────────────────────────────────────────────────────┐
+│ Adafruit_NeoPixel                                   │
+├─────────────────────────────────────────────────────┤
+│                                                     │
+├─────────────────────────────────────────────────────┤
+│ Adafruit_NeoPixel(num, pin, freq_hz, dma, invert,   │
+│                   brightness, channel, strip_type)  │
+│ begin(): void                                       │
+│ show(): void                                        │
+│ setPixelColorRGB(n, red, green, blue, white): void  │
+│ setBrightness(brightness): void                     │
+│ getPixels(): LED_Data                               │
+│ numPixels(): int                                    │
+| getPixelColor(n): Color                             │
+└─────────────────────────────────────────────────────┘
+
+"""
+
 import time
 import neopixel
 
@@ -20,12 +42,14 @@ LED_INVERT = False
 # Anzahl der LEDs auf dem Streifen
 LED_COUNT = 8
 
-strip = neopixel.Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA,
-                                   LED_INVERT, LED_BRIGHTNESS)
-strip.begin()
 
-color_red = neopixel.Color(255, 0, 0)
-for i in range(strip.numPixels()):
-    strip.setPixelColor(i, color_red)
-    strip.show()
-    time.sleep(0.5)
+if __name__ == "__main__":
+    strip = neopixel.Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA,
+                                       LED_INVERT, LED_BRIGHTNESS)
+    strip.begin()
+
+    color_red = neopixel.Color(255, 0, 0)
+    for i in range(strip.numPixels()):
+        strip.setPixelColor(i, color_red)
+        strip.show()
+        time.sleep(0.5)
