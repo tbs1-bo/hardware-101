@@ -74,19 +74,19 @@ diese Lichterkette.
 werden.
 
     ┌─────────────────────────────────────────────────────┐
-    | Adafruit_NeoPixel                                   |
+    │ Adafruit_NeoPixel                                   │
     ├─────────────────────────────────────────────────────┤
-    |                                                     |
+    │                                                     │
     ├─────────────────────────────────────────────────────┤
-    | Adafruit_NeoPixel(num, pin, freq_hz, dma, invert,   |
-    |                   brightness, channel, strip_type)  |
-    | begin(): void                                       |
-    | show(): void                                        |
-    | setPixelColorRGB(n, red, green, blue, white): void  |
-    | setBrightness(brightness): void                     |
-    | getPixels(): LED_Data                               |
-    | numPixels(): int                                    |
-    | getPixelColor(n): Color                             |
+    │ Adafruit_NeoPixel(num, pin, freq_hz, dma, invert,   │
+    │                   brightness, channel, strip_type)  │
+    │ begin(): void                                       │
+    │ show(): void                                        │
+    │ setPixelColorRGB(n, red, green, blue, white): void  │
+    │ setBrightness(brightness): void                     │
+    │ getPixels(): LED_Data                               │
+    │ numPixels(): int                                    │
+    | getPixelColor(n): Color                             │
     └─────────────────────────────────────────────────────┘
 
 
