@@ -3,7 +3,7 @@ import time
 
 
 class LCD:
-    CLEAR_DISPLAY = 0x01    
+    CLEAR_DISPLAY = 0x01
     RETURN_HOME = 0x02
     
     def __init__(self, e_pin, rs_pin, d4, d5, d6, d7, boardmode=GPIO.BCM):
@@ -16,11 +16,13 @@ class LCD:
         self.d6 = d6
         self.d7 = d7
 
-        GPIO.setup([self.rs_pin,
-                    self.e_pin,
-                    self.d4, self.d5, self.d6, self.d7], GPIO.OUT)
+        # all pins are output pins
+        GPIO.setup([rs_pin, e_pin, d4, d5, d6, d7],
+                   GPIO.OUT)
 
     def tick(self, time_wait=0.001):
+        """Make one clock cycle on the E pin."""
+
         GPIO.output(self.e_pin, GPIO.LOW)
         time.sleep(time_wait)
         GPIO.output(self.e_pin, GPIO.HIGH)
@@ -31,8 +33,13 @@ class LCD:
         GPIO.output(self.rs_pin, signal)
 
     def send_data(self, byte, data_mode):
-        self.set_rs(data_mode)
+        """Send one byte on the pin connected to d4-d7. data_mode determines
+        whether it should be send as instructions (=0) or data (=1)."""
         
+        self.set_rs(data_mode)
+
+        # creating array of truth values corresponding to set bits in
+        # the byte
         hi = [(byte >> 4) & 1 > 0,
               (byte >> 5) & 1 > 0,
               (byte >> 6) & 1 > 0,
@@ -43,18 +50,12 @@ class LCD:
               (byte >> 2) & 1 > 0,
               (byte >> 3) & 1 > 0]
         
-        print("sending hi", hi, "lo", lo, "byte", byte)
-        # writing upper 4 bits
+        # First: writing upper 4 bits
         GPIO.output([self.d4, self.d5, self.d6, self.d7], hi)
         self.tick()
-        # writing lower 4 bits
+        # Second: writing lower 4 bits
         GPIO.output([self.d4, self.d5, self.d6, self.d7], lo)
         self.tick()
-
-    def _wait_ms(self, ms):
-        end = time.time() + (ms/10000)
-        while time.time() < end:
-            pass
 
 
 if __name__ == "__main__":
@@ -72,4 +73,3 @@ if __name__ == "__main__":
     lcd.send_data(ord("i"), 1)
     
     GPIO.cleanup()
-    
