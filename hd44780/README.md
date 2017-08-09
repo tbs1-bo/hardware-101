@@ -1,15 +1,17 @@
-HD44780
-=======
+LCD-Treiber HD44780 
+===================
 
 ![lcd](doc/lcd.jpg)
 
-Das C1602A ([Datenblatt](doc/C1602a.pdf)) ist ein Breakout-Board eines
-LC-Displays. Das Display wird mit dem
-Controller [HD44780](http://www.mikrocontroller.net/articles/HD44780)
-([Wikipedia](https://de.wikipedia.org/wiki/HD44780),
-[Datenblatt](doc/HD44780.pdf)) angesteuert.
+Das C1602A ([Datenblatt](doc/C1602a.pdf)) ist ein Board, das ein
+LC-Display und einen zugehörigen Treiber auf einer Platine vereint. Das
+Display wird mit dem Treiber 
+[HD44780](http://www.mikrocontroller.net/articles/HD44780)
+angesteuert und in dem
+[Datenblatt](doc/HD44780.pdf) beschrieben.
 
-Neben der Beschreibung auf dieser Seite, erklärt eine
+Neben der Beschreibung auf dieser Seite und einer Erklärung bei
+[Wikipedia](https://de.wikipedia.org/wiki/HD44780), erläutert eine
 [Anleitung von Adafruit](doc/drive-a-16x2-lcd-directly-with-a-raspberry-pi.pdf) die Verwendung des Displays.
 
 Funktionsweise
