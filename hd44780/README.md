@@ -76,6 +76,11 @@ Eine einfache Anzeige wird im Quelltext der Datei [lcd.py](lcd.py) realisiert.
 Nachdem das Display initialisiert wurde, werden zwei Buchstaben an das Display
 gesendet.
 
+Die Bibliothek 
+[Adafruit_Python_CharLCD](https://github.com/adafruit/Adafruit_Python_CharLCD)
+von Adafruit bietet einen leichteren Einstieg, wenn die Ansteuerung technisch
+zu anspruchsvoll ist.
+
 
 Funktionsprüfung
 ----------------
