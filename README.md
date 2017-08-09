@@ -6,6 +6,7 @@ Schaltungsbeispiele sowie eine Beschreibung.
 
 - [74HC595](74HC595): 8Bit-Schieberegister
 - [ESP8266](esp8266): Microcontroller mit WLAN und Micropython-Unterstützung
+- [HD44780](hd44780): LCD Controller
 - [led_matrix](led_matrix): Eine 5x7 LED-Matrix
 - [lm75](lm75): Temperatursensor
 - [mcp23017](mcp23017): Portexpander (I²C)
