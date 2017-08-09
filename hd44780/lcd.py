@@ -6,21 +6,19 @@ class LCD:
     CLEAR_DISPLAY = 1
     RETURN_HOME = 2
     
-    def __init__(self, e_pin, rs_pin, db_pins, boardmode=GPIO.BCM):
-        assert len(db_pins) == 4
-
+    def __init__(self, e_pin, rs_pin, d4, d5, d6, d7, boardmode=GPIO.BCM):
         GPIO.setmode(boardmode)
         
         self.rs_pin = rs_pin
-        GPIO.setup(self.rs_pin, GPIO.OUT)
         self.e_pin = e_pin
-        GPIO.setup(self.e_pin, GPIO.OUT)
-        
-        self.db_pins = db_pins
+        self.d4 = d4
+        self.d5 = d5
+        self.d6 = d6
+        self.d7 = d7
 
-        GPIO.setup(self.rs_pin, GPIO.OUT)
-        for p in self.db_pins:
-            GPIO.setup(p, GPIO.OUT)
+        GPIO.setup([self.rs_pin,
+                    self.e_pin,
+                    self.d4, self.d5, self.d6, self.d7], GPIO.OUT)
 
     def tick(self, time_wait=0.001):
         GPIO.output(self.e_pin, GPIO.LOW)
@@ -35,20 +33,22 @@ class LCD:
     def send_data(self, byte, data_mode):
         self.set_rs(data_mode)
         
-        lo = [byte & 1 > 0,
-              (byte >> 1) & 1 > 0,
-              (byte >> 2) & 1 > 0,
-              (byte >> 3) & 1 > 0]
-        
         hi = [(byte >> 4) & 1 > 0,
               (byte >> 5) & 1 > 0,
               (byte >> 6) & 1 > 0,
               (byte >> 7) & 1 > 0]
         
+        lo = [(byte) & 1 > 0,
+              (byte >> 1) & 1 > 0,
+              (byte >> 2) & 1 > 0,
+              (byte >> 3) & 1 > 0]
+        
         print("sending hi", hi, "lo", lo, "byte", byte)
-        GPIO.output(self.db_pins, hi)
+        # writing upper 4 bits
+        GPIO.output([self.d4, self.d5, self.d6, self.d7], hi)
         self.tick()
-        GPIO.output(self.db_pins, lo)
+        # writing lower 4 bits
+        GPIO.output([self.d4, self.d5, self.d6, self.d7], lo)
         self.tick()
 
     def _wait_ms(self, ms):
@@ -59,11 +59,22 @@ class LCD:
 
 if __name__ == "__main__":
     lcd = LCD(e_pin=10, rs_pin=25,
-              db_pins=[24, 23, 18, 17])
+              d4=24, d5=23, d6=18, d7=17)
 
     # initialize display
     lcd.send_data(0x32, 0)
     lcd.send_data(0x33, 0)
+    # config display
+    dispcon = 4
+    # lcd.send_data(dispcon, 0)
+    dispfunc = 8
+    # lcd.send_data(dispfunc, 0)
+    dispmode = 2
+    lcd.send_data(dispmode, 0)
+
+    # clear display
+    lcd.send_data(0x01, 0)
+    
     # send command
     #lcd.send_data(LCD.CLEAR_DISPLAY, 0)
     #lcd.send_data(LCD.RETURN_HOME, 0)    
