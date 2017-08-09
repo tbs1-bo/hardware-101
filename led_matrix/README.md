@@ -1,6 +1,7 @@
 LED-Matrix (5x7)
 ==============
 
+![Bild](https://archive.org/download/led_matrix_demo/led_matrix_demo.thumbs/MUTE_20170803_085403_000001.jpg)
 ![LED-Matrix](doc/ledmatrix.png)
 
 Die Matrix besteht aus einzelnen LEDs, die zeilen- und spaltenweise
@@ -23,7 +24,11 @@ Ansteuerung
 -----------
 
 Ein Beispielprogramm zur Ansteuerung der Matrix befindet sich in der
-Datei [ledmatrix.py](ledmatrix.py). Ein Video
+Datei [ledmatrix.py](ledmatrix.py). 
+
+![Bild](https://archive.org/download/led_matrix_demo/led_matrix_demo.thumbs/MUTE_20170803_085403_000001.jpg)
+
+Ein Video
 [hier](https://youtu.be/pf3Cuj75bP4) oder 
 [hier](https://archive.org/details/led_matrix_demo) zeigt die Matrix 
 in Betrieb.
