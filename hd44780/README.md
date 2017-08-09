@@ -61,6 +61,8 @@ Schaltung
 
 ![schaltung](doc/schaltung_Steckplatine.png)
 
+![schaltung](doc/lcd_breadboard.jpg)
+
 Das Display wird mit 5V betrieben. Da der Pi nur 3,3 V an seinen
 Eingangspins verträgt, darf das Display nur beschrieben, nicht jedoch
 ausgelesen werden. Daher ist Pin 5 (R/W) mit GND (0=Schreiben)
