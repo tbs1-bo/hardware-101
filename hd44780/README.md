@@ -70,4 +70,4 @@ verbunden, um ein Lesen zu verhindern.
 Quelltext
 ---------
 
-TODO
+Eine einfache Anzeige wird im Quelltext der Datei [lcd.py](lcd.py) realisiert.
