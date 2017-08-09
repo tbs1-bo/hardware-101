@@ -73,3 +73,18 @@ Quelltext
 ---------
 
 Eine einfache Anzeige wird im Quelltext der Datei [lcd.py](lcd.py) realisiert.
+Nachdem das Display initialisiert wurde, werden zwei Buchstaben an das Display
+gesendet.
+
+
+Funktionsprüfung
+----------------
+
+![video](https://archive.org/download/lcd_display_demo/lcd_display_demo.thumbs/MUTE_20170809_220636_000024.jpg)
+
+Ein Video 
+([mp4](https://archive.org/download/lcd_display_demo/MUTE_20170809_220636.mp4),
+[ogg](https://archive.org/download/lcd_display_demo/MUTE_20170809_220636.ogv),
+[YouTube](https://www.youtube-nocookie.com/embed/W6sKhcwKmA4?rel=0)) 
+zeigt die Funktionsweise des Displays.
+
