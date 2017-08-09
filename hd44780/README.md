@@ -10,8 +10,8 @@ Display wird mit dem Treiber
 angesteuert und in dem
 [Datenblatt](doc/HD44780.pdf) beschrieben.
 
-Neben der Beschreibung auf dieser Seite und einer Erklärung bei
-[Wikipedia](https://de.wikipedia.org/wiki/HD44780), erläutert eine
+Neben der Beschreibung auf dieser Seite und einer Erklärung
+bei [Wikipedia](https://de.wikipedia.org/wiki/HD44780), erläutert eine
 [Anleitung von Adafruit](doc/drive-a-16x2-lcd-directly-with-a-raspberry-pi.pdf) die Verwendung des Displays.
 
 Funktionsweise
