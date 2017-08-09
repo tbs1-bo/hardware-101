@@ -3,8 +3,8 @@ import time
 
 
 class LCD:
-    CLEAR_DISPLAY = 1
-    RETURN_HOME = 2
+    CLEAR_DISPLAY = 0x01    
+    RETURN_HOME = 0x02
     
     def __init__(self, e_pin, rs_pin, d4, d5, d6, d7, boardmode=GPIO.BCM):
         GPIO.setmode(boardmode)
@@ -61,23 +61,13 @@ if __name__ == "__main__":
     lcd = LCD(e_pin=10, rs_pin=25,
               d4=24, d5=23, d6=18, d7=17)
 
-    # initialize display
-    lcd.send_data(0x32, 0)
-    lcd.send_data(0x33, 0)
-    # config display
-    dispcon = 4
-    # lcd.send_data(dispcon, 0)
-    dispfunc = 8
-    # lcd.send_data(dispfunc, 0)
-    dispmode = 2
-    lcd.send_data(dispmode, 0)
+    # configure by "return home" instruction
+    lcd.send_data(LCD.RETURN_HOME, 0)
 
     # clear display
-    lcd.send_data(0x01, 0)
+    lcd.send_data(LCD.CLEAR_DISPLAY, 0)
     
     # send command
-    #lcd.send_data(LCD.CLEAR_DISPLAY, 0)
-    #lcd.send_data(LCD.RETURN_HOME, 0)    
     lcd.send_data(ord("H"), 1)
     lcd.send_data(ord("i"), 1)
     
