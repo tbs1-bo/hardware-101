@@ -5,10 +5,10 @@ import time
 class LCD:
     CLEAR_DISPLAY = 0x01
     RETURN_HOME = 0x02
-    
+
     def __init__(self, e_pin, rs_pin, d4, d5, d6, d7, boardmode=GPIO.BCM):
         GPIO.setmode(boardmode)
-        
+
         self.rs_pin = rs_pin
         self.e_pin = e_pin
         self.d4 = d4
@@ -35,7 +35,7 @@ class LCD:
     def send_data(self, byte, data_mode):
         """Send one byte on the pin connected to d4-d7. data_mode determines
         whether it should be send as instructions (=0) or data (=1)."""
-        
+
         self.set_rs(data_mode)
 
         # creating array of truth values corresponding to set bits in
@@ -44,12 +44,12 @@ class LCD:
               (byte >> 5) & 1 > 0,
               (byte >> 6) & 1 > 0,
               (byte >> 7) & 1 > 0]
-        
+
         lo = [(byte) & 1 > 0,
               (byte >> 1) & 1 > 0,
               (byte >> 2) & 1 > 0,
               (byte >> 3) & 1 > 0]
-        
+
         # First: writing upper 4 bits
         GPIO.output([self.d4, self.d5, self.d6, self.d7], hi)
         self.tick()
@@ -67,9 +67,9 @@ if __name__ == "__main__":
 
     # clear display
     lcd.send_data(LCD.CLEAR_DISPLAY, 0)
-    
+
     # send command
     lcd.send_data(ord("H"), 1)
     lcd.send_data(ord("i"), 1)
-    
+
     GPIO.cleanup()
