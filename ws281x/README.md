@@ -101,7 +101,4 @@ Weitere Informationen
 
 Neben diesem Einstieg, gibt es eine weitere Anleitung 
 [Neopixels on RaspberryPi](doc/neopixels-on-raspberry-pi.pdf), die zusätzliche
-Informationen bereithält. 
-
-Das [Open Pixel Protocol](http://openpixelcontrol.org/) soll bei der
-Ansteuerung von LED-Feldern helfen.
+Informationen bereithält.
