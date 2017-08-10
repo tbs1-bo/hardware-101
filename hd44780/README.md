@@ -17,21 +17,20 @@ bei [Wikipedia](https://de.wikipedia.org/wiki/HD44780), erläutert eine
 Funktionsweise
 --------------
 
-Das Display besitzt 16 (manchmal auch nur 14) Pins, über die es
-angesteuert werden kann. 
+Das Display besitzt 16 (manchmal auch nur 14) Pins, die in Reihe angeordnet 
+sind und über die es angesteuert werden kann. 
 
-- Pin 1 Vss: Versorgungsspannung 0 Volt
-- Pin 2 Vcc: Versorgungsspannung + 5 Volt
+- Pin 1 Vss: GND
+- Pin 2 Vcc: Versorgungsspannung 5 Volt
 - Pin 3 V0: Kontrastspannung, zwischen VEE und VCC, kann auf VSS
-  gelegt oder via Poti angeschlossen werden. 
+  gelegt oder via Poti angeschlossen werden. Auch eine Steurung über eine 
+  PWM-Pin wäre möglich.
 - Pin 4 RS: Registerauswahl (0 = Befehlsregister, 1 = Datenregister)
-- Pin 5 R/W: Lese- oder Schreibzugriff; kann fest auf GND gelegt
-  werden, wenn Busy-Auswertung durch Timing ersetzt wird (0 =
-  Schreiben, 1 = Lesen)
+- Pin 5 R/W: Lese- oder Schreibzugriff; wird fest auf GND gelegt
+  werden, damit keine 5V-Signale in den Pi gelangen.
 - Pin 6 E: Taktleitung (Achtung! Diese Leitung hat im Gegensatz zu den
   anderen bei einigen Displays keinen internen Pullup, man muss also
-  einen externen vorsehen, falls man mit Open-Drain-Ausgängen
-  arbeitet.)
+  einen externen vorsehen.)
 - Pin 7 DB0: Datenleitung (bleibt im 4-Bit-Modus offen)
 - Pin 8 DB1: Datenleitung (bleibt im 4-Bit-Modus offen)
 - Pin 9 DB2: Datenleitung (bleibt im 4-Bit-Modus offen)
@@ -40,12 +39,12 @@ angesteuert werden kann.
 - Pin 12 DB5: Datenleitung
 - Pin 13 DB6: Datenleitung
 - Pin 14 DB7: Datenleitung
-- Pin 15 A: Anode der LED-Hintergrundbeleuchtung
+- Pin 15 A: Anode der LED-Hintergrundbeleuchtung (5V)
 - Pin 16 K: Kathode der LED-Hintergrundbeleuchtung
 
 Der RS-Pin bestimmt, ob ein Befehl oder Daten über die Pins DB0-7
-gesendet wird. Die verschiedenen Befehle werden im Abschnitt *Instructions*
-im Datenblatt beschrieben. 
+gesendet werden. Die möglichen Befehle werden im Datenblatt im Abschnitt 
+*Instructions* beschrieben. 
 
 Pin E liefert ein Taktsignal. Bei steigender Flanke werden die Signale
 auf den Pins DB0-7 als Befehl (RS=0) oder Daten (RS=1) interpretiert.
