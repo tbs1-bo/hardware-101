@@ -11,7 +11,9 @@ lassen sich mittels PWM über die Länge des Impulses auf einem Pin
 zudem sehr einfach ansteuern.
 
 Das übersichtliche [Datenblatt](doc/SG90.pdf) des *Micro Servo 9G*
-beschreibt weitere Details.
+beschreibt weitere Details. Auch der 
+[Modellbauservo Ansteuerung](https://www.mikrocontroller.net/articles/Modellbauservo_Ansteuerung)
+bietet viele Informationen.
 
 Schaltung
 ---------
