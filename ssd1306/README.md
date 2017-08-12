@@ -25,9 +25,13 @@ Je nach Beschaltung des SSD1306 kann die Slaveadresse entweder `0x3c` oder `0x3d
 
 ## Kommunikation
 
-Die Datenübertragung erfolgt mit einem Control byte gefolgt von einem Datenbyte. Das Control byte entspricht der Registeradresse bei anderen I²C-Bauteilen. Beim SSD1306 wird mit dem Control byte festgelegt, ob ein Kommando oder Daten übertragen werden soll.
-* Control byte für Kommandos: `0x00`
-* Control byte für Daten: `0x40`
+Die Datenübertragung erfolgt mit einem Kontrollbyte gefolgt von einem
+Datenbyte. Das Kontrollbyte entspricht der Registeradresse bei anderen
+I²C-Bauteilen. Beim SSD1306 wird mit dem Kontrollbyte festgelegt, ob
+ein Kommando oder Daten übertragen werden soll.
+
+* Kontrollbyte für Kommandos: `0x00`
+* Kontrollbyte für Daten: `0x40`
 
 ## Kommandos übertragen
 
