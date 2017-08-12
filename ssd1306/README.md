@@ -51,11 +51,12 @@ Bei der Standardkonfiguration (Page addressing mode) muss zunächst die Page adr
 
 ![Page addressing mode](doc/page_addressing_mode.png)
 
-Beim Horizontal addressing mode springt der Address Pointer nach dem Beschreiben einer Page in die nächste. Dadurch können alle 8 Pages hintereinander beschrieben werden.
+Beim *horizontal addressing mode* springt der Address Pointer nach dem Beschreiben einer Page in die nächste. Dadurch können alle 8 Pages hintereinander beschrieben werden.
 
 ![Horizontal addressing mode](doc/horizontal_addressing_mode.png)
 
-Der Vertical addressing mode funktioniert so ähnlich wie der horizontale, nur dass der Speicher Spaltenweise beschrieben wird.
+Der *vertical addressing mode* funktioniert so ähnlich wie der
+horizontale Modus, nur dass der Speicher Spaltenweise beschrieben wird.
 
 ![Vertical addressing mode](doc/vertical_addressing_mode.png) 
 
