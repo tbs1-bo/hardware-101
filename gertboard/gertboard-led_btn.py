@@ -3,7 +3,7 @@ import time
 
 led_pin = 25
 btn_pin = 24
-o
+
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(led_pin, GPIO.OUT)
 GPIO.setup(btn_pin, GPIO.IN)
