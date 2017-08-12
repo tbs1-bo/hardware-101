@@ -9,4 +9,10 @@ Handbuch
 deutsch Übersetzung befindet sich in
 [Gertboard-Handbuch_deutsch.pdf](doc/Gertboard-Handbuch_deutsch.pdf).
 
+LEDs und Buttons
+----------------
 
+Das Gertboard verfügt im oberen Bereich über zahlreiche LED und drei
+Taster. Das Programm [gertboard-led_btn.py](gertboard-led_btn.py)
+zeigt die Verwendung der Komponenten. Beim Drücken des Tasters wird
+eine LED an und wieder ausgeschaltet.
