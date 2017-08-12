@@ -56,7 +56,7 @@ Beim *horizontal addressing mode* springt der Address Pointer nach dem Beschreib
 ![Horizontal addressing mode](doc/horizontal_addressing_mode.png)
 
 Der *vertical addressing mode* funktioniert so ähnlich wie der
-horizontale Modus, nur dass der Speicher Spaltenweise beschrieben wird.
+horizontale Modus, nur dass der Speicher spaltenweise beschrieben wird.
 
 ![Vertical addressing mode](doc/vertical_addressing_mode.png) 
 
