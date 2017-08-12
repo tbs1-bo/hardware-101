@@ -14,5 +14,6 @@ Schaltungsbeispiele sowie eine Beschreibung.
 - [mcp3426](mcp3426): Analog-Digtial-Wandler (I²C)
 - [mpu6050](mpu6050): Beschleunigungssensor und Gyrometer (I²C)
 - [servo](servo): Servomotoren mittels PWM
+- [ssd1306](ssd1306): OLED Display Treiber
 - [ws2811/ws2812](ws281x): RGB-LED-Streifen
 
