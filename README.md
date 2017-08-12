@@ -6,6 +6,7 @@ Schaltungsbeispiele sowie eine Beschreibung.
 
 - [74HC595](74HC595): 8Bit-Schieberegister
 - [ESP8266](esp8266): Microcontroller mit WLAN und Micropython-Unterstützung
+- [Gertboard](gertboard): Erweiterungsboard für den Raspberry Pi
 - [HD44780](hd44780): LCD Controller
 - [led_matrix](led_matrix): Eine 5x7 LED-Matrix
 - [lm75](lm75): Temperatursensor
