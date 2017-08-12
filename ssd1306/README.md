@@ -1,6 +1,9 @@
 # OLED Display Treiber SSD1306 
 
-Es gibt viele verschiedene OLED-Displays, die mit dem Treiber SSD1306 arbeiten. Der Treiber lässt sich entweder über eine parallele Schnittstelle, SPI oder I²C steuern. Im folgenden wird ein OLED-Modul mit I²C-Schnittstelle vorgestellt.
+Es gibt viele verschiedene OLED-Displays, die mit dem Treiber SSD1306
+arbeiten. Der Treiber lässt sich entweder über eine parallele
+Schnittstelle, SPI oder I²C steuern. Im Folgenden wird ein OLED-Modul
+mit I²C-Schnittstelle vorgestellt.
 
 ![oled_i2c](doc/oled_i2c.jpg)
 
