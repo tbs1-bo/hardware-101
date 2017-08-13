@@ -5,10 +5,14 @@ import spidev
 class DAConverter:
 
     # configuring the DAC
-    # bit 15 = channel, bit 14 = ignored, bit 13 =gain, bit 12 = shutdown,
-    # bits 11-4 data, bits 3-0 ignored
     #
-    # select channel of the DAC
+    # bit 15 = channel
+    # bit 14 = ignored
+    # bit 13 = gain
+    # bit 12 = shutdown
+    # bits 11-4 data (for 8 Bit)
+    # bits 3-0 ignored or used for 10 or 12 Bit converters
+    #
     B_NOTA = 0b10000000
     NOT_GAIN = 0b00100000
     NOT_SHUTDOWN = 0b00010000
