@@ -3,43 +3,52 @@ import spidev
 
 # SPI channel to be used
 channel = 0
-# SPI bus and devive
-spi_bus, spi_dev = 0, 1
 
-# configuring the DAC
-#
-# select channel of the DAC
-B_NOTA = 0b10000000 & 0
-NOT_GAIN = 0b00100000 & 0xFF
-NOT_SHUTDOWN = 0b00010000 & 0xFF
 
-# some sample values that should be converted into analog output
-values = [1, 20, 50, 127, 255]
+class DAConverter:
 
-spi = spidev.SpiDev()
-spi.open(spi_bus, spi_dev)
+    # configuring the DAC
+    # bit 15 = channel, bit 14 = ignored, bit 13 =gain, bit 12 = shutdown,
+    # bits 11-4 data, bits 3-0 ignored
+    #
+    # select channel of the DAC
+    B_NOTA = 0b10000000
+    NOT_GAIN = 0b00100000
+    NOT_SHUTDOWN = 0b00010000
 
-for v in values:
-    print("value", v, end="\t")
-    b1 = B_NOTA | NOT_GAIN | NOT_SHUTDOWN
-    # attach four bits of value to b1
-    b1 = b1 | (v >> 4)
-    # remaining bits for b2
-    b2 = v << 4
-    spi.xfer2([b1, b2])
+    def __init__(self, spi_bus, spi_dev):
+        self.spi = spidev.SpiDev()
+        self.spi.open(spi_bus, spi_dev)
 
-    
-    input("(Enter for next val)")
+        # apply default settings
+        #
+        # using channel a
+        self.b_nota = DAConverter.B_NOTA & 0
+        # use no gain
+        self.not_gain = DAConverter.NOT_GAIN & 0xFF
+        # don't shutdown
+        self.shutdown = DAConverter.NOT_GAIN & 0xFF
 
-r = spi.xfer2([16, 0])   # switch off channel A = 00010000 00000000 [16,0]
-r = spi.xfer2([144, 0])  # switch off channel B = 10010000 00000000 [144,0]
+    def write_digital(self, value):
+        """Write the given value to the bus. apply configurtion first"""
 
-# The DAC is controlled by writing 2 bytes (16 bits) to it.
-# So we need to write a 16 bit word to DAC
+        b1 = self.B_NOTA | self.NOT_GAIN | self.NOT_SHUTDOWN
+        # attach four bits of value to b1
+        b1 = b1 | (value >> 4)
+        # remaining bits for b2
+        b2 = value << 4
+        self.spi.xfer2([b1, b2])
 
-# bit 15 = channel, bit 14 = ignored, bit 13 =gain, bit 12 = shutdown,
-# bits 11-4 data, bits 3-0 ignored
 
-# You feed spidev a decimal number and it converts it to 8 bit binary
-# each argument is a byte (8 bits), so we need two arguments, which
-# together make 16 bits.
+def main():
+    # some sample values that should be converted into analog output
+    values = [1, 20, 50, 127, 255]
+    dac = DAConverter(spi_bus=0, spi_dev=1)
+
+    for v in values:
+        print("value", v, end="\t")
+        dac.write_digital(v)
+        input("(Enter for next val)")
+
+if __name__ == "__main__":
+    main()
