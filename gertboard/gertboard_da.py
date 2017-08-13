@@ -6,16 +6,15 @@ class DAConverter:
 
     # configuring the DAC
     #
-    # bit 15 = channel
+    # bit 15 = channel (~A/B)
+    B_NOTA = 0b10000000
     # bit 14 = ignored
     # bit 13 = gain
+    NOT_GAIN = 0b00100000
     # bit 12 = shutdown
+    NOT_SHUTDOWN = 0b00010000
     # bits 11-4 data (for 8 Bit)
     # bits 3-0 ignored or used for 10 or 12 Bit converters
-    #
-    B_NOTA = 0b10000000
-    NOT_GAIN = 0b00100000
-    NOT_SHUTDOWN = 0b00010000
 
     def __init__(self, spi_bus, spi_dev_select):
         self.spi = spidev.SpiDev()
