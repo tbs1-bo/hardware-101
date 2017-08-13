@@ -57,14 +57,18 @@ deklarieren.
 Digital-Analog Konverter
 ------------------------
 
-Das Gertboard wird mit unterschiedlichen Konvertern mit einer
-Auflösung von 8, 10 oder 12 Bit bestückt. Welches Bauteil genau
+Das Gertboard ist mit einem Digital-Analog-Konverter MCPx02
+([Datenblatt](doc/mcp48x2.pdf)) bestückt, welches über SPI (Abschnitt
+5 im Datenblatt) mit dem Gertboard und damit dem Pi kommuniziert.
+
+Auf dem Gertboard kommen unterschiedliche Konverter mit einer
+Auflösung von 8, 10 oder 12 Bit zum Einsatz. Welches Bauteil genau
 verwendet wurde, lässt sich mit der Bauteilbeschriftung in U10 und dem
 Handbuch ab Seite 32 klären.
 
 Der Konnverter ist mit den Pins DA0 (Kanal 0) und DA1 (Kanal 1) in J29
-verbunden. Er lässt sich über SPI ansteuern und muss mit den Jumpern
-in J11 und J2 wie folgt konfiguriert werden.
+verbunden. Er muss mit Jumpern in J11 und J2 wie folgt auf dem
+Gertboard verdrahtet werden, um mittels SPI kommunizieren zu können.
 
               SCLK  MOSI  MISO     CS
     J11 ...o   o     o     o    o   o    o...
