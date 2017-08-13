@@ -11,8 +11,8 @@ ausführliche Beschreibung befindet sich in dem
 Die darin referenzierten Programme befinden sich in dem Archiv
 [gertboard_py.zip](doc/gertboard_py.zip).
 
-Bestandteile
-------------
+Funktionsblöcke
+---------------
 
 ![Funktionsbloecke](doc/gertboard_funtional_blocks.png)
 
