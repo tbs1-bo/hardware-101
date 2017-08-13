@@ -2,13 +2,13 @@
 
 ## Beschreibung
 
-![MCP3426](docs/mcp3426_pinout.png)
+![MCP3426](doc/mcp3426_pinout.png)
 
 Der MCP3426 ist ein Analog-Digital-Wandler, mit einer I²C-Schnittstelle. Analoge Spannungen (Signale) können an zwei unabhängigen Kanälen gemessen werden. Die Auflösung beträgt je nach Konfiguration 12 Bit, 14 Bit oder 16 Bit.
 
 ## Beschaltung
 
-![Schaltung](docs/mcp3426_grundschaltung.png)
+![Schaltung](doc/mcp3426_grundschaltung.png)
 
 - VDD: Spannungsversorgung (+) (3,3 V)
 - VSS: Spannungsversorgung (-) (Masse)
@@ -50,4 +50,4 @@ Eine Beispielanwendung befindet sich im Ordner [sample](sample).
 
 ## Datenblatt
 
-- [Datenblatt](docs/mcp3426_datasheet.pdf)
+- [Datenblatt](doc/mcp3426_datasheet.pdf)

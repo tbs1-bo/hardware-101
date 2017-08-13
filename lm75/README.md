@@ -2,7 +2,7 @@
 
 ## Beschreibung
 
-![lm75](docs/lm75-pins.png)
+![lm75](doc/lm75-pins.png)
 
 Der LM75 ist ein Temperatursensor, der sich über die I²C-Schnittstelle auslesen
 lässt. Hierfür wird der Raspberry Pi (Master) mit Pin 5 und 3 mit SCL bzw. SDA
@@ -10,7 +10,7 @@ verbunden. Der I²C-Overlay kann mit raspi-config aktiviert werden.
 
 ## Beschaltung
 
-![Schaltung](docs/lm75_schematic.png)
+![Schaltung](doc/lm75_schematic.png)
 
 - SDA: Serial Data (I²C)
 - SCL: Serial Clock (I²C)
@@ -75,7 +75,7 @@ dies mal für den obigen Wert.
 Es ergeben sich 24,5 °C. Im Datenblatt wird der Prozess wie folgt
 beschrieben.
 
-![datenblatt](docs/lm75-temp-description.png)
+![datenblatt](doc/lm75-temp-description.png)
 
 ## Zweierkomplement
 
@@ -96,5 +96,5 @@ vervollständige es.
 
 ## Datenblatt
 
-- [Datenblatt (vollständig)](docs/nxp_lm75_datasheet_full.pdf)
-- [Datenblatt (gekürzt)](docs/nxp_lm75_datasheet_short.pdf)
+- [Datenblatt (vollständig)](doc/nxp_lm75_datasheet_full.pdf)
+- [Datenblatt (gekürzt)](doc/nxp_lm75_datasheet_short.pdf)

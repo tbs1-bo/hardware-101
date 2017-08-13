@@ -2,13 +2,13 @@
 
 ## Beschreibung
 
-![MCP23017](docs/mcp23017_pinout.png)
+![MCP23017](doc/mcp23017_pinout.png)
 
 Der MCP23017 ist ein I/O Expander, der sich über die I²C-Schnittstelle ansteuern lässt. Er verfügt über insgesamt 16 I/O Ports, die sich frei programmieren lassen. Dabei werden jeweils 8 Ports über ein 8-Bit-Register konfiguriert bzw. angesteuert.
 
 ## Beschaltung
 
-![Schaltung](docs/mcp23017_grundschaltung.png)
+![Schaltung](doc/mcp23017_grundschaltung.png)
 
 - VDD: Spannungsversorgung (+) (3,3 V)
 - VSS: Spannungsversorgung (-) (Masse)
@@ -66,4 +66,4 @@ Das IC verfügt für jeden Port über 8 weitere Register. Unter anderem kann man
 
 ## Datenblatt
 
-- [Datenblatt](docs/mcp23017_mcp23S17_datasheet.pdf)
+- [Datenblatt](doc/mcp23017_mcp23S17_datasheet.pdf)

@@ -2,7 +2,7 @@
 
 ## Beschreibung
 
-![MCP23S17](docs/mcp23s17_pinout.png)
+![MCP23S17](doc/mcp23s17_pinout.png)
 
 Der MCP23S17 ist ein I/O Expander, der sich über die SPI-Schnittstelle ansteuern lässt. Er verfügt über insgesamt 16 I/O Ports, die sich frei programmieren lassen. Dabei werden jeweils 8 Ports über ein 8-Bit-Register konfiguriert bzw. angesteuert.
 
@@ -10,7 +10,7 @@ Der MCP23S17 ist die SPI-Variante des MCP23017, der über den I²C-Bus angesteue
 
 ## Beschaltung
 
-![Schaltung](docs/mcp23s17_grundschaltung.png)
+![Schaltung](doc/mcp23s17_grundschaltung.png)
 
 - VDD: Spannungsversorgung (+) (3,3 V)
 - VSS: Spannungsversorgung (-) (Masse)
@@ -70,4 +70,4 @@ Das IC verfügt für jeden Port über 8 weitere Register. Unter anderem kann man
 
 ## Datenblatt
 
-- [Datenblatt](docs/mcp23017_mcp23S17_datasheet.pdf)
+- [Datenblatt](doc/mcp23017_mcp23S17_datasheet.pdf)
