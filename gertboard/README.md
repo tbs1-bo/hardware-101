@@ -57,7 +57,7 @@ deklarieren.
 Digital-Analog Konverter
 ------------------------
 
-Das Gertboard ist mit einem Digital-Analog-Konverter MCPx02
+Das Gertboard ist mit einem Digital-Analog-Konverter MCP48x2
 ([Datenblatt](doc/mcp48x2.pdf)) bestückt, welches über SPI (Abschnitt
 5 im Datenblatt) mit dem Gertboard und damit dem Pi kommuniziert.
 
