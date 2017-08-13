@@ -53,3 +53,29 @@ ist nur bei den Taster-Ports B1-B3 vefügbar.
 
 Der Jumper B5 (out) wurde gesetzt, um den Port B5 als Ausgang zu
 deklarieren.
+
+Digital-Analog Konverter
+------------------------
+
+Das Gertboard wird mit unterschiedlichen Konvertern mit einer
+Auflösung von 8, 10 oder 12 Bit bestückt. Welches Bauteil genau
+verwendet wurde, lässt sich mit der Bauteilbeschriftung in U10 und dem
+Handbuch ab Seite 32 klären.
+
+Der Konnverter ist mit den Pins DA0 (Kanal 0) und DA1 (Kanal 1) in J29
+verbunden. Er lässt sich über SPI ansteuern und muss mit den Jumpern
+in J11 und J2 wie folgt konfiguriert werden.
+
+              SCLK MOSI MISO     CS
+	J11 ...o   o    o    o    o   o    o...
+	           |    |    |        |
+    J2  ...o   o    o    o    o   o    o...
+	          GP11 GP10 GP09     GP07
+
+Die analoge Ausgangsspannung ergibt sich bei einer Auflösug von 8-Bit
+aus der Formel:
+
+    Vout = (Din/256) * 2,084V
+
+Für einen Test mit dem Programm [gertboard_da.py](gertboard_da.py)
+wird ein Multimeter benötigt, das in J28 an DA0 angeschlossen wird.
