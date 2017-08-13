@@ -13,9 +13,9 @@ class DAConverter:
     NOT_GAIN = 0b00100000
     NOT_SHUTDOWN = 0b00010000
 
-    def __init__(self, spi_bus, spi_dev):
+    def __init__(self, spi_bus, spi_dev_select):
         self.spi = spidev.SpiDev()
-        self.spi.open(spi_bus, spi_dev)
+        self.spi.open(spi_bus, spi_dev_select)
 
         # apply default settings
         #
@@ -27,20 +27,22 @@ class DAConverter:
         self.shutdown = DAConverter.NOT_GAIN & 0xFF
 
     def write_digital(self, value):
-        """Write the given value to the bus. apply configurtion first"""
+        """Write the given value to the bus. apply configurtion first."""
+        assert 0 <= value < 2**12, "Maximum of 12 Bits allowed."
 
         b1 = self.B_NOTA | self.NOT_GAIN | self.NOT_SHUTDOWN
         # attach four bits of value to b1
         b1 = b1 | (value >> 4)
         # remaining bits for b2
         b2 = value << 4
+
         self.spi.xfer2([b1, b2])
 
 
 def main():
     # some sample values that should be converted into analog output
     values = [1, 20, 50, 127, 255]
-    dac = DAConverter(spi_bus=0, spi_dev=1)
+    dac = DAConverter(spi_bus=0, spi_dev_select=1)
 
     for v in values:
         print("value", v, end="\t")
