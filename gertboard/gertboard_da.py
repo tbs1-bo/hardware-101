@@ -7,13 +7,15 @@ channel = 0
 spi_bus, spi_dev = 0, 1
 
 # some sample values that should be converted into analog output
-values = [1, 20, 50, 256]
+values = [1, 20, 50, 127, 255]
 
 spi = spidev.SpiDev()
 spi.open(spi_bus, spi_dev)
 
 for v in values:
-    spi.xfer2([0, v])
+    print("Value", v, end="\t")
+    spi.xfer2([v, 0])
+    input("(Enter for next value)")
 
 r = spi.xfer2([16, 0])   # switch off channel A = 00010000 00000000 [16,0]
 r = spi.xfer2([144, 0])  # switch off channel B = 10010000 00000000 [144,0]
