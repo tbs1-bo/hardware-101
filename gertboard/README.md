@@ -2,8 +2,8 @@ Gertboard
 =========
 
 Das Gertboard ist ein vielfältiges Erweiterungsboard für den Raspberry
-Pi. Es vereint verschiedene Komponenten auf einer Platine. Ein
-ausführliche Beschreibung befindet sich in den
+Pi. Es vereint verschiedene Komponenten auf einer Platine. Eine
+ausführliche Beschreibung befindet sich in dem
 Handbuch
 [Gertboard_UM_with_python.pdf](doc/Gertboard_UM_with_python.pdf). Eine
 deutsch Übersetzung befindet sich in
