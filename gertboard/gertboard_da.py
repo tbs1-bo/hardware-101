@@ -1,9 +1,6 @@
 # SPI controller is part of package python3-spidev
 import spidev
 
-# SPI channel to be used
-channel = 0
-
 
 class DAConverter:
 
