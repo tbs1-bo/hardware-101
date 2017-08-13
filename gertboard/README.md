@@ -57,10 +57,11 @@ deklarieren.
 Digital-Analog Konverter
 ------------------------
 
-Das Gertboard wird mit unterschiedlichen Konvertern mit einer
-Auflösung von 8, 10 oder 12 Bit bestückt. Welches Bauteil genau
-verwendet wurde, lässt sich mit der Bauteilbeschriftung in U10 und dem
-Handbuch ab Seite 32 klären.
+Das Gertboard wird mit mit einem MCPx02 ([Datenblatt](doc/mcp48x2.pdf)
+Digital-Analog-Konverter bestückt. Auf dem Gertboard kommen
+unterschiedliche Konverter mit einer Auflösung von 8, 10 oder 12 Bit
+zum Einsatz. Welches Bauteil genau verwendet wurde, lässt sich mit der
+Bauteilbeschriftung in U10 und dem Handbuch ab Seite 32 klären.
 
 Der Konnverter ist mit den Pins DA0 (Kanal 0) und DA1 (Kanal 1) in J29
 verbunden. Er lässt sich über SPI ansteuern und muss mit den Jumpern
