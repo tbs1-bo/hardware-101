@@ -20,12 +20,16 @@ spi = spidev.SpiDev()
 spi.open(spi_bus, spi_dev)
 
 for v in values:
+    print("value", v, end="\t")
     b1 = B_NOTA | NOT_GAIN | NOT_SHUTDOWN
     # attach four bits of value to b1
     b1 = b1 | (v >> 4)
     # remaining bits for b2
     b2 = v << 4
     spi.xfer2([b1, b2])
+
+    
+    input("(Enter for next val)")
 
 r = spi.xfer2([16, 0])   # switch off channel A = 00010000 00000000 [16,0]
 r = spi.xfer2([144, 0])  # switch off channel B = 10010000 00000000 [144,0]
