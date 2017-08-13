@@ -11,6 +11,22 @@ ausführliche Beschreibung befindet sich in dem
 Die darin referenzierten Programme befinden sich in dem Archiv
 [gertboard_py.zip](doc/gertboard_py.zip).
 
+Bestandteile
+------------
+
+![Funktionsbloecke](doc/gertboard_funtional_blocks.png)
+
+Die verschiedene Bestandteile des Gertboard sind im oberen Bild
+farblich hervorgehoben.
+
+* 12 gebufferte I/O Ports
+* 3 Taster
+* 6 open collector Treiber (50V, 0.5A)
+* 1 Motortreiber (18V, 2A)
+* 1 ATmega microcontroller (28-pin dual in line)
+* 1 Digital-Analog Konverter (2 Kanäle: 8, 10, or 12 bit)
+* 1 Analog-Digital Konverter (2 Kanäle: 10 bit)
+
 LEDs und Buttons
 ----------------
 
