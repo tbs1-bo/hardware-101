@@ -57,7 +57,7 @@ deklarieren.
 Digital-Analog Konverter
 ------------------------
 
-Das Gertboard wird mit mit einem MCPx02 ([Datenblatt](doc/mcp48x2.pdf)
+Das Gertboard wird mit mit einem MCPx02 ([Datenblatt](doc/mcp48x2.pdf))
 Digital-Analog-Konverter bestückt. Auf dem Gertboard kommen
 unterschiedliche Konverter mit einer Auflösung von 8, 10 oder 12 Bit
 zum Einsatz. Welches Bauteil genau verwendet wurde, lässt sich mit der
