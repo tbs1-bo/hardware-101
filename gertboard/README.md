@@ -66,11 +66,11 @@ Der Konnverter ist mit den Pins DA0 (Kanal 0) und DA1 (Kanal 1) in J29
 verbunden. Er lässt sich über SPI ansteuern und muss mit den Jumpern
 in J11 und J2 wie folgt konfiguriert werden.
 
-              SCLK MOSI MISO     CS
-	J11 ...o   o    o    o    o   o    o...
-	           |    |    |        |
-    J2  ...o   o    o    o    o   o    o...
-	          GP11 GP10 GP09     GP07
+              SCLK  MOSI  MISO     CS
+    J11 ...o   o     o     o    o   o    o...
+               |     |     |        |
+    J2  ...o   o     o     o    o   o    o...
+              GP11  GP10  GP09     GP07
 
 Die analoge Ausgangsspannung ergibt sich bei einer Auflösug von 8-Bit
 aus der Formel:
