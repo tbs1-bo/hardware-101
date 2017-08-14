@@ -68,10 +68,11 @@ können.
 
 ## Pin-Belegung
 
-Für das
-[nodemcu-devkit](https://github.com/nodemcu/nodemcu-devkit-v1.0)
-existiert eine gute Dokumentation der
-Pinbelegung.
+Für das [nodemcu-devkit](https://github.com/nodemcu/nodemcu-devkit-v1.0)
+existiert eine gute Dokumentation der Pinbelegung. Die Nummerierung
+bezieht sich jeweils immer auf die Pinnummer am Chip und kann bei
+unterschiedlichen Ausführungen von der Nummerierung auf dem jeweiligen
+Board abweichen.
 
 ![pinout](doc/nodemcu_devkit_v1.0_pinmap.png)
 
