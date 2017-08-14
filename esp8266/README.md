@@ -12,6 +12,15 @@ auf dem Bild zu sehen ist, verfügt der Baustein über einen
 USB-Anschluss, über den man mit dem Chip kommunizieren kann. Die PINs
 sind herausgeführt und lassen sich in Schaltungen verwenden.
 
+Viele technische Details befinden sich in den folgenden Dokumenten:
+
+- [datasheet](doc/0a-esp8266ex_datasheet_en.pdf)
+- [system description](doc/0b-esp8266_system_description_en.pdf)
+- [AT instruction set](doc/4a-esp8266_at_instruction_set_en.pdf)
+- [AT command examples](doc/4b-esp8266_at_command_examples_en.pdf)
+- [technical reference](doc/esp8266-technical_reference_en.pdf)
+
+
 ## Installation der Firmware
 
 Nun soll die Firmware für Micropython installiert werden. Diese lässt
