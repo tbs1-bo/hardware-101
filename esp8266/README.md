@@ -45,8 +45,11 @@ entnommen.
 
 ## Zugriff über die serielle Schnittstelle
 
-Nun kann mit einem Terminalprogramm auf den Microcontroller zugegriffen
-werden. Das geht mit `putty, minicom, screen` oder auch `miniterm.py`.
+Nun kann mit einem Terminalprogramm auf den Microcontroller
+zugegriffen werden. Das geht mit `putty, minicom, screen` oder auch
+`miniterm.py`, wenn das Board über einen USB-Anschluss
+verfügt. Ansonsten fungieren die Pins GPIO1=TX und GPIO3=RX als
+serielle Schnittstelle. Die Baudrate beträgt 115200.
 
     $ screen /dev/ttyUSB0 115200
 
