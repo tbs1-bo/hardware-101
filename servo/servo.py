@@ -2,28 +2,56 @@ import RPi.GPIO as GPIO
 import time
 
 # set pin for hardware PWM
-servopin = 17
+SERVOPIN = 17
 # set a frequency to be used by the servo (in Hz)
-frequency = 50
-# the pin numbering boardmode of the pi
-boardmode = GPIO.BCM
+FREQUENCY = 50
 
-# first setup the pi
-GPIO.setmode(boardmode)
-GPIO.setup(servopin, GPIO.OUT)
+# some default duty cycles
+LEFT = 2
+RIGHT = 12
+CENTER = 8
 
-# creating pwm pin
-pwm = GPIO.PWM(servopin, frequency)
 
-print("Starting PWM")
-pwm.start(2.5)
-time.sleep(3)
+class Servo:
+    def __init__(self, servopin, dc_defaults,
+                 boardmode=GPIO.BCM, frequency=50):
+        """Create servo connected with frequency freq to pin. dc_defaults
+        contains default duty cylces for values of left, center and
+        right.
+        """
+        self.left, self.center, self.right = dc_defaults
 
-# test different duty cycles
-for dc in [3, 4, 5, 7, 9]:
-    print("duty cycle:", dc)
-    pwm.ChangeDutyCycle(dc)
+        # first setup the pi
+        GPIO.setmode(boardmode)
+        GPIO.setup(servopin, GPIO.OUT)
+
+        # creating pwm pin
+        self.pwm = GPIO.PWM(servopin, frequency)
+        self.pwm.start(0)
+
+    def change_dc(self, duty_cycle):
+        self.pwm.ChangeDutyCycle(duty_cycle)
+
+    def stop(self):
+        self.pwm.stop()
+
+
+def main():
+    servo = Servo(servopin=SERVOPIN, dc_defaults=[LEFT, CENTER, RIGHT],
+                  frequency=FREQUENCY)
+
+    servo.change_dc(LEFT)
+    time.sleep(2)
+    servo.change(RIGHT)
+    time.sleep(2)
+    servo.change(CENTER)
     time.sleep(2)
 
-pwm.stop()
-GPIO.cleanup()
+    servo.stop()
+    GPIO.cleanup()
+
+
+if __name__ == "__main__":
+    main()
+
+
