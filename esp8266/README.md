@@ -4,15 +4,18 @@ ESP8266
 ![esp8266](doc/esp8266.jpg)
 
 [Micropython](https://micropython.org) ist eine Variante von Python,
-die auf Mikrocontroller zugeschnitten ist. Der
+die auf verschiedene Mikrocontroller zugeschnitten ist. Der
 [ESP8266](http://www.mikrocontroller.net/articles/ESP8266) ist ein
-günstiger (~4$) Baustein mit WLAN-Funktionen, für den eine
+solcher günstiger (~4$) Baustein mit WLAN-Funktionen, für den eine
 Micropython-Firmware existiert. Über das nodemcu Development-Kit, das
 auf dem Bild zu sehen ist, verfügt der Baustein über einen
 USB-Anschluss, über den man mit dem Chip kommunizieren kann. Die PINs
-sind herausgeführt und lassen sich in Schaltungen verwenden.
+sind herausgeführt und lassen sich in Schaltungen verwenden. 
 
-Viele technische Details befinden sich in den folgenden Dokumenten:
+Die
+[Anleitung von Micopython für den ESP8266](http://docs.micropython.org/en/latest/esp8266/index.html)
+erklärt viele wesentliche Funktionen. Weitere technische Details 
+befinden sich in den folgenden Dokumenten:
 
 - [datasheet](doc/0a-esp8266ex_datasheet_en.pdf)
 - [system description](doc/0b-esp8266_system_description_en.pdf)
