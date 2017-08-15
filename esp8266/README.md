@@ -116,7 +116,7 @@ Neben ampy gibt es weitere Tools für den Dateitransfer.
 shell-basierter Datei-Explorer, um den ESP zu erkunden.
 [rshell](https://github.com/dhylands/rshell) ist eine remote
 shell für den ESP8266. 
-[webrepl_cli.py](https://github.com/micropython/webrepl) ist 
+[webrepl](https://github.com/micropython/webrepl) ist 
 eine weitere Möglichkeit.
 
 
