@@ -6,15 +6,15 @@ SERVOPIN = 17
 # set a frequency to be used by the servo (in Hz)
 FREQUENCY = 50
 
-# some default duty cycles
-LEFT = 2
+# some default duty cycles for different positions
+LEFT = 2.4
 RIGHT = 12
-CENTER = 8
+CENTER = 7.5
 
 
 class Servo:
     def __init__(self, servopin, dc_defaults,
-                 boardmode=GPIO.BCM, frequency=50):
+                 boardmode=GPIO.BCM, freq=50):
         """Create servo connected with frequency freq to pin. dc_defaults
         contains default duty cylces for values of left, center and
         right.
@@ -26,10 +26,12 @@ class Servo:
         GPIO.setup(servopin, GPIO.OUT)
 
         # creating pwm pin
-        self.pwm = GPIO.PWM(servopin, frequency)
+        self.pwm = GPIO.PWM(servopin, freq)
         self.pwm.start(0)
 
     def change_dc(self, duty_cycle):
+        assert 0 <= duty_cycle <= 100.0
+
         self.pwm.ChangeDutyCycle(duty_cycle)
 
     def stop(self):
@@ -38,13 +40,14 @@ class Servo:
 
 def main():
     servo = Servo(servopin=SERVOPIN, dc_defaults=[LEFT, CENTER, RIGHT],
-                  frequency=FREQUENCY)
+                  freq=FREQUENCY)
 
+    # move servo to left, right and center
     servo.change_dc(LEFT)
     time.sleep(2)
-    servo.change(RIGHT)
+    servo.change_dc(RIGHT)
     time.sleep(2)
-    servo.change(CENTER)
+    servo.change_dc(CENTER)
     time.sleep(2)
 
     servo.stop()
