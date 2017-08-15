@@ -139,8 +139,8 @@ Mikroprozessorboards](https://media.ccc.de/v/froscon2016-1791-python_fur_das_int
 - [Forum für den 
   Informationsaustausch](http://forum.micropython.org/viewforum.php?f=16) 
   mit Gleichgesinnten.
-- [Tutorialreihe mit Videos von Tony 
-  DiCola](https://learn.adafruit.com/category/micropython) von Adafruit, die 
-  den ESP8266 und die Ansteuerung über MicroPython ausführlich darstellt.
+- [Tutorialreihe mit Videos von Tony DiCola](https://learn.adafruit.com/category/micropython) 
+  von Adafruit, die den ESP8266 und die Ansteuerung über MicroPython 
+  ausführlich darstellt.
 
 
