@@ -72,9 +72,10 @@ verwenden kann. Beim Start steht der ESP als Access Point zur Verfügung,
 auf den sich Clients mit dem Standardpasswort `micropythoN` verbinden
 können.
 
-## Pin-Belegung
+## Pin-Belegung (nodemcu devkit)
 
-Für das [nodemcu-devkit](https://github.com/nodemcu/nodemcu-devkit-v1.0)
+Das [nodemcu-devkit](https://github.com/nodemcu/nodemcu-devkit-v1.0)
+ist eines der populärsten Boards, das den ESP8266 verbaut. Hierfür
 existiert eine gute Dokumentation der Pinbelegung. Die Nummerierung
 bezieht sich jeweils immer auf die Pinnummer am Chip und kann bei
 unterschiedlichen Ausführungen von der Nummerierung auf dem jeweiligen
