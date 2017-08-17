@@ -6,7 +6,7 @@ DS18B20
 Der DS18B20 ist ein günstiger Temperatursensor (~1€), der seine Daten
 über das 1-Wire-Protokoll ausgibt.
 
-Weitere Details sind in dem [Datenblatt](doc/DS18B20.pdf) und der
+Weitere Details sind in dem [Datenblatt](doc/DS18B20.pdf) und auf der
 Seite [pinout.xyz](https://pinout.xyz/pinout/1_wire) beschrieben.
 
 
@@ -35,13 +35,15 @@ Das Bauteil ist anschließend im Dateisystem vefügbar. Das Vezeichnis
 `/sys/devices/w1_bus_master` enthält in Dateien verschiedene
 Informationen über den Bus und die daran angeschlossenen Slaves.
 
-> w1_master_max_slave_count
->                    - (rw) maximum number of slaves to search for at a time
-> w1_master_name     - (ro) the name of the device (w1_bus_masterX)
-> w1_master_pullup   - (rw) 5V strong pullup 0 enabled, 1 disabled
-> w1_master_slave_count
->	                    - (ro) the number of slaves found
-> w1_master_slaves   - (ro) the names of the slaves, one per line
+```
+w1_master_max_slave_count
+                   - (rw) maximum number of slaves to search for at a time
+w1_master_name     - (ro) the name of the device (w1_bus_masterX)
+w1_master_pullup   - (rw) 5V strong pullup 0 enabled, 1 disabled
+w1_master_slave_count
+                   - (ro) the number of slaves found
+w1_master_slaves   - (ro) the names of the slaves, one per line
+```
 
 [Quelle: kernel.org](https://www.kernel.org/doc/Documentation/w1/w1.generic)
 
