@@ -17,6 +17,7 @@ Die
 erklärt viele wesentliche Funktionen. Weitere technische Details 
 befinden sich in den folgenden Dokumenten:
 
+- [quick start guide](doc/esp8266_quick_start_guide_en.pdf)
 - [datasheet](doc/0a-esp8266ex_datasheet_en.pdf)
 - [system description](doc/0b-esp8266_system_description_en.pdf)
 - [AT instruction set](doc/4a-esp8266_at_instruction_set_en.pdf), [AT command examples](doc/4b-esp8266_at_command_examples_en.pdf)
