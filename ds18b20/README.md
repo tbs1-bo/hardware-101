@@ -52,12 +52,16 @@ beschreibt die Gerätefamilie, der Rest die Seriennummer. Für jeden
 Slave wird ein Verzeichnis angelegt, in dem die Daten in der Datei
 `w1_slave`liegen.
 
-	pi@meinpi:/sys/devices/w1_bus_master1/28-0000064d724b $ cat w1_slave 
+    pi@meinpi:~ $ cat /sys/devices/w1_bus_master1/28-0000064d724b/w1_slave 
 	96 01 4b 46 7f ff 0a 10 0a : crc=0a YES
 	96 01 4b 46 7f ff 0a 10 0a t=25375
 
-Der Sensorwert mit `t=25375` bezeichnet einen Temperaturwert von
-23,375 °C.
+Die erste Zeile zeigt mit `crc=0a` eine Checksumme an, die bei der
+Übertragung generiert wurde. Das `YES` bestätigt dies Checksumme und
+damit eine korrekte Übertragung der Daten. 
+
+In der zweiten Zeile steht Sensorwert mit `t=25375` - ein
+Temperaturwert von 23,375 °C.
 
 Quelltext
 ---------
