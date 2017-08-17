@@ -10,7 +10,9 @@ solcher günstiger (~4$) Baustein mit WLAN-Funktionen, für den eine
 Micropython-Firmware existiert. Über das nodemcu Development-Kit, das
 auf dem Bild zu sehen ist, verfügt der Baustein über einen
 USB-Anschluss, über den man mit dem Chip kommunizieren kann. Die PINs
-sind herausgeführt und lassen sich in Schaltungen verwenden. 
+sind herausgeführt und lassen sich in Schaltungen verwenden. Genaue 
+Details des devkit werden im [Datenblatt](doc/NODEMCU_DEVKIT_V1.0.PDF)
+beschrieben.
 
 Die
 [Anleitung von Micopython für den ESP8266](http://docs.micropython.org/en/latest/esp8266/index.html)
