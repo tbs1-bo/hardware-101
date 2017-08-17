@@ -13,6 +13,8 @@ Seite [pinout.xyz](https://pinout.xyz/pinout/1_wire) beschrieben.
 Schaltung
 ---------
 
+![schaltung](doc/schaltung_bb.png)
+
 Die drei Pins an dem Sensor müssen mit einer Spannungsversorgung und
 Masse beschaltet werden. Der dritte Pin wird für die Datenübertragung
 benötigt. Für den 1-WIRE Bus ist auf dem Pi hierfür der Pin BCM 4
