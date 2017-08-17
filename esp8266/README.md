@@ -26,11 +26,14 @@ befinden sich in den folgenden Dokumenten:
 
 ## Installation der Firmware
 
-Nun soll die Firmware für Micropython installiert werden. Diese lässt
+Zuerst muss die Firmware für Micropython installiert werden. Diese lässt
 sich von der Webseite
-[herunterladen](https://micropython.org/download/#esp8266).
-Für die Installation gibt es das Tool `esptool.py`, das sich ebenso
-einfach installieren lässt.
+[herunterladen](https://micropython.org/download/#esp8266)
+oder
+[selbst kompilieren](https://github.com/micropython/micropython/tree/master/esp8266).
+
+Für die Installation der Firmware gibt es das Tool `esptool.py`, das
+sich ebenso einfach installieren lässt.
 
     $ sudo pip install esptool
 
