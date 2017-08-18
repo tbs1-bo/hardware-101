@@ -157,5 +157,9 @@ Mikroprozessorboards](https://media.ccc.de/v/froscon2016-1791-python_fur_das_int
 - [Tutorialreihe mit Videos von Tony DiCola](https://learn.adafruit.com/category/micropython) 
   von Adafruit, die den ESP8266 und die Ansteuerung über MicroPython 
   ausführlich darstellt.
+- Ein
+[Artikel bei Henry's Bench](http://henrysbench.capnfatz.com/henrys-bench/arduino-projects-tips-and-more/powering-the-esp-12e-nodemcu-development-board/) 
+  beschreibt verschiedene Möglichkeiten, um das nodemcu-devkit mit Strom zu
+  versorgen.
 
 
