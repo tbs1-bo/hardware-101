@@ -7,12 +7,7 @@ ESP8266
 die auf verschiedene Mikrocontroller zugeschnitten ist. Der
 [ESP8266](http://www.mikrocontroller.net/articles/ESP8266) ist ein
 solcher günstiger (~4$) Baustein mit WLAN-Funktionen, für den eine
-Micropython-Firmware existiert. Über das nodemcu Development-Kit, das
-auf dem Bild zu sehen ist, verfügt der Baustein über einen
-USB-Anschluss, über den man mit dem Chip kommunizieren kann. Die PINs
-sind herausgeführt und lassen sich in Schaltungen verwenden. Genaue 
-Details des devkit werden im [Datenblatt](doc/NODEMCU_DEVKIT_V1.0.PDF)
-beschrieben.
+Micropython-Firmware existiert. 
 
 Die
 [Anleitung von Micopython für den ESP8266](http://docs.micropython.org/en/latest/esp8266/index.html)
@@ -24,6 +19,19 @@ befinden sich in den folgenden Dokumenten:
 - [system description](doc/0b-esp8266_system_description_en.pdf)
 - [AT instruction set](doc/4a-esp8266_at_instruction_set_en.pdf), [AT command examples](doc/4b-esp8266_at_command_examples_en.pdf)
 - [technical reference](doc/esp8266-technical_reference_en.pdf)
+
+nodemcu devkit
+--------------
+
+Häufig wird der ESP8266 auf einem Entwicklerboard verbaut, um ihn
+leichter ansteuern zu können. Eine USB-Schnittstelle stellt zum einen
+eine Stromversorgung und zum anderen eine einfache
+Kommunikationsmöglichkeit bereit. Die Pins sind auf eine Steckerleiste
+herausgeführt und beschriftet. Eine prominenter Vertreter ist das
+"nodemcu devkit", welcher auf dem obigen Bild zu sehen ist. Details
+über das Enticklungsboard
+sind [online](https://github.com/nodemcu/nodemcu-devkit-v1.0) oder
+über das [Datenblatt](doc/NODEMCU_DEVKIT_V1.0.PDF) verfügbar.
 
 
 ## Installation der Firmware
