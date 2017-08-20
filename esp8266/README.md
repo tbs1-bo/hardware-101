@@ -161,5 +161,7 @@ Mikroprozessorboards](https://media.ccc.de/v/froscon2016-1791-python_fur_das_int
 [Artikel bei Henry's Bench](http://henrysbench.capnfatz.com/henrys-bench/arduino-projects-tips-and-more/powering-the-esp-12e-nodemcu-development-board/) 
   beschreibt verschiedene Möglichkeiten, um das nodemcu-devkit mit Strom zu
   versorgen.
-
+- Neben Micropython gibt es für das nodemcu-devkit auch eine Firmware,
+  die es ermöglichkeit, die Programmiersprache lua zu
+  verwenden: [NodeMCU Documentation](https://nodemcu.readthedocs.io/)
 
