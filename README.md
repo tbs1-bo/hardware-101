@@ -14,6 +14,7 @@ Schaltungsbeispiele sowie eine Beschreibung.
 - [mcp23017](mcp23017): Portexpander (I²C)
 - [mcp23s17](mcp23s17): Portexpander (SPI)
 - [mcp3426](mcp3426): Analog-Digtial-Wandler (I²C)
+- [mcp4151](mcp4151): Digitalpotentiometer (SPI)
 - [mpu6050](mpu6050): Beschleunigungssensor und Gyrometer (I²C)
 - [servo](servo): Servomotoren mittels PWM
 - [ssd1306](ssd1306): OLED Display Treiber
