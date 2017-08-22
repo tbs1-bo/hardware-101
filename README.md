@@ -5,6 +5,7 @@ grundlegende Informationen wie Datenblätter, Quelltext- und
 Schaltungsbeispiele sowie eine Beschreibung.
 
 - [74HC595](74HC595): 8Bit-Schieberegister
+- [DS18B20](ds18b20): Temperatursensor (1-WIRE)
 - [ESP8266](esp8266): Microcontroller mit WLAN und Micropython-Unterstützung
 - [Gertboard](gertboard): Erweiterungsboard für den Raspberry Pi
 - [HD44780](hd44780): LCD Controller

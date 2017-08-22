@@ -4,21 +4,46 @@ ESP8266
 ![esp8266](doc/esp8266.jpg)
 
 [Micropython](https://micropython.org) ist eine Variante von Python,
-die auf Mikrocontroller zugeschnitten ist. Der
+die auf verschiedene Mikrocontroller zugeschnitten ist. Der
 [ESP8266](http://www.mikrocontroller.net/articles/ESP8266) ist ein
-günstiger (~4$) Baustein mit WLAN-Funktionen, für den eine
-Micropython-Firmware existiert. Über das nodemcu Development-Kit, das
-auf dem Bild zu sehen ist, verfügt der Baustein über einen
-USB-Anschluss, über den man mit dem Chip kommunizieren kann. Die PINs
-sind herausgeführt und lassen sich in Schaltungen verwenden.
+solcher günstiger (~4$) Baustein mit WLAN-Funktionen, für den eine
+Micropython-Firmware existiert. 
+
+Die
+[Anleitung von Micopython für den ESP8266](http://docs.micropython.org/en/latest/esp8266/index.html)
+erklärt viele wesentliche Funktionen. Weitere technische Details 
+befinden sich in den folgenden Dokumenten:
+
+- [quick start guide](doc/esp8266_quick_start_guide_en.pdf)
+- [datasheet](doc/0a-esp8266ex_datasheet_en.pdf)
+- [system description](doc/0b-esp8266_system_description_en.pdf)
+- [AT instruction set](doc/4a-esp8266_at_instruction_set_en.pdf), [AT command examples](doc/4b-esp8266_at_command_examples_en.pdf)
+- [technical reference](doc/esp8266-technical_reference_en.pdf)
+
+nodemcu devkit
+--------------
+
+Häufig wird der ESP8266 auf einem Entwicklerboard verbaut, um ihn
+leichter ansteuern zu können. Eine USB-Schnittstelle stellt zum einen
+eine Stromversorgung und zum anderen eine einfache
+Kommunikationsmöglichkeit bereit. Die Pins sind auf eine Steckerleiste
+herausgeführt und beschriftet. Eine prominenter Vertreter ist das
+"nodemcu devkit", welcher auf dem obigen Bild zu sehen ist. Details
+über das Enticklungsboard
+sind [online](https://github.com/nodemcu/nodemcu-devkit-v1.0) oder
+über das [Datenblatt](doc/NODEMCU_DEVKIT_V1.0.PDF) verfügbar.
+
 
 ## Installation der Firmware
 
-Nun soll die Firmware für Micropython installiert werden. Diese lässt
+Zuerst muss die Firmware für Micropython installiert werden. Diese lässt
 sich von der Webseite
-[herunterladen](https://micropython.org/download/#esp8266).
-Für die Installation gibt es das Tool `esptool.py`, das sich ebenso
-einfach installieren lässt.
+[herunterladen](https://micropython.org/download/#esp8266)
+oder
+[selbst kompilieren](https://github.com/micropython/micropython/tree/master/esp8266).
+
+Für die Installation der Firmware gibt es das Tool `esptool.py`, das
+sich ebenso einfach installieren lässt.
 
     $ sudo pip install esptool
 
@@ -37,8 +62,11 @@ entnommen.
 
 ## Zugriff über die serielle Schnittstelle
 
-Nun kann mit einem Terminalprogramm auf den Microcontroller zugegriffen
-werden. Das geht mit `putty, minicom, screen` oder auch `miniterm.py`.
+Nun kann mit einem Terminalprogramm auf den Microcontroller
+zugegriffen werden. Das geht mit `putty, minicom, screen` oder auch
+`miniterm.py`, wenn das Board über einen USB-Anschluss
+verfügt. Ansonsten fungieren die Pins GPIO1=TX und GPIO3=RX als
+serielle Schnittstelle. Die Baudrate beträgt 115200.
 
     $ screen /dev/ttyUSB0 115200
 
@@ -58,12 +86,14 @@ verwenden kann. Beim Start steht der ESP als Access Point zur Verfügung,
 auf den sich Clients mit dem Standardpasswort `micropythoN` verbinden
 können.
 
-## Pin-Belegung
+## Pin-Belegung (nodemcu devkit)
 
-Für das
-[nodemcu-devkit](https://github.com/nodemcu/nodemcu-devkit-v1.0)
-existiert eine gute Dokumentation der
-Pinbelegung.
+Das [nodemcu-devkit](https://github.com/nodemcu/nodemcu-devkit-v1.0)
+ist eines der populärsten Boards, das den ESP8266 verbaut. Hierfür
+existiert eine gute Dokumentation der Pinbelegung. Die Nummerierung
+bezieht sich jeweils immer auf die Pinnummer am Chip und kann bei
+unterschiedlichen Ausführungen von der Nummerierung auf dem jeweiligen
+Board abweichen.
 
 ![pinout](doc/nodemcu_devkit_v1.0_pinmap.png)
 
@@ -101,7 +131,7 @@ Neben ampy gibt es weitere Tools für den Dateitransfer.
 shell-basierter Datei-Explorer, um den ESP zu erkunden.
 [rshell](https://github.com/dhylands/rshell) ist eine remote
 shell für den ESP8266. 
-[webrepl_cli.py](https://github.com/micropython/webrepl) ist 
+[webrepl](https://github.com/micropython/webrepl) ist 
 eine weitere Möglichkeit.
 
 
@@ -124,8 +154,14 @@ Mikroprozessorboards](https://media.ccc.de/v/froscon2016-1791-python_fur_das_int
 - [Forum für den 
   Informationsaustausch](http://forum.micropython.org/viewforum.php?f=16) 
   mit Gleichgesinnten.
-- [Tutorialreihe mit Videos von Tony 
-  DiCola](https://learn.adafruit.com/category/micropython) von Adafruit, die 
-  den ESP8266 und die Ansteuerung über MicroPython ausführlich darstellt.
-
+- [Tutorialreihe mit Videos von Tony DiCola](https://learn.adafruit.com/category/micropython) 
+  von Adafruit, die den ESP8266 und die Ansteuerung über MicroPython 
+  ausführlich darstellt.
+- Ein
+[Artikel bei Henry's Bench](http://henrysbench.capnfatz.com/henrys-bench/arduino-projects-tips-and-more/powering-the-esp-12e-nodemcu-development-board/) 
+  beschreibt verschiedene Möglichkeiten, um das nodemcu-devkit mit Strom zu
+  versorgen.
+- Neben Micropython gibt es für das nodemcu-devkit auch eine Firmware,
+  die es ermöglichkeit, die Programmiersprache lua zu
+  verwenden: [NodeMCU Documentation](https://nodemcu.readthedocs.io/)
 
