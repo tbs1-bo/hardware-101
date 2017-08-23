@@ -10,10 +10,12 @@ class MCP4151:
         self.spi.max_speed_hz = speed_MHz*1000000
         
     def set_wiper(self, value):
-        self.spi.xfer([0x00, value], self.speed_Hz, 0)
+        assert value in range(257)
+        self.spi.xfer([0x00+value//256, value%256], self.speed_Hz, 0)
 
     def inc_wiper(self):
         self.spi.xfer([0b00000100], self.speed_Hz, 0)
 
     def dec_wiper(self):
         self.spi.xfer([0b00001000], self.speed_Hz, 0)
+
