@@ -2,7 +2,7 @@
 
 In diesem Repository befinden sich für verschiedene Hardwarebausteine
 grundlegende Informationen wie Datenblätter, Quelltext- und
-Schaltungsbeispiele sowie eine Beschreibung. 
+Schaltungsbeispiele sowie eine Beschreibung.
 
 - [74HC595](74HC595): 8Bit-Schieberegister
 - [DS18B20](ds18b20): Temperatursensor (1-WIRE)
