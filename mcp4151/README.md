@@ -29,7 +29,7 @@ verwendet wird.
 ## Steuerung des Schleifers
 
 Um den Schleifer zu steuern, gibt es drei verschiedene Möglichkeiten:
-- Schleifer ein Stück "weiterscheiben" (inkrementieren): `0b00000100`
+- Schleifer ein Stück "weiterschieben" (inkrementieren): `0b00000100`
 - Schleifer ein Stück "zurückschieben" (dekrementieren): `0b00001000`
 - Schleifer auf eine beliebige Position setzen: `0b0000000* 0b********`
 
