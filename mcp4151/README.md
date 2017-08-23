@@ -22,14 +22,14 @@ Schleifers digital in einem Register gespeichert.
 
 Normalerweise wird eine Datenleitung des SPI-Bus entweder als MOSI- oder als 
 MISO-Leitung verwendet. Beim MCP4151 lassen sich die Registerwerte über eine 
-Datenleitung sowohl lesen als auch schreiben. Für die Meisten Anwendungen 
+Datenleitung sowohl lesen als auch schreiben. Für die meisten Anwendungen 
 genügt es aber in die Register zu schreiben, so dass der SDI/SDO-Pin als MOSI 
 verwendet wird.
 
 ## Steuerung des Schleifers
 
-Um den Schleifer zu steuern gibt es drei verschiedene Möglichkeiten:
-- Schleifer ein Stück "weierscheiben" (inkrementieren): `0b00000100`
+Um den Schleifer zu steuern, gibt es drei verschiedene Möglichkeiten:
+- Schleifer ein Stück "weiterscheiben" (inkrementieren): `0b00000100`
 - Schleifer ein Stück "zurückschieben" (dekrementieren): `0b00001000`
 - Schleifer auf eine beliebige Position setzen: `0b0000000* 0b********`
 
