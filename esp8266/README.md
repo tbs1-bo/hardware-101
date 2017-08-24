@@ -3,11 +3,17 @@ ESP8266
 
 ![esp8266](doc/esp8266.jpg)
 
+Der [ESP8266](http://www.mikrocontroller.net/articles/ESP8266) ist ein
+günstiger Microcontroller für ca. 3 € mit eingebauten
+WLAN-Fähigkeiten. Er wird in Modulen wie ESP-01, ESP-12 oder ESP-12E
+verbaut, die sich z.B. in der Anzahl der Pins unterscheiden. Das
+ESP-12E-Modul ist recht beliebt, da es sehr viele Pins beistzt und
+wird z.B. auf einem Development-Board wie dem nodemcu-devkit (oben
+abgebildet) verbaut.
+
 [Micropython](https://micropython.org) ist eine Variante von Python,
-die auf verschiedene Mikrocontroller zugeschnitten ist. Der
-[ESP8266](http://www.mikrocontroller.net/articles/ESP8266) ist ein
-solcher günstiger (~4$) Baustein mit WLAN-Funktionen, für den eine
-Micropython-Firmware existiert. 
+die auf verschiedene Mikrocontroller zugeschnitten ist - so auch für
+den ESP8266.
 
 Die
 [Anleitung von Micopython für den ESP8266](http://docs.micropython.org/en/latest/esp8266/index.html)
@@ -34,7 +40,8 @@ sind [online](https://github.com/nodemcu/nodemcu-devkit-v1.0) oder
 über das [Datenblatt](doc/NODEMCU_DEVKIT_V1.0.PDF) verfügbar.
 
 
-## Installation der Firmware
+Installation der Firmware
+-------------------------
 
 Zuerst muss die Firmware für Micropython installiert werden. Diese lässt
 sich von der Webseite
