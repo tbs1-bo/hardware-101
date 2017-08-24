@@ -163,5 +163,9 @@ Mikroprozessorboards](https://media.ccc.de/v/froscon2016-1791-python_fur_das_int
   versorgen.
 - Neben Micropython gibt es für das nodemcu-devkit auch eine Firmware,
   die es ermöglichkeit, die Programmiersprache lua zu
-  verwenden: [NodeMCU Documentation](https://nodemcu.readthedocs.io/)
+  verwenden:
+  [NodeMCU Documentation](https://nodemcu.readthedocs.io/). Uwe Berger
+  stellte auf der FrOSCon 2017 in dem Vortrag
+  [Wi-Fi mit Lua](https://media.ccc.de/v/froscon2017-1953-wi-fi_mit_lua)
+  den Chip vor.
 
