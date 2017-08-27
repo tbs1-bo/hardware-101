@@ -1,5 +1,4 @@
-ESP8266
-=======
+# ESP8266
 
 ![esp8266](doc/esp8266.jpg)
 
@@ -26,8 +25,7 @@ befinden sich in den folgenden Dokumenten:
 - [AT instruction set](doc/4a-esp8266_at_instruction_set_en.pdf), [AT command examples](doc/4b-esp8266_at_command_examples_en.pdf)
 - [technical reference](doc/esp8266-technical_reference_en.pdf)
 
-nodemcu devkit
---------------
+## nodemcu devkit
 
 Häufig wird der ESP8266 auf einem Entwicklerboard verbaut, um ihn
 leichter ansteuern zu können. Eine USB-Schnittstelle stellt zum einen
@@ -40,8 +38,7 @@ sind [online](https://github.com/nodemcu/nodemcu-devkit-v1.0) oder
 über das [Datenblatt](doc/NODEMCU_DEVKIT_V1.0.PDF) verfügbar.
 
 
-Installation der Firmware
--------------------------
+## Installation der Firmware
 
 Zuerst muss die Firmware für Micropython installiert werden. Diese lässt
 sich von der Webseite
