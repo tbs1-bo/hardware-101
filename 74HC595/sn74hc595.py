@@ -61,10 +61,12 @@ def main():
     # enable the output
     register.output_enable(True)
 
-    # send on bit into the register
+    # send one bit into the register
     register.send_ser(True)
+    # tick the clock
     register.tick_srclk()
     register.tick_rclk()
+    # send another bit and tick again
     register.send_ser(False)
     register.tick_srclk()
     register.tick_rclk()
