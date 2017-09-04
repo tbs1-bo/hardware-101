@@ -25,7 +25,7 @@ try:
         # Pruefen, ob Port A, Pin 7 (Taster-Pin) gesetzt wurde
         # Registerinhalt mit 0x80 = 0b10000000 maskieren
         porta &= 0x80
-        if porta  == 0x80:
+        if porta == 0x80:
             print("Taster wurde gedrückt!")
 
         # Port B, Pin 0 (LED) einschalten
