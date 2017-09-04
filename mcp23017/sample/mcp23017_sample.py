@@ -31,12 +31,12 @@ try:
         # Port B, Pin 0 (LED) einschalten
         # alle anderen Pins bleiben unveraendert
         portb = iic.read_byte_data(IOEXP, OLATB)
-        portb |= 0x01    # Verorderung mit 0x01
+        portb |= 0x01    # Veroderung mit 0x01
         iic.write_byte_data(IOEXP, OLATB, portb)
         time.sleep(0.2)
 
         # Port B, Pin 0 ausschalten
-        # alle anderen Pins bleiben unveraendern
+        # alle anderen Pins bleiben unverändert
         portb = iic.read_byte_data(IOEXP, OLATB)
         portb &= ~0x01   # Verundung mit ~(0b00000001) = 0b11111110
         iic.write_byte_data(IOEXP, OLATB, portb)
