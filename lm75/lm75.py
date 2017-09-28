@@ -35,7 +35,7 @@ try:
 
         print("Temperatur:", temperatur)
 
-        time.selfleep(1)
+        time.sleep(1)
 
 except KeyboardInterrupt:
     print("Tschuess!")
