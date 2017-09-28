@@ -20,3 +20,4 @@ Schaltungsbeispiele sowie eine Beschreibung.
 - [ssd1306](ssd1306): OLED Display Treiber
 - [ws2811/ws2812](ws281x): RGB-LED-Streifen
 
+- [fake-rpi](fake-rpi): Hilfe für die Programmentwicklung
