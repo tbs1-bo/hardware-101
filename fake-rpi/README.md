@@ -26,10 +26,12 @@ werden. Alternativ könnte auch eine Variable über die Ausführung entscheiden.
 ## Verwendung ohne Veränderung des Programmes
 
 Alternativ kann die Datei [sitecustomize.py](sitecustomize.py) vor der
-Ausführung in den Suchpfad aufgenommen werden. Legt man sie neben das
-Programm in den gleichen Ordner, so funktioniert der folgende Aufruf.
+Ausführung in den Suchpfad aufgenommen werden. 
+Diese Datei wird standardmäßig importiert und die Änderungen darin
+werden für das folgende Programm wirksam.
+
+Legt man sie neben das Programm in den gleichen Ordner, so
+funktioniert der folgende Aufruf.
 
     $ PYTHONPATH=. python programm.py
 
-Diese Datei wird standardmäßig importiert und die Änderungen darin
-werden für das folgende Programm wirksam.
