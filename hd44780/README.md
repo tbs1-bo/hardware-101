@@ -58,6 +58,8 @@ vorhandenen Zeichen befinden sich ebenfalls im Datenblatt.
 Schaltung
 ---------
 
+![schaltung_schema](doc/schaltung_schema.png)
+
 ![schaltung](doc/schaltung_Steckplatine.png)
 
 ![schaltung](doc/lcd_breadboard.jpg)
