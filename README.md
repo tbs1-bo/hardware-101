@@ -19,5 +19,6 @@ Schaltungsbeispiele sowie eine Beschreibung.
 - [servo](servo): Servomotoren mittels PWM
 - [ssd1306](ssd1306): OLED Display Treiber
 - [ws2811/ws2812](ws281x): RGB-LED-Streifen
+- [apa102](apa102): RGB-LED-Streifen mit dem Chipsatz APA102
 
 - [fake-rpi](fake-rpi): Hilfe für die Programmentwicklung
