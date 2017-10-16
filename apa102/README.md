@@ -30,6 +30,14 @@ Und im letzten Schritt SPI aktivieren:
 ![konfiguration schritt 3](doc/spi_3.jpg)
 
 
+## Paket Aufbau
+
+Über den SPI Bus wird ein Datenpaket gesendet für alle LEDs.
+Das Paket fängt an mit 4 Start Bytes, die 0 sein müssen. Darauf folgt für jede LED die Helligkeit, Roter Farbanteil, Grüner Farbanteil und Blauer Farbanteil.
+Zum Schluss folgen 4 End Bytes.  
+![paketaufbau](doc/paketaufbau.jpg)
+
+
 ## Bibliothek
 
 Um die LEDs Anzustuern wird der SPI Bus benötigt. Für die Ansteuerung dessen wird die Bibliothek [spidev](https://pypi.python.org/pypi/spidev) benötigt.
