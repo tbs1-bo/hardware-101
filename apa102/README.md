@@ -14,7 +14,7 @@ Dabei sieht die Schaltung dann wie folgt aus:
 
 ![schaltung](doc/Sketch_Steckplatine.png)
 
-Ab ca. 8-10 LEDs wird ein externens Netzteil mit 5V benötigt.
+Ab ca. 8-10 LEDs wird ein externes Netzteil mit 5V benötigt.
 
 
 ## Zugriff auf SPI aktivieren
@@ -41,7 +41,7 @@ Und im letzten Schritt SPI aktivieren:
 ## Paket Aufbau
 
 Über den SPI Bus wird ein Datenpaket für alle LEDs gesendet. Das
-Paket fängt mit 4 Start Bytes an, die 0 sein müssen. Darauf folgt für
+Paket fängt mit 4 Start-Bytes an, die 0 sein müssen. Darauf folgt für
 jede LED die Helligkeit, der rote Farbanteil, der grüne Farbanteil und
 der blaue Farbanteil.  Zum Schluss folgen 4 End-Bytes.
 
