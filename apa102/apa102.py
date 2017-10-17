@@ -5,10 +5,10 @@ import spidev
 LED_ANZAHL = 5
 
 # Helligkeit von 0 bis 31
-LED_HELLIGKEIT = 31 
+LED_HELLIGKEIT = 31
 
 # SPI Port (normalerweise 1)
-SPI_BUS = 0 # SPI port 0
+SPI_BUS = 0  # SPI port 0
 
 # Slave Device (CS) 1
 SPI_DEVICE = 1
