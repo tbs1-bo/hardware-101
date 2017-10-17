@@ -4,6 +4,7 @@ In diesem Repository befinden sich für verschiedene Hardwarebausteine
 grundlegende Informationen wie Datenblätter, Quelltext- und
 Schaltungsbeispiele sowie eine Beschreibung.
 
+- [apa102](apa102): RGB-LED-Streifen mit dem Chipsatz APA102
 - [74HC595](74HC595): 8Bit-Schieberegister
 - [DS18B20](ds18b20): Temperatursensor (1-WIRE)
 - [ESP8266](esp8266): Microcontroller mit WLAN und Micropython-Unterstützung
@@ -19,6 +20,5 @@ Schaltungsbeispiele sowie eine Beschreibung.
 - [servo](servo): Servomotoren mittels PWM
 - [ssd1306](ssd1306): OLED Display Treiber
 - [ws2811/ws2812](ws281x): RGB-LED-Streifen
-- [apa102](apa102): RGB-LED-Streifen mit dem Chipsatz APA102
 
 - [fake-rpi](fake-rpi): Hilfe für die Programmentwicklung
