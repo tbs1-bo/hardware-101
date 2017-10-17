@@ -1,29 +1,29 @@
 # APA102
 
-Der APA102 ist ein Controller, mit dem RGB-LED auf einem Leuchtstreifen gezielt angesteuert werden können. Er ist ausführlich im [Datenblatt](doc/APA102.pdf) beschrieben. Im Gegensatz zu den [WS281x](../ws281x) wird der APA102 Chipsatz über den SPI Bus angesteuert.
+Der APA102 ist ein Controller, mit dem RGB-LED auf einem Leuchtstreifen gezielt angesteuert werden kÃ¶nnen. Er ist ausfÃ¼hrlich im [Datenblatt](doc/APA102.pdf) beschrieben. Im Gegensatz zu den [WS281x](../ws281x) wird der APA102 Chipsatz Ã¼ber den SPI Bus angesteuert.
 
 
 ## Schaltung
 
-Für eine geringe Anzahl an LEDs liefert der RPi genügend Strom.
+FÃ¼r eine geringe Anzahl an LEDs liefert der RPi genÃ¼gend Strom.
 Dabei sieht die Schaltung dann wie folgt aus:
 
 ![schaltung](doc/Sketch_Steckplatine.png)
 
-Ab ca. 8-10 LEDs wird ein externens Netzteil mit 5V benötigt.
+Ab ca. 8-10 LEDs wird ein externens Netzteil mit 5V benÃ¶tigt.
 
 
 ## Zugriff auf SPI aktivieren
 
 Damit der SPI Bus auf dem Raspiberry Pi verwendet werden kann, muss dieser vorher aktiviert werden.
-Über das Konfigurationsprogramm `raspi-config` kann dies ganz leicht erledigt werden.
+Ãœber das Konfigurationsprogramm `raspi-config` kann dies ganz leicht erledigt werden.
 
     $ sudo raspi-config
 
 Zu aller erst in die Interface Optionen:  
 ![konfiguration schritt 1](doc/spi_1.png)
 
-Danach das SPI Interface auswählen:  
+Danach das SPI Interface auswÃ¤hlen:  
 ![konfiguration schritt 2](doc/spi_2.png)
 
 Und im letzten Schritt SPI aktivieren:  
@@ -32,15 +32,15 @@ Und im letzten Schritt SPI aktivieren:
 
 ## Paket Aufbau
 
-Über den SPI Bus wird ein Datenpaket gesendet für alle LEDs.
-Das Paket fängt an mit 4 Start Bytes, die 0 sein müssen. Darauf folgt für jede LED die Helligkeit, Roter Farbanteil, Grüner Farbanteil und Blauer Farbanteil.
+Ãœber den SPI Bus wird ein Datenpaket gesendet fÃ¼r alle LEDs.
+Das Paket fÃ¤ngt an mit 4 Start Bytes, die 0 sein mÃ¼ssen. Darauf folgt fÃ¼r jede LED die Helligkeit, Roter Farbanteil, GrÃ¼ner Farbanteil und Blauer Farbanteil.
 Zum Schluss folgen 4 End Bytes.  
 ![paketaufbau](doc/paketaufbau.jpg)
 
 
 ## Bibliothek
 
-Um die LEDs Anzustuern wird der SPI Bus benötigt. Für die Ansteuerung dessen wird die Bibliothek [spidev](https://pypi.python.org/pypi/spidev) benötigt.
+Um die LEDs Anzustuern wird der SPI Bus benÃ¶tigt. FÃ¼r die Ansteuerung dessen wird die Bibliothek [spidev](https://pypi.python.org/pypi/spidev) benÃ¶tigt.
 
     $ pip3 install spidev
 
