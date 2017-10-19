@@ -1,5 +1,7 @@
 # Hardware-101 für Hardwarebausteine
 
+![logo](hardware-101-logo.png)
+
 In diesem Repository befinden sich für verschiedene Hardwarebausteine
 grundlegende Informationen wie Datenblätter, Quelltext- und
 Schaltungsbeispiele sowie eine Beschreibung.
