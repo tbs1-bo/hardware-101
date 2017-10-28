@@ -1,10 +1,10 @@
 # Hardware-101 für Hardwarebausteine
 
-![logo](img/hardware-101-logo.png)
-
 In diesem Repository befinden sich für verschiedene Hardwarebausteine
 grundlegende Informationen wie Datenblätter, Quelltext- und
 Schaltungsbeispiele sowie eine Beschreibung.
+
+![logo](img/1x/hardware-101-logo_wide.png)
 
 - [apa102](apa102): RGB-LED-Streifen mit dem Chipsatz APA102
 - [74HC595](74HC595): 8Bit-Schieberegister
