@@ -4,8 +4,8 @@
 
 ![Orange Pi](doc/opizero.png)
 
-Der OrangePiZero ist eine ist die kleine an den Pi Zero
-angelehnte Version des [Orange Pi](http://www.orangepi.org/). 
+Der Orange Pi Zero ist die kleine, ebenfalls günstige und an den Pi
+Zero angelehnte Version des [Orange Pi](http://www.orangepi.org/).
 
 ## Installation
 
