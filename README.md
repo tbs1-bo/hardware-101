@@ -25,6 +25,7 @@ Schaltungsbeispiele sowie eine Beschreibung.
 - [ws2811/ws2812](ws281x): RGB-LED-Streifen
 
 - [fake-rpi](fake-rpi): Hilfe für die Programmentwicklung
+- [Transistoren](Transistoren): Eine Übersicht (noch sehr übersichtlich)
 
 
 ![logo](img/hardware-101-logo2.png)
