@@ -2,7 +2,7 @@
 
 In diesem Repository befinden sich für verschiedene Hardwarebausteine
 grundlegende Informationen wie Datenblätter, Quelltext- und
-Schaltungsbeispiele sowie eine Beschreibung. 
+Schaltungsbeispiele sowie eine Beschreibung.
 
 ![logo](img/1x/hardware-101-logo_wide.png)
 
