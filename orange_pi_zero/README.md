@@ -4,7 +4,7 @@
 
 ![Orange Pi](doc/opizero.png)
 
-Der Orange Pi Zero ist die kleine, ebenfalls günstige und an den Pi
+Der Orange Pi Zero ist die kleine, ebenfalls günstige (ca. 8 €) und an den Pi
 Zero angelehnte Version des [Orange Pi](http://www.orangepi.org/).
 
 ## Installation
