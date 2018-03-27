@@ -30,3 +30,5 @@ Schaltungsbeispiele sowie eine Beschreibung.
 
 
 ![logo](img/hardware-101-logo2.png)
+
+{% github_edit_link "Bearbeite diese Seite bei github" %}
