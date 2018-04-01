@@ -10,7 +10,7 @@ WLAN-Fähigkeiten. Er wird in Modulen wie ESP-01, ESP-12 oder ESP-12E
 verbaut, die sich z.B. in der Anzahl der Pins unterscheiden. Das
 ESP-12E-Modul ist recht beliebt, da es sehr viele Pins beistzt und
 wird z.B. auf einem Development-Board wie dem nodemcu-devkit (oben
-abgebildet) verbaut.
+abgebildet) oder dem "Wemos D1 Mini" verbaut.
 
 [Micropython](https://micropython.org) ist eine Variante von Python,
 die auf verschiedene Mikrocontroller zugeschnitten ist - so auch für
