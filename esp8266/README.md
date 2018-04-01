@@ -174,4 +174,9 @@ Mikroprozessorboards](https://media.ccc.de/v/froscon2016-1791-python_fur_das_int
   stellte auf der FrOSCon 2017 in dem Vortrag
   [Wi-Fi mit Lua](https://media.ccc.de/v/froscon2017-1953-wi-fi_mit_lua)
   den Chip vor.
+- Das Projekt
+  [ESPEasy](https://www.letscontrolit.com/wiki/index.php/ESPEasy|ESPEasy)
+  stellt eine Firmware mit einer Web-Oberfläche bereit, über die verschiedene
+  Sensoren Daten sammeln und an einen MQTT-Broker oder Web-Server senden 
+  können.
 
