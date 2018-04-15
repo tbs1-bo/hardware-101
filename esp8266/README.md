@@ -179,4 +179,8 @@ Mikroprozessorboards](https://media.ccc.de/v/froscon2016-1791-python_fur_das_int
   stellt eine Firmware mit einer Web-Oberfläche bereit, über die verschiedene
   Sensoren Daten sammeln und an einen MQTT-Broker oder Web-Server senden 
   können.
+- Der ESP8266 wird auch in kommerziellen Produkten verbaut - z.B. in einer Funk-Bridge, die zwischen MQTT und Funk
+  in 433 MHz vermittelt. In dem ct-Artikel 
+  [Funkbrücke - 433-MHz-Komponenten vernetzen (08/2018)](https://www.heise.de/ct/ausgabe/2018-8-433-MHz-Komponenten-vernetzen-4000453.html?wt_mc=print.ct.2018.08.146)
+  wird eine Bridge und alternative Firmware für einen ESP8266 beschrieben.
 
