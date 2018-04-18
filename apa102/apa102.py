@@ -30,7 +30,7 @@ if __name__ == "__main__":
         helligkeit = (LED_HELLIGKEIT & 0b00011111) | 0b11100000
         # Senden:  Helligkeit  Blau Grün Rot
         spi.xfer2([helligkeit, 255, 128, 0])
-        
+
     # End Frame => 32 Endbits
     spi.xfer2([0] * 4)
     spi.close()

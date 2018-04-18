@@ -95,7 +95,7 @@ class OLED:
     def _clear_display(self):
         """ send only zeros to the display.
             works only in horizontal or vertical mode."""
-        for i in range(128*8):
+        for i in range(128 * 8):
             self._send_data(0x00)
 
 
@@ -103,7 +103,7 @@ def main():
     oled = OLED()
     oled._clear_display()
     while(True):
-        for i in range(128*8):
+        for i in range(128 * 8):
             oled._send_data(0b11001100)
             time.sleep(0.005)
         time.sleep(2)
@@ -123,6 +123,7 @@ def main():
         time.sleep(1)
         oled._send_command(oled.OLED_NOT_INVERSE)
         time.sleep(1)
+
 
 if __name__ == "__main__":
     main()

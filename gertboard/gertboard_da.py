@@ -52,5 +52,6 @@ def main():
         dac.write_digital(v)
         input("(Enter for next val)")
 
+
 if __name__ == "__main__":
     main()

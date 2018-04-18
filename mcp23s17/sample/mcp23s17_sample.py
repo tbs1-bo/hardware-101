@@ -3,10 +3,10 @@ import spidev
 
 # Slaveadresse des MCP23S17
 # IOEXP = 0x20
-SPIBUS = 0    # SPI0
-SPIDEVICE = 0 # CE0
-IOEXPw = 0b01000000 # Opcode write
-IOEXPr = 0b01000001 # Opcode read
+SPIBUS = 0     # SPI0
+SPIDEVICE = 0  # CE0
+IOEXPw = 0b01000000  # Opcode write
+IOEXPr = 0b01000001  # Opcode read
 
 # Adressen der Register
 IODIRA = 0x00   # Port A direction
