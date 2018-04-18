@@ -28,11 +28,10 @@ class DS18B20:
         temp_line = lines[1]
         val = temp_line.split("=")[1]
         return int(val)
-        
+
 
 if __name__ == "__main__":
     ds = DS18B20('0000064d724b')
     temp_raw = ds.read_raw_value()
-    print("Temperature {temp} °C (raw: {raw})".format(temp=temp_raw/1000,
+    print("Temperature {temp} °C (raw: {raw})".format(temp=temp_raw / 1000,
                                                       raw=temp_raw))
-
