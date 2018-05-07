@@ -54,6 +54,8 @@ Anschließend müssen die Module kompiliert und gemäß der Beschreibung in der
 Datei `README` installiert werden. Das Testprogramm kann mit `sudo ./test` 
 ausgeführt werden und sollte die LEDs zu leuchten bringen.  
 
+[![Youtube Demo Video](https://img.youtube.com/vi/MYdSkIIllsU/0.jpg)](https://www.youtube-nocookie.com/embed/MYdSkIIllsU?rel=0) 
+
 Ein [Video](https://www.youtube-nocookie.com/embed/MYdSkIIllsU?rel=0) zeigt ein
 Demo.
 

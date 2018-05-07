@@ -41,7 +41,7 @@ Datei [sn74hc595.py](sn74hc595.py).
 Demo
 ----
 
-[![Youtube Demo Video](https://img.youtube.com/vi/Q4rGgCm2nYc/0.jpg)](https://www.youtube.com/watch?v=Q4rGgCm2nYc) 
+[![Youtube Demo Video](https://img.youtube.com/vi/Q4rGgCm2nYc/0.jpg)](https://www.youtube-nocookie.com/embed/Q4rGgCm2nYc?rel=0) 
 
 Ein Demovideo ([mp4](https://archive.org/download/8bit_shift_register/MUTE_20170807_170113.mp4), [ogg Video](https://archive.org/download/8bit_shift_register/MUTE_20170807_170113.ogv) oder 
 [Youtube](https://youtu.be/Q4rGgCm2nYc)) zeigt eine Verwendung, bei der eine 1

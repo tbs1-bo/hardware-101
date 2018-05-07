@@ -8,6 +8,6 @@ Bastelprojekten einsetzen lässt.
 - [CheatSheetMiniBook](RaspiCheatSheetMiniBook-OnePage.pdf) enthält
   dieselben Informationen wie das CheatSheet, lässt sich aber einfach
   zu einem kleinen Buch
-  falten. Das [Video](https://www.youtube.com/embed/DqLRhnOA_z0)
+  falten. Das [Video](https://www.youtube-nocookie.com/embed/DqLRhnOA_z0?rel=0)
   zeigt, wie das Blatt gefaltet werden muss.
 
