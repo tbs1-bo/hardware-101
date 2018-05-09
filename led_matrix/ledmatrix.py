@@ -11,7 +11,7 @@ Pinout of the matrix:
 5 |   | 8
 6 +---+ 7
 
-Connections: Electrical current travels from columns to rows.
+Connections: Electrical current travels from rows to columns.
 
      1
    13078
