@@ -11,7 +11,7 @@ Pinout of the matrix:
 5 |   | 8
 6 +---+ 7
 
-Connections: Electrical current travels from columns to rows.
+Connections: Electrical current travels from rows to columns.
 
      1
    13078
@@ -60,7 +60,7 @@ class LedMatrix:
         handled this way. Use multiplexing instead - as described here
         https://www.mikrocontroller.net/articles/LED-Matrix#Multiplexbetrieb"""
 
-        # electric current can only travel from column (y) to row (x)
+        # electric current can only travel from row (x) to column (y)
         if on_off:
             ledpin_lo = self.x_pins[x]
             ledpin_hi = self.y_pins[y]
