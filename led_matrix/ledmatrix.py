@@ -64,21 +64,19 @@ class LedMatrix:
         https://www.mikrocontroller.net/articles/LED-Matrix#Multiplexbetrieb"""
 
         # electric current can only travel from column (y) to row (x)
-        ledp_hi = self.y_pins[y]
-        ledp_lo = self.x_pins[x]
+
+        ledp_hi_y = self.y_pins[y]
+        ledp_lo_x = self.x_pins[x]
 
         # determine GPIO pins for led pins
-        gpio_hi, gpio_lo = self.led_gpio[ledp_hi], self.led_gpio[ledp_lo]
+        gpio_hi_y = self.led_gpio[ledp_hi_y]
+        gpio_lo_x = self.led_gpio[ledp_lo_x]
 
-        # row pin high, col pin low, all other col pins high as well
-        GPIO.output(gpio_hi, GPIO.HIGH)
-        # collect configured x-pins that must be high
-        pinsh_x = [] 
-        for ledp in self.x_pins:
-            if ledp in self.led_gpio:                    
-                pinsh_x.append(self.led_gpio[ledp])
-        GPIO.output(pinsh_x, GPIO.HIGH)
-        GPIO.output(gpio_lo, GPIO.LOW)
+        # collect pins that must be high, then remove desired low pin
+        pinsh = self.x_pins + [gpio_hi_y]
+        pinsh.remove(gpio_lo_x)
+        GPIO.output(pinsh, GPIO.HIGH)
+        GPIO.output(gpio_lo_x, GPIO.LOW)
 
 
 def main():
