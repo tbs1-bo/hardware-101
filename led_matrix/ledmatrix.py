@@ -54,29 +54,28 @@ class LedMatrix:
         # configure all pins as output
         GPIO.setup(gpiopin, GPIO.OUT)
 
-    def all_off(self):
-        GPIO.output(list(self.led_gpio.values()), GPIO.LOW)
-
     def on(self, x, y):
         """Turn the led at coordinate (x,y) on. Starting with (0,0) at
         top left. Multiple LEDs that are not all in one row/column cannot be
         handled this way. Use multiplexing instead - as described here
         https://www.mikrocontroller.net/articles/LED-Matrix#Multiplexbetrieb"""
 
-        # electric current can only travel from column (y) to row (x)
+        # first turn all off
+        GPIO.output(list(self.led_gpio.values()), GPIO.LOW)
 
+        # electric current can only travel from column (y) to row (x)
         ledp_hi_y = self.y_pins[y]
         ledp_lo_x = self.x_pins[x]
 
+        # collect pins that must be high
         # determine GPIO pins for led pins
         gpio_hi_y = self.led_gpio[ledp_hi_y]
-        gpio_lo_x = self.led_gpio[ledp_lo_x]
+        gpio_pins_h = [gpio_hi_y]
+        for ledpin in self.led_gpio:
+            if ledpin in self.x_pins and ledpin != ledp_lo_x:
+                gpio_pins_h.append(self.led_gpio[ledpin])
 
-        # collect pins that must be high, then remove desired low pin
-        pinsh = self.x_pins + [gpio_hi_y]
-        pinsh.remove(gpio_lo_x)
-        GPIO.output(pinsh, GPIO.HIGH)
-        GPIO.output(gpio_lo_x, GPIO.LOW)
+        GPIO.output(gpio_pins_h, GPIO.HIGH)
 
 
 def main():
@@ -105,17 +104,14 @@ def main():
             for x in (0, 1):
                 ledmat.on(x, y)
                 time.sleep(0.2)
-                ledmat.all_off()
-                time.sleep(0.2)
 
     # turning on two leds at (0,0) and (0,1) using multiplexing
     while True:
         for x in (0, 1):
             for y in (0, 1):
-                if (x, y) in [(0, 0), (1, 1)]:
-                    ledmat.on(x, y)
-                    time.sleep(0.001)
-                    ledmat.all_off()
+                    if (x, y) in [(0, 0), (1, 1)]:
+                        ledmat.on(x, y)
+                        time.sleep(0.0001)
 
 
 if __name__ == "__main__":
