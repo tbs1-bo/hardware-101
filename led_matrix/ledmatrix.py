@@ -47,7 +47,7 @@ class LedMatrix:
         GPIO.setmode(boardmode)
 
     def connect_pins(self, ledpin, gpiopin):
-        """Connect a Pin of the LED Matrix with a GPIO pin on the Raspberry
+        """Connect a Pin of the LED Matrix to a GPIO pin on the Raspberry
         Pi."""
         self.led_gpio[ledpin] = gpiopin
 
@@ -80,8 +80,19 @@ class LedMatrix:
 
 
 def main():
+    """
+     Connect pins of the led-matrix to GPIO-pins and run a demo programm.
+    
+      -------+            +----------
+             |            |
+             +-1  ---  17-+
+      LED    +-3  ---  18-+ Raspberry
+      Matrix +-11 ---  23-+ Pi
+             +-12 ---  22-+ 
+             |            |
+      -------+            +-----------
+    """
     ledmat = LedMatrix()
-    # connect pins of the led-matrix to GPIO-pins
     ledmat.connect_pins(ledpin=1, gpiopin=17)
     ledmat.connect_pins(ledpin=3, gpiopin=18)
     ledmat.connect_pins(ledpin=11, gpiopin=23)
