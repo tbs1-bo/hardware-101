@@ -105,13 +105,17 @@ def main():
                 ledmat.on(x, y)
                 time.sleep(0.2)
 
-    # turning on two leds at (0,0) and (0,1) using multiplexing
+    # turning on two leds at (0,0) and (0,1) at the same time 
+    # using multiplexing
+    fps = 120  # Hz
+    sleeptime_per_pixel = 1/fps/4  # divide by 4 since using four pixels
     while True:
         for x in (0, 1):
             for y in (0, 1):
-                    if (x, y) in [(0, 0), (1, 1)]:
-                        ledmat.on(x, y)
-                        time.sleep(0.0001)
+                if (x, y) in [(0, 0), (1, 1)]:
+                    ledmat.on(x, y)
+
+                time.sleep(sleeptime_per_pixel)
 
 
 if __name__ == "__main__":
