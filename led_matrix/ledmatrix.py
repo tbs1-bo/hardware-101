@@ -44,7 +44,7 @@ class LedMatrix:
         self.y_pins = [12, 11, 2, 9, 4, 5, 6]
 
         # using the given numbering scheme
-        GPIO.setmode(boardmode)
+        GPIO.setmode(boardmode)        
 
     def connect_pins(self, ledpin, gpiopin):
         """Connect a Pin of the LED Matrix to a GPIO pin on the Raspberry
@@ -54,6 +54,14 @@ class LedMatrix:
         # configure all pins as output
         GPIO.setup(gpiopin, GPIO.OUT)
 
+    def led_pins_set(self, led_pins, on_off):
+        """Turn the specified pin numbers on the LED Matrix on or off."""
+        gpiopins = []
+        for pinnr in led_pins:
+            gpiopins.append(self.led_gpio[pinnr])
+
+        GPIO.output(gpiopins, on_off)
+
     def on(self, x, y):
         """Turn the led at coordinate (x,y) on. Starting with (0,0) at
         top left. Multiple LEDs that are not all in one row/column cannot be
@@ -61,7 +69,7 @@ class LedMatrix:
         https://www.mikrocontroller.net/articles/LED-Matrix#Multiplexbetrieb"""
 
         # first turn all off
-        GPIO.output(list(self.led_gpio.values()), GPIO.LOW)
+        self.led_pins_set(self.led_gpio.keys(), False)
 
         # electric current can only travel from column (y) to row (x)
         ledp_hi_y = self.y_pins[y]
@@ -69,13 +77,12 @@ class LedMatrix:
 
         # collect pins that must be high
         # determine GPIO pins for led pins
-        gpio_hi_y = self.led_gpio[ledp_hi_y]
-        gpio_pins_h = [gpio_hi_y]
+        led_pins_h = [ledp_hi_y]
         for ledpin in self.led_gpio:
             if ledpin in self.x_pins and ledpin != ledp_lo_x:
-                gpio_pins_h.append(self.led_gpio[ledpin])
+                led_pins_h.append(ledpin)
 
-        GPIO.output(gpio_pins_h, GPIO.HIGH)
+        self.led_pins_set(led_pins_h, True)
 
 
 def main():
