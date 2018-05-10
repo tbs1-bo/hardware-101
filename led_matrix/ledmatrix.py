@@ -80,12 +80,12 @@ class LedMatrix:
 
 def main():
     """
-     Connect pins of the led-matrix to GPIO-pins and run a demo programm.
-    
+     Connect four pins of the led-matrix to GPIO-pins and run a demo programm.
+
       -------+            +----------
              |            |
              +-1  ---  17-+
-      LED    +-3  ---  18-+ Raspberry
+       LED   +-3  ---  18-+ Raspberry
       Matrix +-11 ---  23-+ Pi
              +-12 ---  22-+ 
              |            |
