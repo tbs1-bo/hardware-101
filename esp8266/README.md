@@ -40,6 +40,16 @@ sind [online](https://github.com/nodemcu/nodemcu-devkit-v1.0) oder
 über das [Datenblatt](doc/NODEMCU_DEVKIT_V1.0.PDF) verfügbar.
 
 
+## USB-Treiber
+
+Auf dem Board ist ein Wandlet USB-UART verbaut. Manchmal benötigt er einen 
+Treiber, nachträglich installiert werden muss.
+
+Unter Mac OS:
+
+     $ brew cask install homebrew/cask-drivers/wch-ch34x-usb-serial-driver
+
+
 ## Installation der Firmware
 
 Zuerst muss die Firmware für Micropython installiert werden. Diese lässt
