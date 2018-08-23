@@ -69,3 +69,6 @@ target/
 
 # Scribus Backup-Files
 *.autosave
+
+# Mac OS Files
+.DS_Store
