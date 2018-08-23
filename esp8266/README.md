@@ -8,7 +8,7 @@ günstiger Microcontroller
 für ca. 3 € mit eingebauten 
 WLAN-Fähigkeiten. Er wird in Modulen wie ESP-01, ESP-12 oder ESP-12E
 verbaut, die sich z.B. in der Anzahl der Pins unterscheiden. Das
-ESP-12E-Modul ist recht beliebt, da es sehr viele Pins beistzt und
+ESP-12E-Modul ist recht beliebt, da es sehr viele Pins besitzt und
 wird z.B. auf einem Development-Board wie dem nodemcu-devkit (oben
 abgebildet) oder dem "Wemos D1 Mini" verbaut.
 
@@ -33,7 +33,7 @@ Häufig wird der ESP8266 auf einem Entwicklerboard verbaut, um ihn
 leichter ansteuern zu können. Eine USB-Schnittstelle stellt zum einen
 eine Stromversorgung und zum anderen eine einfache
 Kommunikationsmöglichkeit bereit. Die Pins sind auf eine Steckerleiste
-herausgeführt und beschriftet. Eine prominenter Vertreter ist das
+herausgeführt und beschriftet. Ein prominenter Vertreter ist das
 "nodemcu devkit", welcher auf dem obigen Bild zu sehen ist. Details
 über das Enticklungsboard
 sind [online](https://github.com/nodemcu/nodemcu-devkit-v1.0) oder
@@ -42,8 +42,8 @@ sind [online](https://github.com/nodemcu/nodemcu-devkit-v1.0) oder
 
 ## USB-Treiber
 
-Auf dem Board ist ein Wandlet USB-UART verbaut. Manchmal benötigt er einen 
-Treiber, nachträglich installiert werden muss.
+Auf dem Board ist ein USB-UART Wandler verbaut. Manchmal benötigt er einen 
+Treiber, der nachträglich installiert werden muss.
 
 Unter Mac OS:
 
