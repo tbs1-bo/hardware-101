@@ -193,4 +193,5 @@ Mikroprozessorboards](https://media.ccc.de/v/froscon2016-1791-python_fur_das_int
   in 433 MHz vermittelt. In dem ct-Artikel 
   [Funkbrücke - 433-MHz-Komponenten vernetzen (08/2018)](https://www.heise.de/ct/ausgabe/2018-8-433-MHz-Komponenten-vernetzen-4000453.html?wt_mc=print.ct.2018.08.146)
   wird eine Bridge und alternative Firmware für einen ESP8266 beschrieben.
-
+- PyCharm unterstützt die Entwicklung mit MicroPython durch ein eigenes 
+  [Plugin](https://blog.jetbrains.com/pycharm/2018/01/micropython-plugin-for-pycharm/)
