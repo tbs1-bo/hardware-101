@@ -46,7 +46,7 @@ Auf dem Board ist ein USB-UART Wandler verbaut. Manchmal benötigt er einen
 Treiber, der nachträglich installiert werden muss.
 
 Ein populärer Treiber für Windows ist unter 
-[MSXFAQ](http://www.msxfaq.de/sonst/bastelbude/nodemcu.htm) verlinkt.
+[MSXFAQ](https://www.msxfaq.de/sonst/bastelbude/esp8266/nodemcu.htm#serielle_verbindung) verlinkt.
 
 Unter Mac OS lässt sich ein Treiber mit Homebrew installieren.
 
