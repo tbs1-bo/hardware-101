@@ -45,7 +45,10 @@ sind [online](https://github.com/nodemcu/nodemcu-devkit-v1.0) oder
 Auf dem Board ist ein USB-UART Wandler verbaut. Manchmal benötigt er einen 
 Treiber, der nachträglich installiert werden muss.
 
-Unter Mac OS:
+Ein populärer Treiber für Windows ist unter 
+[MSXFAQ](http://www.msxfaq.de/sonst/bastelbude/nodemcu.htm) verlinkt.
+
+Unter Mac OS lässt sich ein Treiber mit Homebrew installieren.
 
      $ brew cask install homebrew/cask-drivers/wch-ch34x-usb-serial-driver
 
@@ -164,9 +167,6 @@ wie man auf dem I²C-Bus nach Geräten scannen kann.
 - Vortrag der Froscon 2016: [Python für das Internet der Dinge -
 Einführung in MicroPython für ESP8266 und Cortex-M4
 Mikroprozessorboards](https://media.ccc.de/v/froscon2016-1791-python_fur_das_internet_der_dinge)
-- Unter Windows werden eventuell Treiber für den USB-UART-Konverter benötigt.
-  Ein populärer Treiber ist unter 
-  [MSXFAQ](http://www.msxfaq.de/sonst/bastelbude/nodemcu.htm) verlinkt.
 - [Forum für den 
   Informationsaustausch](http://forum.micropython.org/viewforum.php?f=16) 
   mit Gleichgesinnten.
