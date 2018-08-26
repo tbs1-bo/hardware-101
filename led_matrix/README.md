@@ -44,4 +44,9 @@ Weitere Informationen
 Ein [Artikel bei 
 mikrocontroller.net](https://www.mikrocontroller.net/articles/LED-Matrix) 
 beschreibt LED-Matrizen genauer und geht auf unterschiedliche Möglichkeiten
-der Ansteuerung ein.
+der Ansteuerung ein. Ein 
+[LED shield](https://wiki.wemos.cc/products:d1_mini_shields:matrix_led_shield)
+für den Wemos D1 Mini enthält einen Controller für I²C-Display und vereinfacht
+damit die Ansteuerung etwas. Die Ansteuerung noch größerer Displays beschreibt
+Henner Zeller in dem Projekt
+[rpi-rgb-led-matrix](https://github.com/hzeller/rpi-rgb-led-matrix).
