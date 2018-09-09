@@ -71,3 +71,7 @@ Das IC verfügt für jeden Port über 8 weitere Register. Unter anderem kann man
 ## Datenblatt
 
 - [Datenblatt](doc/mcp23017_mcp23S17_datasheet.pdf)
+
+## Beispielanwendung
+
+- [Eine einfache Beispielanwendung](sample)
