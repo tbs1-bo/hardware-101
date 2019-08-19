@@ -37,7 +37,7 @@ class MPU6050:
         else:
             return val
 
-    def get_xyz_rotation(self):
+    def get_xyz_rotation_speed(self):
         gyro_xout = self.read_word_2c(self.regs["GYRO_XOUT_H"])
         # TODO: the same for the other axis y and z.
         # gyro_yout = ...
@@ -58,6 +58,6 @@ class MPU6050:
 if "__main__" == __name__:
         a = MPU6050()
         while True:
-            xyz_rot = a.get_xyz_rotation()
+            xyz_rot = a.get_xyz_rotation_speed()
             print(xyz_rot)
             time.sleep(0.5)
