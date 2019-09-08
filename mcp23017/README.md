@@ -64,6 +64,10 @@ Das IC verfügt für jeden Port über 8 weitere Register. Unter anderem kann man
 * INTF - Interrupt flag register (0x0E/0x0F)
 * INTCAP - Interrupt captured value for port register (0x10/0x11)
 
+## Python-Klasse
+
+- [MCP23017.py](MCP23017.py)
+
 ## Datenblatt
 
 - [Datenblatt](doc/mcp23017_mcp23S17_datasheet.pdf)
