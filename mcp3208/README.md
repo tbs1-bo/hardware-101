@@ -42,7 +42,7 @@ Um die zu Spannung am analogen Eingang zu berechnen, muss die Formel nach Vin um
 
 - [Beispielklasse](sample/MCP3208.py)
 
-Die Beispielklasse für den MCP3208 kann mit dem Raspberry Pi verwendet werden. Der A/D-Wandler muss mit der Busnummer (SPI0 oder SPI1), Divicenummer (CE0 oder CE1) und der Referenzspannung initialisiert werden.
+Die Beispielklasse für den MCP3208 kann mit dem Raspberry Pi verwendet werden. Der A/D-Wandler muss mit der Busnummer (SPI0 oder SPI1), Devicenummer (CE0 oder CE1) und der Referenzspannung initialisiert werden.
 
 Mit der Methode read(channel) wird der angegebene Kanal gelesen und die Spannung in Volt zurückgegeben.
 
