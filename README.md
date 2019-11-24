@@ -23,6 +23,7 @@ Schaltungsbeispiele sowie eine Beschreibung.
 - [Orange Pi Zero](orange_pi_zero): Einplatinencomputer
 - [Raspberry Pi](raspi): Einplatinencomputer
 - [servo](servo): Servomotoren mittels PWM
+- [sh1106](sh1106): OLED Display Treiber
 - [ssd1306](ssd1306): OLED Display Treiber
 - [ws2811/ws2812](ws281x): RGB-LED-Streifen
 
