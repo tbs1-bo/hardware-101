@@ -4,7 +4,7 @@ Es gibt auch OLED-Displays, die mit dem Treiber SH1106
 arbeiten. Der Treiber lässt sich entweder über eine parallele
 Schnittstelle, SPI oder I²C steuern.
 
-Der Speicheraufbau und die Ansteuerung ist nahezu identisch, wie beim [SSD1306](../SSD1306). Ein wesentlicher Unterschied ist die Adressierung der Spalten und Zeilen. Die Adresse der "Page" (8 Zeilen des Displays) muss über ein Kommando festgelegt werden. Daher ist der SH1106 nicht 100%ig kompatibel mit der Adafruit-Bibliothek des SSD1306.
+Der Speicheraufbau und die Ansteuerung ist nahezu identisch, wie beim [SSD1306](../ssd1306). Ein wesentlicher Unterschied ist die Adressierung der Spalten und Zeilen. Die Adresse der "Page" (8 Zeilen des Displays) muss über ein Kommando festgelegt werden. Daher ist der SH1106 nicht 100%ig kompatibel mit der Adafruit-Bibliothek des SSD1306.
 
 
 ## Datenblatt
@@ -14,15 +14,15 @@ Der Speicheraufbau und die Ansteuerung ist nahezu identisch, wie beim [SSD1306](
 
 ## Schaltung
 
-Siehe [SSD1306](../SSD1306).
+Siehe [SSD1306](../ssd1306).
 
 ## Adressierung
 
-Siehe [SSD1306](../SSD1306).
+Siehe [SSD1306](../ssd1306).
 
 ## Kommunikation
 
-Siehe [SSD1306](../SSD1306).
+Siehe [SSD1306](../ssd1306).
 
 
 ## Quelltext
