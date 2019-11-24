@@ -27,7 +27,7 @@ Siehe [SSD1306](../ssd1306).
 
 ## Quelltext
 
-Der Quelltext der Datei [sh1106.py](sh1106.py) zeigt eine Klasse `SH1106_128_64` in der die Initialisierung und Konfiguration des Displays realisiert wird. 
+Der Quelltext der Datei [SH1106.py](SH1106.py) zeigt eine Klasse `SH1106_128_64` in der die Initialisierung und Konfiguration des Displays realisiert wird. 
 
 Das Bild wird im Attribut _buffer gespeichert. Es handelt sich um eine Liste mit 128·8 (Breite·Pages) Bytes.
 
