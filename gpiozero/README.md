@@ -7,7 +7,7 @@ Standardinstallation des Pi auch die Bibliothek
 
 ## LED blinken lassen
 
-Um die Klassen aus der Bibliothek nutzen zu können, müssen sie zunächst importiert
+Um die Klassen aus der Bibliothek nutzen zu können, müssen sie zuerst importiert
 werden. Zunächst wird die LED-Klasse importiert. Da zwischen dem Ein-
 und Ausschalten eine Weile vergehen soll, wird mit sleep eine Funktion zum Pausieren
 des Programms zusätzlich importiert.
@@ -20,7 +20,7 @@ from time import sleep
 
 Nun wird ein Objekt der Klasse LED erzeugt. 
 
-```pyhon
+```python
 led = LED(17)
 ```
 
@@ -30,25 +30,28 @@ frei gewählt werden. In ihr wird das neue LED-Objekt gespeichert.
 Mit der 17 wird der Pin angegeben, an dem die LED angeschlossen ist. Hier gibt es
 verschiedene Arten der Zählweise. Wenn die Zahl direkt angegeben wird, ist die 
 BCM-Nummerierung gemeint - also die Nummer des Pins direkt am Prozessor des Pi.
-Diese unterscheidet sich von der physikalischen Board-Zählweise, bei die Pins
+Diese unterscheidet sich von der physikalischen Board-Zählweise, bei der die Pins
 an der Pfostenleiste abgezählt werden.
 
 Die LED kann auch mit der Board-Nummerierung erzeugt werden, wenn die
 LED wie folgt erzeugt wird.
 
-```pyhon
+```python
 led = LED("BOARD11")
 ```
 
 Nun wird der physikalische Pin Nummer 11 genutzt, der mit dem Pin 17
-am Prozessor des Pi verbunden ist.
+am Prozessor des Pi verbunden ist. Weitere Informationen zur Nummerierung
+stehen in 
+[Abschnitt 2.2](https://gpiozero.readthedocs.io/en/stable/recipes.html#pin-numbering)
+der Dokumentation von gpiozero.
 
 Das erstellte LED-Objekt hat verschiedene Methoden, die auf ihm
 aufgerufen werden können. Wir nutzen die Methoden on() und off(), um
 die LED ein- und ausschalten zu können.
 
 
-```pyhon
+```python
 while True:
     led.on()
     sleep(1)
