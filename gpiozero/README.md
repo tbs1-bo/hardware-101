@@ -42,8 +42,8 @@ led = LED("BOARD11")
 
 Nun wird der physikalische Pin Nummer 11 genutzt, der mit dem Pin 17
 am Prozessor des Pi verbunden ist. Weitere Informationen zur Nummerierung
-stehen in 
-[Abschnitt 2.2](https://gpiozero.readthedocs.io/en/stable/recipes.html#pin-numbering)
+stehen im Abschnitt
+[Pin Numbering](https://gpiozero.readthedocs.io/en/stable/recipes.html#pin-numbering)
 der Dokumentation von gpiozero.
 
 Das erstellte LED-Objekt hat verschiedene Methoden, die auf ihm
