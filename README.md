@@ -11,6 +11,7 @@ Schaltungsbeispiele sowie eine Beschreibung.
 - [DS18B20](ds18b20): Temperatursensor (1-WIRE)
 - [ESP8266](esp8266): Microcontroller mit WLAN und Micropython-Unterstützung
 - [Gertboard](gertboard): Erweiterungsboard für den Raspberry Pi
+- [gpiozero](gpiozero): Einfach Bibliothek zur Ansteuerung der GPIO-Pins.
 - [HD44780](hd44780): LCD Controller
 - [led_matrix](led_matrix): Eine 5x7 LED-Matrix
 - [lm75](lm75): Temperatursensor
