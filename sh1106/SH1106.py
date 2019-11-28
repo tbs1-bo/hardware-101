@@ -167,18 +167,35 @@ class SH1106Base(object):
         self._gpio.set_high(self._rst)
         """
 
+    def px8(self, x, page, value):
+        """Set 8 Pixel in column x and page page to value"""
+        x = self.width - x - 1
+        index = self.width * page + x
+        self._buffer[index] = value
+
+    def px(self, x, y, value):
+        """Set a Pixel in column x and row y to val"""
+        x = self.width - x - 1
+        page = y // 8
+        pixel = y % 8
+        index = self.width * page + x
+        if value:
+            self._buffer[index] |= (1<<pixel)
+        else:
+            self._buffer[index] &= ~(1<<pixel)
+
     def display(self):
         """Write display buffer to physical display."""
         self.command(SH1106_SETSTARTLINE)
-        self.command(0xD3)
+        self.command(SH1106_SETDISPLAYOFFSET)
         self.command(0x00)
         for p in range(8):
             self.command(SH1106_SETPAGEADDR|p)
-            self.command(SH1106_SETLOWCOLUMN)
+            self.command(SH1106_SETLOWCOLUMN|0x2)
             self.command(SH1106_SETHIGHCOLUMN)
-            for x in range(0,self.width,16):
+            for x in range(0, self.width, 16):
                 control = 0x40
-                index = self.width*p + x
+                index = self.width*p  + x
                 self._i2c.write_i2c_block_data(SH1106_I2C_ADDRESS, control, self._buffer[index:index+16])
 
 
@@ -198,7 +215,7 @@ class SH1106Base(object):
         index = 0
         for page in range(self._pages):
             # Iterate through all x axis columns.
-            for x in range(self.width):
+            for x in range(self.width)[::-1]:
                 # Set the bits for the column of pixels at the current position.
                 bits = 0
                 # Don't use range here as it's a bit slow

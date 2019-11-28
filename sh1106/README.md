@@ -33,7 +33,8 @@ Das Bild wird im Attribut _buffer gespeichert. Es handelt sich um eine Liste mit
 
 Mit der Methode display() wird der Inhalt des Buffers auf dem OLED-Display angezeigt.
 
-Der Vorteil dieser Klasse ist, dass man nur die (standard) smbus-Bibliothek benötigt und keine weiteren Bibliotheken auf dem Raspberry Pi nachinstallieren muss
+Der Vorteil dieser Klasse ist, dass man nur die (standard) smbus-Bibliothek benötigt und 
+keine weiteren Bibliotheken auf dem Raspberry Pi nachinstalliert werden müssen.
 
 In der Datei [oled.py](oled.py) ist ein kurzes Beispielprogramm für die Verwendung der Bibliothek.
 
