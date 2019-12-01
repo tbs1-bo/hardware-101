@@ -38,5 +38,47 @@ keine weiteren Bibliotheken auf dem Raspberry Pi nachinstalliert werden müssen.
 
 In der Datei [oled.py](oled.py) ist ein kurzes Beispielprogramm für die Verwendung der Bibliothek.
 
+## Die Klasse `OledDisplay`
+
+In der Datei [oleddisplay.py](oleddisplay.py) befindet sich eine Klasse `OledDisplay`,
+welche die Verwendung des Display etwas vereinfacht. Hierfür wird zusätzlich das
+Pythonpaket »pillow« benötigt, welches mit pip installiert werden kann.
+
+Danach kann die Klasse wie folgt verwendet werden, um das folgende Bild zu erzeugen.
+
+![oled-Display](oled_test.png)
+
+```python
+import smbus
+from oleddisplay import OledDisplay
+
+disp = OledDisplay(i2c=smbus.SMBus(1))
+
+# Initialize library.
+disp.begin()
+
+# Clear display.
+disp.clear()
+disp.display()
+
+# Write two lines of text.
+disp.draw_text('Hello', 10, 10)
+disp.draw_text('World', 10, 30)
+
+# draw a line
+disp.draw_line(5, 25, 100, 25, 2)
+
+# draw some pixels
+disp.px(1, 25, True)
+disp.px(1, 26, True)
+
+# Draw image next to display
+disp.draw_bitmap(50, -10, 'images/run1.png')
+
+# Display image.
+disp.display()
+disp.save_to_file('oled_test.png')
+```
+
 ## TODO
 - Erweiterung der Klasse um Methoden px(x, y, value, buffered=True/False)
