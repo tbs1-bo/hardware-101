@@ -44,7 +44,8 @@ In der Datei [oleddisplay.py](oleddisplay.py) befindet sich eine Klasse `OledDis
 welche die Verwendung des Display etwas vereinfacht. Hierfür wird zusätzlich das
 Pythonpaket »pillow« benötigt, welches mit pip installiert werden kann.
 
-Danach kann die Klasse wie folgt verwendet werden, um das folgende Bild zu erzeugen.
+Danach kann die Klasse wie folgt verwendet werden, um das folgende Bild zu
+erzeugen. Das im Quelltext verwendete Bild ist [hier](sprite.png) zu finden.
 
 ![oled-Display](oled_test.png)
 
@@ -73,12 +74,13 @@ disp.px(1, 25, True)
 disp.px(1, 26, True)
 
 # Draw image next to display
-disp.draw_bitmap(50, -10, 'images/run1.png')
+disp.draw_bitmap(50, -10, 'sprite.png')
 
 # Display image.
 disp.display()
 disp.save_to_file('oled_test.png')
 ```
+
 
 ## TODO
 - Erweiterung der Klasse um Methoden px(x, y, value, buffered=True/False)
