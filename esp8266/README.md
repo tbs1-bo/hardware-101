@@ -195,3 +195,5 @@ Mikroprozessorboards](https://media.ccc.de/v/froscon2016-1791-python_fur_das_int
   wird eine Bridge und alternative Firmware für einen ESP8266 beschrieben.
 - PyCharm unterstützt die Entwicklung mit MicroPython durch ein eigenes 
   [Plugin](https://blog.jetbrains.com/pycharm/2018/01/micropython-plugin-for-pycharm/)
+- Unter [esp8266.net](http://esp8266.net/) sind viele wichtige Informationen
+  zentral an einer Stelle versammelt.
