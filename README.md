@@ -32,4 +32,11 @@ Schaltungsbeispiele sowie eine Beschreibung.
 - [Transistoren](Transistoren): Eine Übersicht (noch sehr übersichtlich)
 
 
+## Hilf mit
+
+Du kannst das Projekt mit eigenen Beiträgen ergänzen. Schau dazu bei den  
+["good first issues"](https://github.com/tbs1-bo/hardware-101/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
+nach, welche Themen noch benötigt werden.
+
+
 ![logo](img/hardware-101-logo2.png)
