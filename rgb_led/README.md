@@ -10,5 +10,5 @@ lassen sie sich einfach ansteuern. Ein Beispiel findet sich in der Datei
 [rgb_led.py](rgb_led.py).
 
 Ein
-[Video](https://peertube.fidonet.io/videos/watch/9a352cee-b35a-4b2f-9d54-72a89fec7fe0)
+[Video](https://peertube.fidonet.io/videos/embed/9a352cee-b35a-4b2f-9d54-72a89fec7fe0)
 zeigt, wie sich die LED verhält.
