@@ -1,7 +1,5 @@
 # RGB LED
 
-# RGB LED
-
 RGB-LED können viele verschiedene Farben darstellen. Sie haben 
 vier Pins: jeweils einen für Rot, Grün und Blau und zusätzlich
 einen für die Masse. 
