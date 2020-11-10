@@ -22,6 +22,7 @@ Schaltungsbeispiele sowie eine Beschreibung.
 - [mcp4151](mcp4151): Digitalpotentiometer (SPI)
 - [mpu6050](mpu6050): Beschleunigungssensor und Gyrometer (I²C)
 - [Orange Pi Zero](orange_pi_zero): Einplatinencomputer
+- [RGB-LED](rgb_led): LEDs mit vielen Farben
 - [Raspberry Pi](raspi): Einplatinencomputer
 - [servo](servo): Servomotoren mittels PWM
 - [sh1106](sh1106): OLED Display Treiber
