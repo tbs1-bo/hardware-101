@@ -72,3 +72,6 @@ target/
 
 # Mac OS Files
 .DS_Store
+
+# VSCode files
+.vscode/
