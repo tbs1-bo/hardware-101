@@ -1,8 +1,12 @@
 # RGB LED
 
+![RGB LED](rgb_led.jpg)
+
 RGB-LED können viele verschiedene Farben darstellen. Sie haben 
 vier Pins: jeweils einen für Rot, Grün und Blau und zusätzlich
 einen für die Masse. 
+
+![pinout](rgb_led_pinout.png)
 
 Mit der 
 [gpiozero-Bibliothek](https://gpiozero.readthedocs.io/en/stable/api_output.html?#gpiozero.RGBLED) 
