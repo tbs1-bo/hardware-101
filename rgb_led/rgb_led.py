@@ -7,8 +7,8 @@ from time import sleep
 #
 led = RGBLED(red=2, green=3, blue=4)
 
-# Einzelne Farbwerte können können über das color-Attribut gesetzt werden. Hier
-# wird ein Wert zwischen 0 und 1 für jede Farbe rot, grün und blau genutzt.
+# Einzelne Farbwerte können über das color-Attribut gesetzt werden. Hier
+# wird ein Wert zwischen 0 und 1 für jede Farbe rot, grün und blau erwartet.
 
 print('LED rot')
 led.color = (1, 0, 0)
