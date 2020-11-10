@@ -8,6 +8,10 @@ einen für die Masse.
 
 ![pinout](rgb_led_pinout.png)
 
+Eine 
+[Beispielbeschaltung](http://wiring.org.co/learning/basics/rgbled.html) 
+zeigt eine mögliche Verwendung.
+
 Mit der 
 [gpiozero-Bibliothek](https://gpiozero.readthedocs.io/en/stable/api_output.html?#gpiozero.RGBLED) 
 lassen sie sich einfach ansteuern. Ein Beispiel findet sich in der Datei 
