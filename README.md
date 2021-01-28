@@ -31,6 +31,7 @@ Schaltungsbeispiele sowie eine Beschreibung.
 
 - [fake-rpi](fake-rpi): Hilfe für die Programmentwicklung
 - [Transistoren](Transistoren): Eine Übersicht (noch sehr übersichtlich)
+- [IO-Emulator](https://tbs1-bo.github.io/ioemu/): Emulator für Eingabe-Ausgabe-Operationen.
 
 
 ## Hilf mit
