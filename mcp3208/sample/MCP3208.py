@@ -10,6 +10,12 @@ class MCP3208:
         self.refvoltage = refvoltage
 
     def read(self, channel):
+        '''
+        Three data bytes will be transmitted. The three channel bits CCC are encoded into 
+        the first and second bytes in the following way.
+
+        0000011C CCxxxxxx xxxxxxxx
+        '''
         assert channel in range(8)
         data = self.spi.xfer([0b00000110 | (channel&0b100) >> 2, (channel&0b11)<<6, 0])
         value = (data[1] << 8) + data[2]
