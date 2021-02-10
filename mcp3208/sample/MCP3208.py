@@ -11,7 +11,8 @@ class MCP3208:
 
     def read(self, channel):
         '''
-        Three data bytes will be transmitted. The three channel bits CCC are encoded into 
+        Three data bytes will be transmitted. The IC has 8 channels.
+        The three channel bits CCC are encoded into 
         the first and second bytes in the following way.
 
         0000011C CCxxxxxx xxxxxxxx
