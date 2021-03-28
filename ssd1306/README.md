@@ -70,6 +70,10 @@ Die Bibliothek
 von Adafruit bietet einen leichteren Einstieg, wenn die Ansteuerung technisch
 zu anspruchsvoll ist.
 
+Für den ESP32/ESP8266 gibt es einen passenden
+[Displaytreiber in Micropython](https://github.com/micropython/micropython/tree/master/drivers/display) 
+für das SSD1306.
+
 ## Funktionsprüfung
 
 [![Video](https://archive.org/services/img/oled_i2c)](https://archive.org/details/oled_i2c)
