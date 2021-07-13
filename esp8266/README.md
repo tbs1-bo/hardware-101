@@ -197,3 +197,5 @@ Mikroprozessorboards](https://media.ccc.de/v/froscon2016-1791-python_fur_das_int
   [Plugin](https://blog.jetbrains.com/pycharm/2018/01/micropython-plugin-for-pycharm/)
 - Unter [esp8266.net](http://esp8266.net/) sind viele wichtige Informationen
   zentral an einer Stelle versammelt.
+- [ESPHome](https://esphome.io/) ist ein System, mit dem der ESP8266/ESP32 durch einfache Konfigurationsdateien 
+  gesteuert werden kann.
