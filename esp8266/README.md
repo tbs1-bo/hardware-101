@@ -199,3 +199,5 @@ Mikroprozessorboards](https://media.ccc.de/v/froscon2016-1791-python_fur_das_int
   zentral an einer Stelle versammelt.
 - [ESPHome](https://esphome.io/) ist ein System, mit dem der ESP8266/ESP32 durch einfache Konfigurationsdateien 
   gesteuert werden kann.
+- [AI on the edge device](https://github.com/jomjol/AI-on-the-edge-device): Mit einem ESP32 und einem neuronalen
+  Netz lassen sich Zahlen von einer Wasseruhr oder einem Stromzähler ablesen und auswerten.
