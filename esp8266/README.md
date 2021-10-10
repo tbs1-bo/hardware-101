@@ -201,3 +201,5 @@ Mikroprozessorboards](https://media.ccc.de/v/froscon2016-1791-python_fur_das_int
   gesteuert werden kann.
 - [AI on the edge device](https://github.com/jomjol/AI-on-the-edge-device): Mit einem ESP32 und einem neuronalen
   Netz lassen sich Zahlen von einer Wasseruhr oder einem Stromzähler ablesen und auswerten.
+- [WLED](https://kno.wled.ge/) ist ein Projekt für den ESP8266/32, um LEDs
+  (WS2811/2812 etc.) einfach anzusteuern.
