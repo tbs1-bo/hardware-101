@@ -105,6 +105,6 @@ Neben diesem Einstieg, gibt es eine weitere Anleitung
 [Neopixels on RaspberryPi](doc/neopixels-on-raspberry-pi.pdf), die zusätzliche
 Informationen bereithält.
 
-Das Projekt [WLED](https://kno.wled.ge/) macht die LEDs über einen ESP2866/32
+Das Projekt [WLED](https://kno.wled.ge/) macht die LEDs über einen ESP8266/32
 ansteuerbar.
 
