@@ -33,3 +33,6 @@ Links
 -----
 
 - [Anleitung für den Arduino](http://playground.arduino.cc/Main/MPU-6050)
+- [TWANG](https://github.com/Critters/TWANG) ist ein 1D-Dungeon-Crawler, der
+  den MPU6050 für die Steuerung nutzt.
+
