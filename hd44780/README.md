@@ -99,5 +99,5 @@ zeigt die Funktionsweise des Displays.
 Links
 -----
 
-- [lcdproc](http://lcdproc.omnipotent.net/) zeigt Statusinformationen eines
+- [lcdproc](http://lcdproc.org) zeigt Statusinformationen eines
   Linux-Servers auf einem Display an.
