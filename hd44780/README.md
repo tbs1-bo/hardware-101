@@ -95,3 +95,9 @@ Ein Video
 [YouTube](https://www.youtube-nocookie.com/embed/W6sKhcwKmA4?rel=0)) 
 zeigt die Funktionsweise des Displays.
 
+
+Links
+-----
+
+- [lcdproc](http://lcdproc.omnipotent.net/) zeigt Statusinformationen eines
+  Linux-Servers auf einem Display an.
