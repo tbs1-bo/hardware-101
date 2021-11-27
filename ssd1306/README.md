@@ -63,7 +63,9 @@ horizontale Modus, nur dass der Speicher spaltenweise beschrieben wird.
 
 ## Quelltext
 
-Der Quelltext der Datei [ssd1306.py](ssd1306.py) zeigt eine Klasse `OLED` in der die Initialisierung und Konfiguration des Displays realisiert wird. Anschließend werden Muster dargestellt. Die Klasse ist noch ausbaufähig.
+Der Quelltext der Datei [ssd1306.py](ssd1306.py) zeigt eine Klasse `OLED` in der die Initialisierung und Konfiguration des Displays realisiert wird. Anschließend werden Muster dargestellt. Die Klasse ist noch ausbaufähig. 
+Sie kann mit `pip3 install hw101` installiert und mit 
+`from ssd1306 import OLED` genutzt werden.
 
 Die Bibliothek 
 [Adafruit_Python_SSD1306](https://github.com/adafruit/Adafruit_Python_SSD1306)

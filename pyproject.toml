@@ -2,12 +2,13 @@
 name = "hw101"
 homepage = "https://hw101.tbs1.de"
 readme = "README.md"
-version = "0.1.5"
+version = "0.2.0"
 description = "Classes for educational purposes to get started with hardware projects."
 authors = ["Marco Bakera <bakera@tbs1.de>", "Reinhard Gummlich <gummlich@tbs1.de>"]
 packages = [
     { include = "MCP23017.py", from="mcp23017" },
     { include = "MCP23S17.py", from="mcp23s17" },
+    { include = "ssd1306.py", from="ssd1306" },
 ]
 
 [tool.poetry.dependencies]
