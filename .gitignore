@@ -75,3 +75,6 @@ target/
 
 # VSCode files
 .vscode/
+
+# ignore poetry file
+poetry.lock
