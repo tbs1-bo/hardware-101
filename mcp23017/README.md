@@ -69,7 +69,7 @@ Das IC verfügt für jeden Port über 8 weitere Register. Unter anderem kann man
 - [MCP23017.py](MCP23017.py)
 
 Die Klasse kann mit `pip3 install hw101` installiert und anschließend mit
-`import MCP23017` genutzt werden.
+`from MCP23017 import MCP23017` genutzt werden.
 
 ## Datenblatt
 

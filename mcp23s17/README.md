@@ -73,7 +73,7 @@ Das IC verfügt für jeden Port über 8 weitere Register. Unter anderem kann man
 - [MCP23S17.py](MCP23S17.py)
 
 Die Klasse kann mit `pip3 install hw101` installiert und anschließend mit
-`import MCP23S17` genutzt werden.
+`from MCP23S17 import MCP23S17` genutzt werden.
 
 ## Datenblatt
 
