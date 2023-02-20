@@ -40,29 +40,34 @@ Mit dem "input polarity port register" können die Signale an den Input-Pins inv
 Das IC verfügt für jeden Port über 8 weitere Register. Unter anderem kann man über diese Register das Verhalten der Interrupt-Pins (Pin 19 und 20) beeinflussen. Für erste Experimente können diese Register unverändert bleiben.
 
 ### IODIRA (IODIRB) - I/O direction register Port A (Port B) - 0x00 (0x01)
-* 1: Konfiguration des Pins als input (default)
-* 0: Konfiguration des Pins als output
+
+- 1: Konfiguration des Pins als input (default)
+- 0: Konfiguration des Pins als output
 
 ### IPOLA (IPOLB) - Input polarity port register Port A (Port B) - 0x02 (0x03)
-* 1: invertiert die Eingangssignale
-* 0: keine Invertierung (default)
+
+- 1: invertiert die Eingangssignale
+- 0: keine Invertierung (default)
 
 ### GPIOA (GPIOB) - General purpose I/O port register Port A (Port B) - 0x12 (0x13)
-* 1: High-Signal am Pin
-* 0: Low-Signal am Pin (default)
+
+- 1: High-Signal am Pin
+- 0: Low-Signal am Pin (default)
 
 ### OLATA (OLATB) - Output latch register Port A (Port B) - 0x14 (0x15)
-* 1: High-Signal
-* 0: Low-Signal (default)
+
+- 1: High-Signal
+- 0: Low-Signal (default)
 
 ### Weitere Register
-* GPINTEN - Interrupt-on-change Pins (0x04/0x05)
-* DEFVAL - Default value register (0x06/0x07)
-* INTCON - Interrupt-on-change control register (0x08/0x09)
-* IOCON - Configuration register (0x0A/0x0B)
-* GPPU - GPIO Pull-up resistor register (0x0C/0x0D)
-* INTF - Interrupt flag register (0x0E/0x0F)
-* INTCAP - Interrupt captured value for port register (0x10/0x11)
+
+- GPINTEN - Interrupt-on-change Pins (0x04/0x05)
+- DEFVAL - Default value register (0x06/0x07)
+- INTCON - Interrupt-on-change control register (0x08/0x09)
+- IOCON - Configuration register (0x0A/0x0B)
+- GPPU - GPIO Pull-up resistor register (0x0C/0x0D)
+- INTF - Interrupt flag register (0x0E/0x0F)
+- INTCAP - Interrupt captured value for port register (0x10/0x11)
 
 ## Python-Klasse
 
@@ -74,3 +79,7 @@ Die Klasse kann mit `pip3 install hw101` installiert und anschließend mit
 ## Datenblatt
 
 - [Datenblatt](doc/mcp23017_mcp23S17_datasheet.pdf)
+
+## Sonstiges
+
+Im ct-Artikel [Mehr I/O zum Basteln - Sehr viele GPIO-Pins an Arduino, Raspi und ESP](https://www.heise.de/select/ct/2020/15/2015610435826119267) wird auf die Nutzung des MCP23017 mit einem Arduino eingegangen.
