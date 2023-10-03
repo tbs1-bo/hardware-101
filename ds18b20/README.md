@@ -24,7 +24,7 @@ vorgesehen. Dies kann jedoch auch in der Datei `/boot/config.txt`
 geändert werden.
 
 _Achtung!_ Im Datenblatt ist das Pinout von unten ("Bottom View")
-dargestellt. Ein Verwechslung der Pins VDD und GND können das Bauteil
+dargestellt. Eine Verwechslung der Pins VDD und GND können das Bauteil
 stark erhitzen oder zerstören.
 
 ![schaltung](doc/schaltung.png)
